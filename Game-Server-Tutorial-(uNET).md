@@ -1,3 +1,5 @@
+:fire: _Don't be discouraged by the length of this tutorial. All you'll actually need to do is add 3 scripts (that you don't even need to write) into the scene, and make a couple of small edits. If you know what you're doing, it's : 5 minutes tops_
+
 ## Overview
 
 General steps to setting up a game server are as follows:
@@ -71,4 +73,66 @@ Our game server is only valid when it implements `IGameServer `interface. If you
 
     :information_source: BMNetworkManager script is pretty much the same as the regular NetworkManager, but instead of forcing you to override methods, it triggers events, to which other components can subscribe. TutGameServer component we've created earlier is one of those subscribers. 
 
-:warning: Now, if you try to launch the game, your _**player characters will not be spawned**_. This is because in order to allow players to join, game server must first be registered to Master, and then opened to public. In the next steps, we'll use some of the "helper components" to automate this process for us. If you want to do it manually, here are the general steps you'll need to take. 
+:warning: If you try to launch the game now, your _**player characters will not be spawned**_. This is because in order to allow players to join, game server must first be registered to Master, and then opened to public. In the next steps, we'll use some of the "helper components" to automate this process for us. If you want to do it manually, here are the general steps you'll need to take. 
+
+## Joining The Game
+
+General steps for client to join a game are as follow: 
+
+1. Connect to Master
+1. Log in
+1. Retrieve a pass
+1. Send pass to game server
+
+If you're using **uNET **for your games networking, there are a few scripts that can automate this process for you. 
+
+When you are developing your game, you probably want try every iteration of changes as fast as possible. Normally you'd have to start the server, build a client, connect and login with the client and etc, just to get into the game.
+
+Thanfully, unitys **uNET **has a built in Host mode which we can use to imitate a client and the server at the same time. There are two scripts that can help you automate the process: 
+
+1. `BMGameServerStarter.cs` - this script handles command line arguments, provided when starting a game server process. There's a helpful flag EnableFakeArgs which can help you start the server with fake arguments provided in inspector.
+1. `BMUnetConnector.cs` - this component handles connecting client to game server. If **AutoJoinIfHost **flag is set, connector will try to authenticate you and spawn a character into the server right after you start the server as a host
+
+Adding these two components is what we're going to do in the next steps. 
+
+1. Create a new empty game object as a child of **Networking **object and call it **Starter**
+1. Attach to it component named **BMGameServerStarter**
+1. Create a new empty game object as a child of Networking object and call it **Connector**
+1. Attach to it component named **BMUnetConnector**
+1. Your hierarchy and component settings should look somewhat like this:
+
+![](http://i.imgur.com/EkdzxN0.png)
+
+:white_check_mark: At this point, if you start the game in editor, the server should be started automatically, and a character should be spawned for the account you have set in inspector to connect with (or guest account) 
+
+If something doesn't work, check the settings of BMGameServerStarter and BMUnetConnector components in the inspector. Make sure the addresses are correct and Master Server is running
+
+:information_source: It's highly recommended that you take a look at how `BMGameServerStarter `and `BMUnetConnector `scripts work, especially if you're not using uNET, or if you're aiming for a custom flow of events. These scripts will give you a general idea of how you can setup your own development process 
+
+## Making Sure Everything Works
+
+Before publishing a game scene / game server, you want to make sure the following works:
+
+We want to make sure the following works: 
+
+* Started server appears in the listing
+* Clients can join the game
+* Users can create new game rooms
+
+To test this, we should build a client with these scenes in the settings: 
+![](http://i.imgur.com/yjbT9F1.png)
+
+:warning: Make sure that _**Main scene is the first one**_, because it's the "lobby" of the game, through which clients will connect to our server.
+
+_Start server _in the editor and _start the client_ from the build you made previously, log in as guest and you should see our server in the listing: 
+
+![](http://i.imgur.com/wHZEOkO.png)
+
+If you see the server in the listing, you should be able to join it
+
+Next step should be to see if your users can create rooms. 
+
+:warning: You should make sure that at least one Spawner Server is started and registered to Master Server 
+
+In the **Main **scene, locate `Canvas -> BMCreateGame` object, and make sure it has your new level in map selection. 
+![](http://i.imgur.com/ew1aNY6.png)
