@@ -18,6 +18,7 @@ To guide you through this process, I've written a very simple game which uses uN
 ## Try out the provided example
 
 Open the **MasterTut** scene (_MasterTutComplete is a scene which is the end result of what we're doing_). The game is very simple and consists of 3 scripts and 3 prefabs. General steps to try the example:
+
 1. Add scene to build settings as the first scene
 1. Build the game
 1. Host the game in unity editor
