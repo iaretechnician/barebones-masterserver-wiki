@@ -5,4 +5,4 @@ To make Barebones Framework more scalable, backend logic was split into three ma
 
 ![](http://i.imgur.com/hIOMncy.png)
 
-You don't need different machines for your servers. If you want, you can host everything on a single 5 USD/month virtual server
+:information_source: You don't need different machines for your servers. If you want, you can host everything on a single 5 USD/month virtual server
