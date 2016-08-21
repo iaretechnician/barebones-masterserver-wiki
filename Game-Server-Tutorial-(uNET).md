@@ -132,7 +132,7 @@ If you see the server in the listing, you should be able to join it
 
 Next step should be to see if your users can create rooms. 
 
-:warning: You should make sure that at least one Spawner Server is started and registered to Master Server 
+:warning: You should make sure that at least one **Spawner Server** is started and registered to **Master Server** 
 
 In the **Main **scene, locate `Canvas -> BMCreateGame` object, and make sure it has your new level in map selection. 
 ![](http://i.imgur.com/ew1aNY6.png)
