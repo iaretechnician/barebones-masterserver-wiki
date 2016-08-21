@@ -17,7 +17,12 @@ To guide you through this process, I've written a very simple game which uses uN
 
 ## Try out the provided example
 
-Open the **MasterTut** scene (_MasterTutComplete is a scene which is the end result of what we're doing_). The game is very simple and consists of 3 scripts and 3 prefabs. 
+Open the **MasterTut** scene (_MasterTutComplete is a scene which is the end result of what we're doing_). The game is very simple and consists of 3 scripts and 3 prefabs. General steps to try the example:
+1. Add scene to build settings as the first scene
+1. Build the game
+1. Host the game in unity editor
+1. Join the game with the client you just built
 
+If you've managed start the server (or host) in unity's editor and joined with client, congratulations! If you're having trouble, feel free to contact me. Here's what you should be aiming for:
 
-
+![](http://i.imgur.com/D2hoH38.png)
