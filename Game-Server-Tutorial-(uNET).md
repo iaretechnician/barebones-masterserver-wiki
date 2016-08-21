@@ -26,3 +26,7 @@ Open the **MasterTut** scene (_MasterTutComplete is a scene which is the end res
 If you've managed start the server (or host) in unity's editor and joined with client, congratulations! If you're having trouble, feel free to contact me. Here's what you should be aiming for:
 
 ![](http://i.imgur.com/D2hoH38.png)
+
+## Implementing IGameServer interface
+
+Our game server is only valid when it implements `IGameServer `interface. If you're using uNET HLAPI, general implementation is already written for you in script **`BMUnetGameServer.cs`**, this is what we'll be using to set things up faster. 
