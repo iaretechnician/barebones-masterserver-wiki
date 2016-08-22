@@ -1,4 +1,6 @@
-This section will cover how you should setup your project for easy development
+This section will cover how you should setup your project for easy development. 
+
+:star: Result of this tutorial should be included in the asset you acquired. If you're lazy, you can just copy the whole solution and work with it there :)
 
 ## Create a New Solution
 
@@ -32,3 +34,5 @@ Now you'll need to add these projects:
 If you have imported all of the projects, here's what you should have:
 
 ![](http://i.imgur.com/2InoccI.png)
+
+## Adding dependencies
