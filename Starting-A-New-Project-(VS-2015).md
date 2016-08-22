@@ -189,6 +189,6 @@ Right click on **YourGame** project, go to `Properties > Debug`, and add these C
 
 Now, when you run your project, you should see something like this:
 
-![](http://i.imgur.com/2InoccI.png)
+![](http://i.imgur.com/zjGYz1z.png)
 
 Don't worry about the warning that executable cannot be found. You can change the path to it later if necessary.
