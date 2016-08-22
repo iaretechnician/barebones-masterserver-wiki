@@ -47,8 +47,9 @@ If you have imported all of the projects, here's what you should have:
 1. Expand **YourGame** project, right click on **References**, then go `Add Reference > Browse` and click Browse  button.
 2. Navigate to the `MasterServerSource > libs` directory, and select:
 
-    * log4net.dll - logging library
-    * LiteDB _(optional)_ - embedded database. Include only if you want to use it
+    * **log4net.dll** - logging library
+    * supersocket > **SuperSocket.SocketEngine.dll**
+    * **LiteDB **_(optional)_ - embedded database. Include only if you want to use it
 
 And hit ok
 
@@ -132,15 +133,20 @@ Open the `YourGame.Program.cs`, and add this code:
 using System.Threading;
 using System.Threading.Tasks;
 using Barebones.MasterStarter;
+using log4net;
 
 namespace YourGame
 {
     class Program
     {
+        private static ILog _log = LogManager.GetLogger(typeof(Program));
+
         static void Main(string[] args)
         {
-            log4net.Config.XmlConfigurator.Configure();  
-          
+            log4net.Config.XmlConfigurator.Configure();
+
+            _log.Info("Logger is working");
+
             Task.Run(() =>
             {
                 var starter = new Starter();
@@ -161,11 +167,20 @@ namespace YourGame
         }
     }
 }
+
 ```
 
-Try to run your project (`Debug -> Start Without Debugging`), and you should see a warning:
+Try to run your project (`Debug -> Start Without Debugging`).
 
+:warning: You should see **Logger is working** message. If you don't see it, there's something wrong with your configuration
+
+If logging works fine, you'll probably see a warning like this:
 `You didn't really start anything... Check out command line arguments`
 
-To start the game
+This is because server starts without any arguments
 
+## Adding Debug Arguments to our project
+
+Right click on **YourGame** project, go to `Properties > Debug`, and add these Command line arguments:
+
+`-master -server`
