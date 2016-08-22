@@ -10,4 +10,8 @@ Run `Debug -> Start Without Debugging (or Start Debugging)`, and you should see 
 
 ![](http://i.imgur.com/zjGYz1z.png)
 
-Don't worry about the warning, you'll be able to resolve it by providing a proper path to your build
+Don't worry about the warning, you'll be able to resolve it by providing a proper path to your build later on
+
+## Starting The Client
+
+Open the scene called `Main`, and run it from the editor.
