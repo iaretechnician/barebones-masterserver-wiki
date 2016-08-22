@@ -42,6 +42,16 @@ If you have imported all of the projects, here's what you should have:
     * Barebones.Networking
     * Barebones.MasterServer.Common
 
+## Adding Third Party Dependencies
+
+1. Expand **YourGame** project, right click on **References**, then go `Add Reference > Browse` and click Browse  button.
+2. Navigate to the `MasterServerSource > libs` directory, and select:
+
+    * log4net.dll - logging library
+    * LiteDB _(optional)_ - embedded database. Include only if you want to use it
+
+And hit ok
+
 ##  Starting project
 
 Open the `YourGame.Program.cs`, and add this code:
