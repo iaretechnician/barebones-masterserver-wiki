@@ -16,3 +16,19 @@ We need a common project, which will be compiled into a .dll and shared between 
 3. We need to change Target Framework to **.NET 3.5**, because Unity doesn't support anything higher. Right click on your project, go to `Properties > Application` and change the TargetFramework to 3.5. 
 4. You can delete the `Class1.cs` file, which was created automatically
 
+## Adding Source
+
+We should start by adding Barebones MasterServer code into our solution. You can do that by referencing DLL files, but I think you'd be happier if you added the projects, so you could navigate through source code if necessary.
+
+Right click on your solution, `Add existing project`, and navigate to `MasterServerSource` folder
+
+Now you'll need to add these projects:
+* `Barebones.MasterServer` - main master server project
+* `Barebones.MasterServer.Common` - files, shared between master server and client 
+* `Barebones.MasterStarter`_(optional) - includes code to help you get started (parses cmd args, initializes objects and etc.)
+* `Barebones.Networking` - networking API code
+* `Barebones.Networking.Server` - helpful server scripts
+
+If you have imported all of the projects, here's what you should have:
+
+![](http://i.imgur.com/2InoccI.png)
