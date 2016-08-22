@@ -12,4 +12,4 @@ We're in this together :)
 
 It's highly advised that you don't make any changes to source code. In most cases, you should be able to make changes by implementing interfaces, extending classes or subscribing to events. If you edit the source, it's possible that your project will break when you download an update, because your changes will be overwritten.
 
-_If you find yourself in a situation where there's no way around, feel free to contact me, and I'll try to provide access to what you need in the next update._
+_With that said, it's still possible that you might stumble upon an issue where there's no work around. In that case, make the changes and contact me, I'll try to provide a better access to what you need in the next update._
