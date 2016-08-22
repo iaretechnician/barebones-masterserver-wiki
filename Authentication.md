@@ -7,9 +7,7 @@
 ### Registering
 `BMAuth.Register(Dictionary<string, string> data, AuthCallback doneCallback)`
 
-Sends a registration request to master server, and invokes a callback when it's done. Data is provided as a string dictionary, by default, it should contains 
-
-Dictionary should contain at least these values: 
+Sends a registration request to master server, and invokes a callback when it's done. Data is provided as a string dictionary, which should contain at least these values: 
 
 * **username **- username of the registering user
 * **password **- password of the registering user
