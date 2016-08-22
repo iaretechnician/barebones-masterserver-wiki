@@ -131,7 +131,6 @@ Open the `YourGame.Program.cs`, and add this code:
 
 ```C#
 using System.Threading;
-using System.Threading.Tasks;
 using Barebones.MasterStarter;
 using log4net;
 
@@ -143,16 +142,12 @@ namespace YourGame
 
         static void Main(string[] args)
         {
+            // Apply log4net configuration
             log4net.Config.XmlConfigurator.Configure();
-
             _log.Info("Logger is working");
 
-            Task.Run(() =>
-            {
-                var starter = new Starter();
-                starter.Setup();
-                Start(starter);
-            });
+            Start();
+
             while (true)
             {
                 Thread.Sleep(1000);
@@ -160,14 +155,19 @@ namespace YourGame
         }
 
 
-        static void Start(Starter starter)
+        static void Start()
         {
-            // Starter object exposes all of the objects that you might need
+            // Starter object holds references to objects, created during 
+            // the default setup process
+            var starter = new Starter();
+            starter.Setup();
+
+            // This is where you'd want to add your custom code
+            
             starter.Start();
         }
     }
 }
-
 ```
 
 Try to run your project (`Debug -> Start Without Debugging`).
@@ -183,4 +183,12 @@ This is because server starts without any arguments
 
 Right click on **YourGame** project, go to `Properties > Debug`, and add these Command line arguments:
 
-`-master -server`
+`-master -spawner`
+
+:information_source: You can find more info on available arguments [here](https://github.com/alvyxaz/barebones-masterserver/wiki/Starting-Master-and-Spawner-Servers#arguments).
+
+Now, when you run your project, you should see something like this:
+
+![](http://i.imgur.com/2InoccI.png)
+
+Don't worry about the warning that executable cannot be found. You can change the path to it later if necessary.
