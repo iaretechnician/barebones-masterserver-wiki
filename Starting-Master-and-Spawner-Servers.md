@@ -5,7 +5,7 @@ You can start the server by either starting an already compiled executable, or b
 ## Running the server from IDE
 
 1. Open the `MasterServer.sln` file with your IDE
-1. Set `Barebones.MasterServer.Demo` as startup project
+1. Set `Barebones.MasterStarter` as startup project
 1. Right click on demo project -> Properties -> Debug, and add the command line arguments: `-master` . This will ensure that when you run the application, an argument to start master server is added.
 1. Run the project through Debug -> Start Debugging (or Start Without Debugging)
 
@@ -19,7 +19,7 @@ You should start seeing some information on the screen. Probably something like 
 
 1. Start Command Prompt in **Complete **folder ([Windows tips](http://superuser.com/questions/946860/how-to-open-windows-cmd-so-that-it-starts-in-the-current-folder))
 2. Run this command: 
-    `Barebones.MasterServer.Demo.exe -master`
+    `Barebones.MasterStarter.exe -master`
 
     This command starts master server with default parameters. More arguments are supported, and they can be found in section below. 
 
@@ -38,7 +38,7 @@ You should start seeing some information on the screen. Probably something like 
 | -spawner |  | If this argument is found, spawner server will be starter | 
 | -fpsLimit | 30 | This fps limit will be passed as cmd arg in started game | 
 | -batchmode |  | If this argument is found, spawner will start game servers in batchmode | 
-| -masterHost | (copies "-ip" value) | Public address of master server. Spawner server will use it to connect to master server | 
+| -masterIp | (copies "-ip" value) | Public address of master server. Spawner server will use it to connect to master server | 
 | -exe | ./ClientBuild/Build.x86 | Path to a file, which will be used to start a game server | 
 | -portsRangeMin | 1000 | When spawner starts a game server, it will assing game server a port from range within -portsRangeMin and -portsRangeMax | 
 | -portsRangeMax | 4000 | When spawner starts a game server, it will assing game server a port from range within -portsRangeMin and -portsRangeMax | 
