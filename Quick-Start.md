@@ -1,6 +1,6 @@
 This section will guide you through the steps for fastest possible setup
 
-## Starting The Server (VS 2015)
+## Starting The Master Server (VS 2015)
 
 We'll be using an example project, called **YourGame**
 
