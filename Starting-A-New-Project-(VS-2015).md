@@ -191,4 +191,4 @@ Now, when you run your project, you should see something like this:
 
 ![](http://i.imgur.com/zjGYz1z.png)
 
-Don't worry about the warning that executable cannot be found. You can change the path to it later if necessary.
+Don't worry about the warning. You can change the path to executable later if necessary.
