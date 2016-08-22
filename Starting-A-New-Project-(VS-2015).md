@@ -57,6 +57,8 @@ namespace YourGame
     {
         static void Main(string[] args)
         {
+            log4net.Config.XmlConfigurator.Configure();  
+          
             Task.Run(() =>
             {
                 var starter = new Starter();
@@ -80,5 +82,8 @@ namespace YourGame
 ```
 
 Try to run your project (`Debug -> Start Without Debugging`), and you should see a warning:
+
 `You didn't really start anything... Check out command line arguments`
+
+To start the game
 
