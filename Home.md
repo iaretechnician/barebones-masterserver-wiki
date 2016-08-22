@@ -1,3 +1,5 @@
+:information_source: _This wiki is constantly updated, so it's not recommended to use the documentation provided with the asset - it's most likely outdated_
+
 ## Regarding Feature Requests, Bugs and Improvement Ideas
 
 I want to make your experience of running Barebones Master Server as simple, easy and convenient as possible.
@@ -8,6 +10,6 @@ We're in this together :)
 
 ## Regarding Editing Source code
 
-It's highly advised that you don't make any changes to source code. In most cases, you should be able to make changes by implementing interfaces, extending classes or subscribing to events. 
+It's highly advised that you don't make any changes to source code. In most cases, you should be able to make changes by implementing interfaces, extending classes or subscribing to events. If you edit the source, it's possible that your project will break when you download an update, because your changes will be overwritten.
 
 _If you find yourself in a situation where there's no way around, feel free to contact me, and I'll try to provide access to what you need in the next update._
