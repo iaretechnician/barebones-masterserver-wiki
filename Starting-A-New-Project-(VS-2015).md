@@ -13,4 +13,6 @@ We need a common project, which will be compiled into a .dll and shared between 
 
 1. Right click on your solution, then `Add > New Project`
 2. This time, choose `Templates > Visual C# > Class Library`. Make sure it's **Class Library**. Name it **YourGame.Common**
-3. We need to change Target Framework to **.NET 3.5**, because Unity doesn't support anything higher. Right click on your project `Properties > Application` and change the TargetFramework to 3.5. 
+3. We need to change Target Framework to **.NET 3.5**, because Unity doesn't support anything higher. Right click on your project, go to `Properties > Application` and change the TargetFramework to 3.5. 
+4. You can delete the `Class1.cs` file, which was created automatically
+
