@@ -1,6 +1,6 @@
 This section will cover how you should setup your project for easy development. 
 
-:star: Result of this tutorial should be included in the asset you acquired. If you're lazy, you can just copy the whole solution and work with it there (you'll need to add dependencies again, because paths will be changed) :)
+:star: Result of this tutorial should be included in the asset you acquired. If you're lazy, you can just copy the whole solution and work with it there (you might need to re-add dependencies, because paths might have changed) :)
 
 ## Create a New Solution
 
