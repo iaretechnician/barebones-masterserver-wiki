@@ -35,4 +35,50 @@ If you have imported all of the projects, here's what you should have:
 
 ![](http://i.imgur.com/2InoccI.png)
 
-## Adding dependencies
+## Adding Project Dependencies
+
+1. Expand **YourGame** project, right click on **References**, then go `Add Reference > Projects >` and select all of the projects
+2. Expand **YourGame.Common**, and add project references to:
+    * Barebones.Networking
+    * Barebones.MasterServer.Common
+
+##  Starting project
+
+Open the `YourGame.Program.cs`, and add this code:
+
+```C#
+using System.Threading;
+using System.Threading.Tasks;
+using Barebones.MasterStarter;
+
+namespace YourGame
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Task.Run(() =>
+            {
+                var starter = new Starter();
+                starter.Setup();
+                Start(starter);
+            });
+            while (true)
+            {
+                Thread.Sleep(1000);
+            }
+        }
+
+
+        static void Start(Starter starter)
+        {
+            // Starter object exposes all of the objects that you might need
+            starter.Start();
+        }
+    }
+}
+```
+
+Try to run your project (`Debug -> Start Without Debugging`), and you should see a warning:
+`You didn't really start anything... Check out command line arguments`
+
