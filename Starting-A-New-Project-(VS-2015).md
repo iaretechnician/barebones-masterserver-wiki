@@ -52,6 +52,78 @@ If you have imported all of the projects, here's what you should have:
 
 And hit ok
 
+## Logger setup
+
+Now you should open `App.config` file and add log4net configuration. Configuring log4net might be a challenging task, this is why I'm adding my App.config, which you can copy (or copy portions of it):
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net" />
+  </configSections>
+  
+  <log4net>
+    <appender name="ColoredConsoleAppender" type="log4net.Appender.ColoredConsoleAppender">
+      <mapping>
+        <level value="WARN" />
+        <foreColor value="Yellow, HighIntensity" />
+      </mapping>
+      <mapping>
+        <level value="ERROR" />
+        <foreColor value="Red, HighIntensity" />
+      </mapping>
+      <mapping>
+        <level value="FATAL" />
+        <foreColor value="White" />
+        <backColor value="Red" />
+      </mapping>
+      <mapping>
+        <level value="INFO" />
+        <foreColor value="Cyan" />
+      </mapping>
+      <mapping>
+        <level value="DEBUG" />
+        <foreColor value="Green" />
+      </mapping>
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %-5level %logger - %message%newline" />
+      </layout>
+
+      <!-- Disable super sockets logging -->
+      <filter type="log4net.Filter.LoggerMatchFilter">
+        <loggerToMatch value="CustomWebsocketServer" />
+        <acceptOnMatch value="false" />
+      </filter>
+
+    </appender>
+
+    <appender name="FileAppender" type="log4net.Appender.FileAppender">
+      <file value="info.log" />
+      <appendToFile value="true" />
+      <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%utcdate [%-3thread] %-5level - %message (%logger)%newline" />
+      </layout>
+    </appender>
+
+    <root>
+      <level value="DEBUG" />
+      <appender-ref ref="ColoredConsoleAppender" />
+      <appender-ref ref="FileAppender" />
+    </root>
+
+  </log4net>
+  
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+    </startup>
+</configuration>
+```
+
+:information_source: What should be of interest to you is `log4net` tree and `configSections`element
+
+
 ##  Starting project
 
 Open the `YourGame.Program.cs`, and add this code:
