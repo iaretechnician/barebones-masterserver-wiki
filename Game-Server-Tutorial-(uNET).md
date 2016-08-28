@@ -83,31 +83,21 @@ General steps for client to join a game are as follow:
 1. Log in
 1. Retrieve access key
 1. Send access key to game server
-1. Game servers spawns a player, 
 
-If you're using **uNET **for your games networking, there are a few scripts that can automate this process for you. 
 
-When you are developing your game, you probably want to test every iteration of changes as fast as possible. Normally you'd have to start the server, build a client, connect and login with the client and etc, just to get into the game.
+When you are developing your game, you probably want to test every iteration of changes as fast as possible. Normally you'd have to start the server, build a client, connect and login with the client and etc, just to get into the game. 
 
-We can start Master Server automatically, by adding the Master server prefab from `Barebones > MasterServer > Prefabs > MasterServer`. It's best to add it as a root object in the objects hierarchy, as it should not be destroyed when changing scenes.
+If you're using **uNET **for your games networking, there are a few scripts and prefabs that can automate this process for you, so navigate to `Barebones > MasterServer > Prefabs`
 
-Thankfully, unitys **uNET **has a built in Host mode which we can use to imitate a client and the server at the same time. There are two scripts that can help you automate the process: 
+1. Add **MasterServer** prefab to the root of the hierarchy. This script will automatically start master server when you hit "play" button in the editor
+1. Add **GameServerStarter** prefab to scene- it will automatically start your game server (after master server starts)
+1. Add **UnetConnector** prefab to scene - it has a flag, called **Auto Join If Host**, which, as the name suggests, will try to automatically join the game, by first connecting to master and logging in.
 
-1. `GameServerStarter.cs` - this script handles command line arguments, which are provided when starting a game server process. If no arguments are provided, it will use default settings from the inspector.
-1. `UnetConnector.cs` - this component handles connecting client to game server. If **AutoJoinIfHost **flag is set, connector will try to authenticate you and spawn a character into the server right after you start the server as a host - very helpful when developing your game.
+After adding these three prefabs, here's what your scene hierarchy should look like:
 
-Adding these two components is what we're going to do in the next steps. 
+![](http://i.imgur.com/EKfWtmI.png)
 
-1. Add the MasterServer prefab to the scene (from `Barebones > MasterServer > Prefabs`)
-1. Create a new empty game object as a child of **Networking **object and call it **Starter**
-1. Attach to it component named **GameServerStarter**
-1. Create a new empty game object as a child of Networking object and call it **Connector**
-1. Attach to it component named **UnetConnector**
-1. Your hierarchy and component settings should look somewhat like this:
-
-![](http://i.imgur.com/Vi2FaJE.png)
-
-:white_check_mark: At this point, if you start the game in editor, the server should be started automatically, and a character should be spawned for the account you have set in inspector to connect with (or guest account) 
+:white_check_mark: At this point, if you start the game in editor, Master server should start thirst, then game server, and after that - a user should join the game.
 
 If something doesn't work, check the settings of GameServerStarter and UnetConnector components in the inspector. Make sure the addresses are correct and Master Server is running.
 
@@ -121,20 +111,4 @@ Before publishing a game scene / game server, you want to make sure the followin
 * Clients can join the game
 * Users can create new game rooms with the scene you just created
 
-To test this, we should build a client with these scenes in the settings: 
-![](http://i.imgur.com/Vi2FaJE.png)
-
-:warning: Make sure that _**Main scene is the first one**_, because it's the "lobby" of the game, through which clients will connect to our server.
-
-_Start server _in the editor and _start the client_ from the build you made previously, log in as guest and you should see our server in the listing: 
-
-![](http://i.imgur.com/yjbT9F1.png)
-
-If you see the server in the listing, you should be able to join it
-
-Next step should be to see if your users can create rooms. 
-
-:warning: You should make sure that at least one **Spawner Server** is started and registered to **Master Server** 
-
-In the **Main **scene, locate `Canvas -> BMCreateGame` object, and make sure it has your new level in map selection. 
-![](http://i.imgur.com/ew1aNY6.png)
+TODO: Guide on how to check these points
