@@ -5,15 +5,14 @@
 General steps to setting up a game server are as follows:
 
 1. Add game server object (**IGameServer**) - it should handle receiving passes from clients, disconnecting players that are not allowed and etc.
-1. Add server **starter script** - this should be a script that reads command line arguments and starts the game server accordingly (example: `BMGameServerStarter.cs`)
-1. Add **connector script** - a script that connects client to game server, when client opens the scene. (example: `BMUnetConnector.cs`)
-1. Setup **shutdown conditions** - you probably don't want users creating a bunch of empty games, so a script that handles some conditions, such as last player leaving the game, should always be present. (example: `BMServerTerminator.cs`)
+1. Add server **starter script** - this should be a script that reads command line arguments and starts the game server accordingly (example: `GameServerStarter.cs`)
+1. Add **connector script** - a script that connects client to game server, when client opens the scene. (example: `UnetConnector.cs`)
 
 In this tutorial, we'll use a basic uNET game, and try to properly connect it to Master Server.
 
 ## Mini uNET Game
 
-To guide you through this process, I've written a very simple game which uses uNET. Game files will be located at `Assets > Barebones > MasterserverTutorial` folder. 
+To guide you through this process, I've written a very simple game which uses uNET. Game files will be located at `Barebones > MasterserverTutorial` folder. 
 
 :information_source: If you're not familiar with uNET, I recommend you go through a tutorial in the [official unity's manual](https://docs.unity3d.com/Manual/UNetSetup.html)
 
