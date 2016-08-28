@@ -92,7 +92,7 @@ When you are developing your game, you probably want to test every iteration of 
 Thankfully, unitys **uNET **has a built in Host mode which we can use to imitate a client and the server at the same time. There are two scripts that can help you automate the process: 
 
 1. `GameServerStarter.cs` - this script handles command line arguments, provided when starting a game server process. There's a helpful flag EnableFakeArgs which can help you start the server with fake arguments provided in inspector.
-1. `BMUnetConnector.cs` - this component handles connecting client to game server. If **AutoJoinIfHost **flag is set, connector will try to authenticate you and spawn a character into the server right after you start the server as a host
+1. `UnetConnector.cs` - this component handles connecting client to game server. If **AutoJoinIfHost **flag is set, connector will try to authenticate you and spawn a character into the server right after you start the server as a host
 
 Adding these two components is what we're going to do in the next steps. 
 
@@ -106,9 +106,9 @@ Adding these two components is what we're going to do in the next steps.
 
 :white_check_mark: At this point, if you start the game in editor, the server should be started automatically, and a character should be spawned for the account you have set in inspector to connect with (or guest account) 
 
-If something doesn't work, check the settings of BMGameServerStarter and BMUnetConnector components in the inspector. Make sure the addresses are correct and Master Server is running
+If something doesn't work, check the settings of GameServerStarter and UnetConnector components in the inspector. Make sure the addresses are correct and Master Server is running.
 
-:information_source: It's highly recommended that you take a look at how `BMGameServerStarter `and `BMUnetConnector `scripts work, especially if you're not using uNET, or if you're aiming for a custom flow of events. These scripts will give you a general idea of how you can setup your own development process 
+:information_source: It's highly recommended that you take a look at how `GameServerStarter `and `UnetConnector `scripts work, especially if you're not using uNET, or if you're aiming for a custom flow of events. These scripts will give you a general idea of how you can setup your own development process 
 
 ## Making Sure Everything Works
 
