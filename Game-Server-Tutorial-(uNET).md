@@ -32,18 +32,18 @@ If you've managed start the server (or host) in unity's editor and joined with c
 
 ## Implementing IGameServer interface
 
-Our game server is only valid when it implements `IGameServer `interface. If you're using uNET HLAPI, general implementation is already written for you in script **`BMUnetGameServer.cs`**, this is what we'll be using to set things up faster. 
+Our game server is only valid when it implements `IGameServer `interface. If you're using uNET HLAPI, general implementation is already written for you in script **`UnetGameServer.cs`**, this is what we'll be using to set things up faster. 
 
 1. Create a new script in `MasterserverTutorial > Scripts`, and call it **TutGameServer.cs**
 
 2. Make sure your newly created class extends `UnetGameServer`. To do that, you'll need to implement two methods: `OnServerUserJoined` and `OnServerUserLeft`. These methods are called when authenticated user joins and leaves a game.
 
-3. Call `TutNetworkManager.SpawnPlayer(client.Connection, client.Username)` in the `OnServerUserJoined`. As you might have guessed, this will spawn players character when player successfully joins the game. OnServerUserJoined is called when the player has officially joined the game. 
+3. Call `TutNetworkManager.SpawnPlayer(client.Connection, client.Username)` in the `OnServerUserJoined`. As you might have guessed, this will spawn player's character when player successfully joins the game. OnServerUserJoined is called when the player has officially joined the game. 
 
     Here's what your script should look like:
 
     ```C#
-    using Barebones.MasterServer.Unity;
+    using Barebones.MasterServer;
 
     public class TutGameServer : UnetGameServer {
 
@@ -67,13 +67,13 @@ Our game server is only valid when it implements `IGameServer `interface. If you
 4. Create a new empty game object as a child of **Networking **object and call it **GameServer**
 5. Attach a newly created component to it.
 
-    At this point, if you try to run the game, it will behave as it did earlier, except for a thrown error, which says that there's no BMNetworkManager in the scene, that's expected, and will be fixed in the next step
+    At this point, if you try to run the game, it will behave as it did earlier, except for a thrown error, which says that there's no EventfulNetworkManager in the scene, that's expected, and will be fixed in the next step
 
-6. Edit **TutNetworkManager **to extend **BMNetworkManager**, instead of the regular NetworkManager. You will also be required to delete OnServerAddPlayer method, so go ahead and do it. Your file should only contain `SpawnPlayer `method 
+6. Edit **TutNetworkManager **to extend **EventfulNetworkManager**, instead of the regular NetworkManager. You will also be required to delete OnServerAddPlayer method, so go ahead and do it. Your file should only contain `SpawnPlayer `method 
 
-    :information_source: BMNetworkManager script is pretty much the same as the regular NetworkManager, but instead of forcing you to override methods, it triggers events, to which other components can subscribe. TutGameServer component we've created earlier is one of those subscribers. 
+    :information_source: EventfulNetworkManager script is pretty much the same as the regular NetworkManager, but instead of forcing you to override methods, it triggers events, to which other components can subscribe. TutGameServer component we've created earlier is one of those subscribers. 
 
-:warning: If you try to launch the game now, your _**player characters will not be spawned**_. This is because in order to allow players to join, game server must first be registered to Master, and then opened to public. In the next steps, we'll use some of the "helper components" to automate this process for us. If you want to do it manually, here are the general steps you'll need to take. 
+:warning: If you try to launch the game now, your _**player character will not be spawned**_. This is because in order to allow players to join, game server must first be registered to Master, and then opened to public. In the next steps, we'll use some of the "helper components" to automate this process for us.
 
 ## Joining The Game
 
@@ -81,16 +81,17 @@ General steps for client to join a game are as follow:
 
 1. Connect to Master
 1. Log in
-1. Retrieve a pass
-1. Send pass to game server
+1. Retrieve access key
+1. Send access key to game server
+1. Game servers spawns a player, 
 
 If you're using **uNET **for your games networking, there are a few scripts that can automate this process for you. 
 
-When you are developing your game, you probably want try every iteration of changes as fast as possible. Normally you'd have to start the server, build a client, connect and login with the client and etc, just to get into the game.
+When you are developing your game, you probably want to test every iteration of changes as fast as possible. Normally you'd have to start the server, build a client, connect and login with the client and etc, just to get into the game.
 
-Thanfully, unitys **uNET **has a built in Host mode which we can use to imitate a client and the server at the same time. There are two scripts that can help you automate the process: 
+Thankfully, unitys **uNET **has a built in Host mode which we can use to imitate a client and the server at the same time. There are two scripts that can help you automate the process: 
 
-1. `BMGameServerStarter.cs` - this script handles command line arguments, provided when starting a game server process. There's a helpful flag EnableFakeArgs which can help you start the server with fake arguments provided in inspector.
+1. `GameServerStarter.cs` - this script handles command line arguments, provided when starting a game server process. There's a helpful flag EnableFakeArgs which can help you start the server with fake arguments provided in inspector.
 1. `BMUnetConnector.cs` - this component handles connecting client to game server. If **AutoJoinIfHost **flag is set, connector will try to authenticate you and spawn a character into the server right after you start the server as a host
 
 Adding these two components is what we're going to do in the next steps. 
