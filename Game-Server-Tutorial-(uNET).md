@@ -89,20 +89,23 @@ If you're using **uNET **for your games networking, there are a few scripts that
 
 When you are developing your game, you probably want to test every iteration of changes as fast as possible. Normally you'd have to start the server, build a client, connect and login with the client and etc, just to get into the game.
 
+We can start Master Server automatically, by adding the Master server prefab from `Barebones > MasterServer > Prefabs > MasterServer`. It's best to add it as a root object in the objects hierarchy, as it should not be destroyed when changing scenes.
+
 Thankfully, unitys **uNET **has a built in Host mode which we can use to imitate a client and the server at the same time. There are two scripts that can help you automate the process: 
 
-1. `GameServerStarter.cs` - this script handles command line arguments, provided when starting a game server process. There's a helpful flag EnableFakeArgs which can help you start the server with fake arguments provided in inspector.
-1. `UnetConnector.cs` - this component handles connecting client to game server. If **AutoJoinIfHost **flag is set, connector will try to authenticate you and spawn a character into the server right after you start the server as a host
+1. `GameServerStarter.cs` - this script handles command line arguments, which are provided when starting a game server process. If no arguments are provided, it will use default settings from the inspector.
+1. `UnetConnector.cs` - this component handles connecting client to game server. If **AutoJoinIfHost **flag is set, connector will try to authenticate you and spawn a character into the server right after you start the server as a host - very helpful when developing your game.
 
 Adding these two components is what we're going to do in the next steps. 
 
+1. Add the MasterServer prefab to the scene (from `Barebones > MasterServer > Prefabs`)
 1. Create a new empty game object as a child of **Networking **object and call it **Starter**
-1. Attach to it component named **BMGameServerStarter**
+1. Attach to it component named **GameServerStarter**
 1. Create a new empty game object as a child of Networking object and call it **Connector**
-1. Attach to it component named **BMUnetConnector**
+1. Attach to it component named **UnetConnector**
 1. Your hierarchy and component settings should look somewhat like this:
 
-![](http://i.imgur.com/EkdzxN0.png)
+![](http://imgur.com/Vi2FaJE)
 
 :white_check_mark: At this point, if you start the game in editor, the server should be started automatically, and a character should be spawned for the account you have set in inspector to connect with (or guest account) 
 
@@ -114,11 +117,9 @@ If something doesn't work, check the settings of GameServerStarter and UnetConne
 
 Before publishing a game scene / game server, you want to make sure the following works:
 
-We want to make sure the following works: 
-
 * Started server appears in the listing
 * Clients can join the game
-* Users can create new game rooms
+* Users can create new game rooms with the scene you just created
 
 To test this, we should build a client with these scenes in the settings: 
 ![](http://i.imgur.com/yjbT9F1.png)
