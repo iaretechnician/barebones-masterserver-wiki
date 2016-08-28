@@ -122,7 +122,7 @@ Before publishing a game scene / game server, you want to make sure the followin
 * Users can create new game rooms with the scene you just created
 
 To test this, we should build a client with these scenes in the settings: 
-![](http://i.imgur.com/yjbT9F1.png)
+![](http://i.imgur.com/Vi2FaJE.png)
 
 :warning: Make sure that _**Main scene is the first one**_, because it's the "lobby" of the game, through which clients will connect to our server.
 
