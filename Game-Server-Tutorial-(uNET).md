@@ -105,7 +105,7 @@ Adding these two components is what we're going to do in the next steps.
 1. Attach to it component named **UnetConnector**
 1. Your hierarchy and component settings should look somewhat like this:
 
-![](http://imgur.com/Vi2FaJE)
+![](http://i.imgur.com/Vi2FaJE.png)
 
 :white_check_mark: At this point, if you start the game in editor, the server should be started automatically, and a character should be spawned for the account you have set in inspector to connect with (or guest account) 
 
@@ -128,7 +128,7 @@ To test this, we should build a client with these scenes in the settings:
 
 _Start server _in the editor and _start the client_ from the build you made previously, log in as guest and you should see our server in the listing: 
 
-![](http://i.imgur.com/wHZEOkO.png)
+![](http://i.imgur.com/yjbT9F1.png)
 
 If you see the server in the listing, you should be able to join it
 
