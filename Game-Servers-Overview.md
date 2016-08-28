@@ -30,7 +30,7 @@ If we ignore different server starting scenarios, there are five steps you need 
 1. Make sure your game server implents the interface `IGameServer`. You'll find more info on what each method means and stands for in the comments of the interface file.
 1. Start game server. This step will depend on game server technology you are using. In uNET HLAPI you'll probably want to call `networkManager.StartServer()` or use the HUD script provided by unity
 1. Connect Game Server to Master. You can do that by calling
-`BConnection.Connect(BConnectionId.GameServerToMaster, "127.0.0.1:5002", (connection) => {})`
+`Connections.GameToMaster.Connect("127.0.0.1", 5002)`
 1. Register game server by calling:
-`BMMaster.RegisterGame(registrationPacket, server, (game) => {})`
-Open game server to public. You can do that right after registration, by invoking `game.Open()`
+`GamesHelper.RegisterGame(registrationPacket, server, (game) => {})`
+1. Open game server to public. You can do that right after registration, by invoking `game.Open()`
