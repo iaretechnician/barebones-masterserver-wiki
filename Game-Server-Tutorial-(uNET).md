@@ -7,6 +7,7 @@ General steps to setting up a game server are as follows:
 1. Add game server object (**IGameServer**) - it should handle receiving passes from clients, disconnecting players that are not allowed and etc.
 1. Add server **starter script** - this should be a script that reads command line arguments and starts the game server accordingly (example: `GameServerStarter.cs`)
 1. Add **connector script** - a script that connects client to game server, when client opens the scene. (example: `UnetConnector.cs`)
+1. Add **MasterServer** prefab - this is not necessary, but recommended for faster development. It will start master server automatically, so that you don't need to.
 
 In this tutorial, we'll use a basic uNET game, and try to properly connect it to Master Server.
 
