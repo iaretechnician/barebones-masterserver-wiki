@@ -1,5 +1,7 @@
 :fire: _Don't be discouraged by the length of this tutorial. All you'll actually need to do is add 3 scripts (that you don't even need to write) into the scene, and make a couple of small edits. If you know what you're doing, it's : 5 minutes tops_
 
+:information_source: You can find a scene of completed tutorial at `Barebones -> MasterServerTutorial -> Scenes -> MasterTutComplete`
+
 ## Overview
 
 General steps to setting up a game server are as follows:
