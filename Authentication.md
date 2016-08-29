@@ -1,10 +1,8 @@
 ## Client API
 
-` Auth` is a static class that handles most of the authentication functionality. 
+` Auth` is a static class that handles most of the authentication functionality. It contains a number methods that can help you with user authentication.
 
-`Auth` uses default settings, which can be accessed through `Auth.Config`. You can override these settings by either changing them in your code, or by adding the Auth script into your scene and changing the properties through inspector _(before accessing config class, Auth checks if there's a script in the scene first)_. 
-
-### Registering
+### Registering a user
 `Auth.Register(Dictionary<string, string> data, AuthCallback doneCallback)`
 
 Sends a registration request to master server, and invokes a callback when it's done. Data is provided as a string dictionary, which should contain at least these values: 
