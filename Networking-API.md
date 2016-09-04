@@ -187,6 +187,40 @@ To avoid reflection and AOT methods, I didn't use any third party serialization 
 
 :information_source: It doesn't mean you can't use serialization libs, such as **Json.NET** or **protobuf-net**. As long as they can turn objects into bytes and back again, and your platform supports them - have fun!
 
+There are some helpful extension methods
 
+* `String.ToBytes()` - use it like this: `"my string".ToBytes()`
+* `Dictionary<string,string>.ToBytes()`
+* `Dictionary<string,string>.FromBytes(byte[])` - use it like this: `new Dictionary<string, string>().FromBytes(data)`
+* `Dictionary<int,int>.ToBytes()`
+* `Dictionary<int,int>.FromBytes(byte[])`
 
+You can extend `SerializablePacket` to create custom packet classes, like this:
 
+``` C#
+using Barebones.Networking;
+
+namespace Barebones.MasterServer
+{
+    public class GameAccessPacket : SerializablePacket
+    {
+        public string AccessToken;
+        public string Address;
+        public string SceneName = "";
+
+        public override void ToBinaryWriter(EndianBinaryWriter writer)
+        {
+            writer.Write(AccessToken);
+            writer.Write(Address);
+            writer.Write(SceneName);
+        }
+
+        public override void FromBinaryReader(EndianBinaryReader reader)
+        {
+            AccessToken = reader.ReadString();
+            Address = reader.ReadString();
+            SceneName = reader.ReadString();
+        }
+    }
+}
+```
