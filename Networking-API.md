@@ -187,7 +187,7 @@ To avoid reflection and AOT methods, I didn't use any third party serialization 
 
 :information_source: It doesn't mean you can't use serialization libs, such as **Json.NET** or **protobuf-net**. As long as they can turn objects into bytes and back again, and your platform supports them - have fun!
 
-There are some helpful extension methods
+There are some helpful extension methods for turning common types to byte array and back:
 
 * `String.ToBytes()` - use it like this: `"my string".ToBytes()`
 * `Dictionary<string,string>.ToBytes()`
