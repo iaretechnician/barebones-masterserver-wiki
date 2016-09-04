@@ -1,12 +1,10 @@
-This section will cover some of the basics of networking with Barebones Networking API.
-
-### What's The Barebones Networking API?
+### What is The Barebones Networking API?
 It's a layer of abstraction on top of networking technologies / protocols, that simplifies communication between servers and clients. It's designed to be fast, convenient and very extendable - you can fine tune structure of your messages, change communication protocols, and none of your networking code would have to change.
 
 ### Supported Protocols
 At the moment of writing this, two protocols are supported.
-* **Websockets/TCP** - based on websocket-sharp
-* **UDP/RUDP** - based on unity's Network Transport Layer
+* **Websockets/TCP** - based on websocket-sharp. Main classes: `ClientSocketWs`, `ServerSocketWs`
+* **UDP/RUDP** - based on unity's Network Transport Layer. Main classes: `ClientSocketUnet`, `ServerSocketUnet`
 
 They should cover pretty much every use case. If there's something else you need, feel free to post a request.
 
@@ -73,6 +71,8 @@ Client socket implements `IClientSocket` interface. Exposed properties and metho
 Client and server communicate to each other through `IPeer` interface. 
 Server will get clients peer when it connects, and client can access servers peer object through `IClientSocket.Peer`
 
+There are many overload methods for sending and responding to messages. You can check them by opening `IPeer` and `IIncommingMessage` interfaces. Examples below will show you some of the basic methods you can use and how to use them.
+
 ### Client to Server
 To receive messages, server will need to listen to the event on `IPeer`:
 
@@ -93,7 +93,7 @@ Client can send a message like this:
 ``` C#
         client.OnConnected += () =>
         {
-            var msg = MessageHelper.FromString(0, "Yo!");
+            var msg = MessageHelper.Create(0, "Yo!");
             client.Peer.SendMessage(msg, DeliveryMethod.Reliable);
         };
 ```
@@ -107,7 +107,7 @@ Server code:
         server.OnConnected += peer =>
         {
             // Client just connected
-            var msg = MessageHelper.FromString(0, "Sup?");
+            var msg = MessageHelper.Create(0, "Sup?");
             peer.SendMessage(msg, DeliveryMethod.Reliable);
         };
 ```
@@ -146,7 +146,7 @@ If you want to send a message and get something in return, a.k.a send a request 
         server.OnConnected += peer =>
         {
             // Send a message to client
-            var msg = MessageHelper.FromString(0, "What's up?");
+            var msg = MessageHelper.Create(0, "What's up?");
             peer.SendMessage(msg, (status, response) =>
             {
                 // This get's called when client responds
@@ -165,3 +165,28 @@ If you want to send a message and get something in return, a.k.a send a request 
             message.Respond("Not much", AckResponseStatus.Success);
         }));
 ```
+
+## Creating Messages
+Messages should be created through `MessageHelper`. It holds factory methods that construct actual message objects that implement `IMessage` interface. When sent, every message get's converted into byte array.
+
+MessageHelper has these basic methods for creating messages out of some common types:
+* `Create(opCode)` - creates an empty message
+* `Create(opCode, byte[])` - creates a message with data provided
+* `Create(opCode, string)` - creates a message from string
+* `Create(opCode, int)` - creates a message from integer 
+
+When receiver handles this message and receives an `IIncommingMessage`, it can use these methods to conveniently transform message to a type it was sent in:
+* `AsBytes()` - returns your data in byte[] array
+* `AsString()` - uses data in message to convert it to string
+* `AsInt()` - uses data in message to convert it to int
+
+## Serialization
+Every single peace of data you send is converted into `byte[]`
+
+To avoid reflection and AOT methods, I didn't use any third party serialization libraries. Instead, every packet is serialized manually - it's really not too difficult to do, and gives you full control.
+
+:information_source: It doesn't mean you can't use serialization libs, such as **Json.NET** or **protobuf-net**. As long as they can turn objects into bytes and back again, and your platform supports them - have fun!
+
+
+
+
