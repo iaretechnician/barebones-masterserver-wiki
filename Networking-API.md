@@ -136,3 +136,32 @@ However, it's not the only way for client to handle a message. You can add a han
         {
         };
 ```
+
+### Responding to Messages
+
+If you want to send a message and get something in return, a.k.a send a request and get a response, there's a useful overload method for that.
+
+** Server: **
+``` C#
+        server.OnConnected += peer =>
+        {
+            // Send a message to client
+            var msg = MessageHelper.FromString(0, "What's up?");
+            peer.SendMessage(msg, (status, response) =>
+            {
+                // This get's called when client responds
+                if (status == AckResponseStatus.Success)
+                {
+                    Debug.Log("Client responded: " + response.AsString());
+                }
+            })
+```
+
+** Client: **
+``` C#
+        client.AddHandler(new PacketHandler(0, message =>
+        {
+            // Message received, let's respond to it
+            message.Respond("Not much", AckResponseStatus.Success);
+        }));
+```
