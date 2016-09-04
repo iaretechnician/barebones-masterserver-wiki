@@ -41,14 +41,17 @@ Server sockets implemet `IServerSocket` interface. It exposes two events and two
 ## Connecting With a Client
 Client socket implements `IClientSocket` interface. Exposed properties and methods are as follow:
 
-** `Peer` - peer, to which client has connected. This is what you'd use to send messages to server.
-** `Status` - Status of the connection
-** `IsConnected` - Returns true, if we are connected to another socket
-** `IsConnecting` - Returns true, if we're in the process of connecting
-** `OnConnected` (event) - Invoked on successful connection
-** `OnDisconnected` (event) - Invoked when disconnected from server socket
-
-
+* `Peer` - peer, to which client has connected. This is what you'd use to send messages to server.
+* `Status` - Status of the connection
+* `IsConnected` - Returns true, if we are connected to another socket
+* `IsConnecting` - Returns true, if we're in the process of connecting
+* `OnConnected` (event) - Invoked on successful connection
+* `OnDisconnected` (event) - Invoked when disconnected from server socket
+* `OnStatusChange` (event) - Invoked when connection status changes
+* `Connect(ip, port)` - Starts connecting to server socket at given address
+* `Disconnect()` - Closes the connection
+* `WaitConnection(callback)` - a helpful method, which will invoke a callback when connection is established, or after a failed attempt to connect. If already connected - callback will be invoked istantly.
+* `AddHandler(handler)` - adds a message handler of a specific operation code. If there's already a handler with same op code, it will be overriden.
 
 ``` C#
     private void StartClient()
@@ -65,3 +68,71 @@ Client socket implements `IClientSocket` interface. Exposed properties and metho
     }
 ```
  
+## Exchanging Messages
+
+Client and server communicate to each other through `IPeer` interface. 
+Server will get clients peer when it connects, and client can access servers peer object through `IClientSocket.Peer`
+
+### Client to Server
+To receive messages, server will need to listen to the event on `IPeer`:
+
+``` C#
+        server.OnConnected += peer =>
+        {
+            // Client just connected
+            peer.OnMessage += message =>
+            {
+                // Handle peer messages
+                Debug.Log("Server: I've got a message from client: " + message.AsString());
+            };
+        };
+```
+
+Client can send a message like this:
+
+``` C#
+        client.OnConnected += () =>
+        {
+            var msg = MessageHelper.FromString(0, "Yo!");
+            client.Peer.SendMessage(msg, DeliveryMethod.Reliable);
+        };
+```
+
+### Server to Client
+
+You can do it pretty much the same way you sent messages from client to server. 
+
+Server code:
+``` C#
+        server.OnConnected += peer =>
+        {
+            // Client just connected
+            var msg = MessageHelper.FromString(0, "Sup?");
+            peer.SendMessage(msg, DeliveryMethod.Reliable);
+        };
+```
+
+Client code:
+
+``` C#
+        client.OnConnected += () =>
+        {
+            client.Peer.OnMessage += message =>
+            {
+                Debug.Log("I've got the message!: " + message.AsString());
+            };
+        };
+```
+
+However, it's not the only way for client to handle a message. You can add a handler which would handle a message with specific op code, such as:
+
+``` C#
+        client.AddHandler(new PacketHandler(0, message =>
+        {
+            Debug.Log("I've got the message!: " + message.AsString());
+        }));
+
+        client.OnConnected += () =>
+        {
+        };
+```
