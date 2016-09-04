@@ -141,7 +141,7 @@ However, it's not the only way for client to handle a message. You can add a han
 
 If you want to send a message and get something in return, a.k.a send a request and get a response, there's a useful overload method for that.
 
-** Server: **
+**Server:** 
 ``` C#
         server.OnConnected += peer =>
         {
@@ -157,7 +157,7 @@ If you want to send a message and get something in return, a.k.a send a request 
             })
 ```
 
-** Client: **
+**Client:**
 ``` C#
         client.AddHandler(new PacketHandler(0, message =>
         {
