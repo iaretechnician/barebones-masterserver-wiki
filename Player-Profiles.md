@@ -1,9 +1,10 @@
-
 Player Profiles module allows you to build player profiles, and use them in your games. 
 
 When a player joins game server, game server can obtain players profile, make changes to it, and those changes will be sent to Master server.
 
 ![](http://i.imgur.com/pYZ9MhY.png)
+
+:fire: It's important to remember that game server receives profile only once, and doesn't get any notifications about changes, made in master server (if you edit profile in master server while player is in game server, game server might override your changes). This is by design, because omni-directional synchronization performs much better and allows a high level of optimizations. Bi-directional profile values are planned to be released in the near future.
 
 ## Defining a Profile Structure
 
@@ -74,4 +75,27 @@ Here's a list of built-int observable types and some of their methods.
  * `.Set(value)` - sets the value
  * `.Add(value)` - adds to the current value. You can subtract by providing a negative number
  * `.TryTake(amount)` - if provided amount is smaller than the value, returns true, and reduces the value by ammount
+* `ObservableFloat`
+ * `.Value` - property, which returns the actual underlying float value
+ * `.Set(value)` - sets the value
+ * `.Add(value)` - adds to the current value. You can subtract by providing a negative number
+ * `.TryTake(amount)` - if provided amount is smaller than the value, returns true, and reduces the value by ammount
+* `ObservableString`
+ * `.Value` - property, which returns the actual underlying string value
+ * `.Set(value)` - sets the value
+* `ObservableDictionary` - represents a `Dictionary<string, string>`
+ * `.Values` - property, which returns a **immutable** list of string values
+ * `.Pairs` - property, which returns an **immutable** list of KeyValuePair's of the dictionary
+ * `.UnderlyingDictionary` - property, which returns an underlying dictionary. **This is mutable!**
+ * `.SetValue(key, value)` - sets a value in the dictionary (updates an existing, or adds a new one)
+ * `.Remove(key)` - removes a value from dictionary
+* `ObservableDictionaryInt` - represents a `Dictionary<int, int>`
+ * `.Values` - property, which returns a **immutable** list of intvalues
+ * `.Pairs` - property, which returns an **immutable** list of KeyValuePair's of the dictionary
+ * `.UnderlyingDictionary` - property, which returns an underlying dictionary. **This is mutable!**
+ * `.SetValue(key, value)` - sets a value in the dictionary (updates an existing, or adds a new one)
+ * `.Remove(key)` - removes a value from dictionary
 
+## Creating Your Own Observable types
+
+You might find yourself in a situation where none of the observables that come with the asset suit your needs. You can write your own observable implementations by implementing interface `IObservableProperty` or extending `ObservableBase` class.
