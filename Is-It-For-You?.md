@@ -2,15 +2,18 @@
 
 It's a framework that helps you write backend servers for your games, with ease, without having to worry about third-party services. It contains boilerplate code for user authentication, dynamic / automatically synchronized player profiles, and highly scalable architecture. 
 
-## What Can You Do with It 
+## What Can You Do With It 
 
 #### Perfect for room-based games: (think standard shooter game with item shops, matchmakers and etc)
 This asset is perfect for you. Master-Spawner-Game architecture will allow you to have rooms functionality out of the box. 
 You won't need to worry about saving player meta stats (such as experience, kills, etc.) and synchronizing it between servers - it can be done automatically, with **Player Profiles module**.
 
-#### If All You Need is 
+#### Using Master Server Alone
+You can use the master server alone
 
-Networking API allows you to easily start any number of socket servers (think "Photon Server", just **without monthly subscriptions, CCU limits and with Linux support**), which you can use to create create 
+#### Perfect For Any Kind of Server
+
+**Networking API** allows you to easily start any number of socket servers (think "Photon Server", just **without monthly subscriptions, CCU limits and with Linux support**), which you can use to create any kind of server you want - chat
 
 ## Before You Buy
 
