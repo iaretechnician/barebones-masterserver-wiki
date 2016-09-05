@@ -11,7 +11,7 @@ Sends a registration request to master server, and invokes a callback when it's 
 * **password **- password of the registering user
 * **email **- email of the registering user
 
-### Loggin In
+### Logging In
 
 `Auth.LogIn(Dictionary<string, string> data, AuthCallback doneCallback)`
 
