@@ -67,7 +67,7 @@ Here's how you retrieve a property of `ObservableInt` type:
         var oldValue = coinsProperty.Value;
 ```
 
-## Built-int Observable Types
+## Built-in Observable Types
 
 Here's a list of built-int observable types and some of their methods.
 * `ObservableInt`
