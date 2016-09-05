@@ -1,29 +1,26 @@
 ## What Is The Master Server Framework
 
-It's a framework that helps you write backend servers for your games, with ease, without having to worry about third-party services. It contains boilerplate code for user authentication, dynamic / automatically synchronized player profiles, and highly scalable architecture. 
+It's a framework that helps you write backend servers for your games, with ease, within unity, without having to worry about third-party services. It contains boilerplate code for user authentication, dynamic / automatically synchronized player profiles, and highly scalable architecture. 
 
-## What Can You Do With It 
+At the time of writing, included modules are:
+* **Authentication module** - manages user registration / logging in
+* **Profiles module** - build your player profiles without having to worry about database structures or synchronizing profiles between servers.
+* **Game Servers module** - allows to register game servers to master server, so that they can be found by players, or used to create matchmakers. Game servers can access player profiles and update them (give exp on kill, etc.)
+* **Spawner Servers module** - allows to spawn game servers on users request (user created game rooms). Spawned servers will have full authority - users don't need to act as hosts, which allows even **Browser and mobile users** to create game rooms - no need for relay servers or NAT punch-through.
 
-#### Perfect for room-based games: (think standard shooter game with item shops, matchmakers and etc)
-This asset is perfect for you. Master-Spawner-Game architecture will allow you to have rooms functionality out of the box. 
-You won't need to worry about saving player meta stats (such as experience, kills, etc.) and synchronizing it between servers - it can be done automatically, with **Player Profiles module**.
+## Networking API 
 
-#### Using Master Server Alone
-You can use the master server alone
+It's a layer of abstraction on top of networking technologies / protocols, that simplifies communication between servers and clients. 
 
-#### Perfect For Any Kind of Server
-
-**Networking API** allows you to easily start any number of socket servers (think "Photon Server", just **without monthly subscriptions, CCU limits and with Linux support**), which you can use to create any kind of server you want - chat
+It allows you to easily start any number of socket servers (think "[Photon Server](https://www.photonengine.com/en/OnPremise)", just **without monthly subscriptions, CCU limits and with Linux support**), which you can use to create any kind of server you want.
 
 ## Before You Buy
 
 **Framework Doesn't Do "Game Server Networking"**
 
-There are too many solutions you might already be familiar with (**Unity's uNET**, Photon, Forge, Bolt, etc. ).
+The reason for this is simple - there are too many solutions you might already be familiar with (**Unity's uNET**, Photon, Forge, Bolt, etc. ).
 
 :fire: This asset officialy supports **uNET** only (because it's free and officialy supported by Unity developers), but it doesn't mean you can't use anything else. 
-
-If you're using something else, you will need to write your own **Connector** and `IGameServer` implementation, which is quite easy. Here's more info on  the subject: TODO
 
 ## Focus Points Of The Framework
 
