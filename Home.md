@@ -1,5 +1,9 @@
 :information_source: _This wiki is constantly updated, so it's not recommended to use the documentation provided with the asset - it's most likely outdated_
 
+## Documentation Improvements
+
+If you find any section of documentation lacking or if there's something you'd like me to cover, please let me know, and I'll update the wiki accordingly.
+
 ## Regarding Feature Requests, Bugs and Improvement Ideas
 
 I want to make your experience of running Barebones Master Server as simple, easy and convenient as possible.
