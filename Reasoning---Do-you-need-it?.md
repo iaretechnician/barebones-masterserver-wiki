@@ -1,17 +1,28 @@
-This page contains ramblings that might help you decide whether or not you should buy/use the Master Server Framework. It also covers some of the reasons for making the Framework.
+## What Is The Master Server Framework
+
+
+## Before You Buy
+
+**Framework Doesn't Do "Game Server Networking"**
+
+There are too many solutions you might already be familiar with (**Unity's uNET**, Photon, Forge, Bolt... ).
+
+:fire: This asset officialy supports **uNET** only (because it's free and officialy supported by Unity developers), but it doesn't mean you can't use anything else. 
+
+If you're using something else, you will need to write your own **Connector** and `IGameServer` implementation, which is quite easy. Here's more info on  the subject:
 
 ## Focus Points Of The Framework
 
 When designing the framework, here's what I've been aiming for:
 * Fast to prototype with -
 * Highly Extendable - if one component doesn't fit your needs, it shouldn't stop you from using others.
-* No third-party services
-* Cheap Maintenance - servers should be able to run on cheap VPS options
+* No third-party services to pay for
+* Cheap Maintenance - servers can run on cheap VPS options
 * Scalability - architecture must be scalable to support an increase of players
 * Modularity -
 * Networking Abstraction - 
 
-## Why Write Every Server On Unity
+## Why Run Every Server With Unity
 
 I used to think that Unity had a huge overhead. As it turns out - it doesn't! Hosting a single unity instance on a 5$/month machine takes about **60 MB's of RAM and 1% of CPU!**
 
