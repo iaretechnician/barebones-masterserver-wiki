@@ -1,3 +1,5 @@
+:information_source: The purpose of this page is to help you determine whether or not you need this asset. If, after reading everything, you're still not sure if this asset is for you, feel free to send me a message with your questions or feature requests
+
 ## What Is The Master Server Framework
 
 It's a framework that helps you write back-end servers for your games, with ease, **within unity**, without having to worry about third-party services. It contains boilerplate code for user authentication, dynamic / automatically synchronized player profiles, and highly scalable game servers (rooms) architecture. 
@@ -9,8 +11,6 @@ At the time of writing, included modules are:
 * **Spawner Servers module** - allows to spawn game servers on users request (user created game rooms). Spawned servers will have full authority - users don't need to act as hosts, which allows even **Browser and mobile users** to create game rooms - no need for relay servers or NAT punch-through.
 
 Servers and modules communicate to each other through **Barebones Networking API**
-
-:information_source: If, after reading everything, you're still not sure if this asset is for you, feel free to contact me and ask any questions.
 
 ## Networking API 
 
