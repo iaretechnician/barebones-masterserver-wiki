@@ -5,7 +5,7 @@ It's a framework that helps you write back-end servers for your games, with ease
 At the time of writing, included modules are:
 * **Authentication module** - manages user registration / logging in
 * **Profiles module** - build your player profiles without having to worry about database structures or synchronizing profiles between servers.
-* **Game Servers module** - allows to register game servers to master server, so that they can be found by players, or used to create matchmakers. Game servers can access player profiles and update them (give exp on kill, etc.)
+* **Game Servers module** - allows to register game servers to master server, so that they can be found by players (**lobby**), or used to create matchmakers. Game servers can access player profiles and update them (give exp on kill, etc.)
 * **Spawner Servers module** - allows to spawn game servers on users request (user created game rooms). Spawned servers will have full authority - users don't need to act as hosts, which allows even **Browser and mobile users** to create game rooms - no need for relay servers or NAT punch-through.
 
 Servers and modules communicate to each other through **Barebones Networking API**
