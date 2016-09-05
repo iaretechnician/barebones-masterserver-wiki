@@ -5,11 +5,11 @@
 
 **Framework Doesn't Do "Game Server Networking"**
 
-There are too many solutions you might already be familiar with (**Unity's uNET**, Photon, Forge, Bolt... ).
+There are too many solutions you might already be familiar with (**Unity's uNET**, Photon, Forge, Bolt, etc. ).
 
 :fire: This asset officialy supports **uNET** only (because it's free and officialy supported by Unity developers), but it doesn't mean you can't use anything else. 
 
-If you're using something else, you will need to write your own **Connector** and `IGameServer` implementation, which is quite easy. Here's more info on  the subject:
+If you're using something else, you will need to write your own **Connector** and `IGameServer` implementation, which is quite easy. Here's more info on  the subject: TODO
 
 ## Focus Points Of The Framework
 
