@@ -224,3 +224,36 @@ namespace Barebones.MasterServer
     }
 }
 ```
+
+If you're using `SerializablePacket`, here's how you serialize, send, receive and deserialize. Sending a message:
+
+``` C#
+            // Create a packet
+            var packet = new GameAccessPacket()
+            {
+                AccessToken = "54fgf4wr81wx85nh5io5gh",
+                Address = "127.0.0.1",
+                SceneName = "Main"
+            };
+
+            // Create a message from the packet
+            var msg = MessageHelper.Create(0, packet.ToBytes());
+
+            // Send the message
+            client.Peer.SendMessage(msg, DeliveryMethod.Reliable);
+```
+
+Receive a packet:
+
+``` C#
+            server.OnConnected += peer =>
+            {
+                peer.OnMessage += message =>
+                {
+                    // We received a message
+                    var data = message.DeserializePacket(new GameAccessPacket());
+                    Debug.Log(data.AccessToken);
+                };
+            };
+```
+
