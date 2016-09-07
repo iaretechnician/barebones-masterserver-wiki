@@ -16,9 +16,9 @@ Servers and modules communicate to each other through **Barebones Networking API
 
 It's a layer of abstraction on top of networking technologies / protocols, that simplifies communication between servers and clients. 
 
-It allows you to easily start any number of socket servers (think "[Photon Server](https://www.photonengine.com/en/OnPremise)", just **without monthly subscriptions, CCU limits and with Linux support**), which you can use to create any kind of server you want.
+It allows you to easily start any number of socket servers (think "[Photon Server](https://www.photonengine.com/en/OnPremise)", just **without monthly subscriptions, CCU limits and with Linux support**), which you can use to create any kind of server you want. 
 
-For more info and code samples, [click here](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API).
+It's decoupled from master server, so you're free to write any kind of socket-based server you need. For more info and code samples, [click here](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API).
 
 ## Before You Buy
 
