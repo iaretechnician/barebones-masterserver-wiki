@@ -1,6 +1,6 @@
-:fire: **_If you found a section that's lacking, or if you want something covered in the documentation, post a feature request here, in GitHub(Issues tab)_**
-
 :information_source: _This wiki is constantly updated, so it's not recommended to use the documentation provided with the asset - it's most likely outdated_
+
+:fire: **_If you found a section that's lacking, or if you want something covered in the documentation, post a feature request here, in GitHub (Issues tab)_**
 
 ## Documentation Improvements
 
