@@ -1,5 +1,16 @@
 :information_source: The purpose of this page is to help you determine whether or not you need this asset. If, after reading everything, you're still not sure if this asset is for you, feel free to send me a message with your questions or feature requests
 
+## Before You Buy
+
+This asset is **not a complete project**, but instead a framework, which you'd use to develop your back-end servers. Making multiplayer games is not a trivial task, so it's expected that you're familiar with writing C# code.
+
+**Framework Doesn't Do "Game Server Networking"**
+
+The reason for this is simple - there are too many solutions you might already be familiar with (**Unity's uNET**, Photon, Forge, Bolt, etc. ).
+
+:fire: This asset officialy supports **uNET** (because it's free and officialy supported by Unity developers), but you can make it work with anything else, that allows you to host game servers.
+
+
 ## What Is The Master Server Framework
 
 It's a framework that helps you write back-end servers for your games, with ease, **within unity**, without having to worry about third-party services. It contains boilerplate code for user authentication, dynamic / automatically synchronized player profiles, and highly scalable game servers (rooms) architecture. 
@@ -21,14 +32,6 @@ It allows you to easily start any number of socket servers (think "[Photon Serve
 
 It's decoupled from master server, so you're free to write any kind of socket-based server you need. For more info and code samples, [click here](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API).
 
-## Before You Buy
-
-**Framework Doesn't Do "Game Server Networking"**
-
-The reason for this is simple - there are too many solutions you might already be familiar with (**Unity's uNET**, Photon, Forge, Bolt, etc. ).
-
-:fire: This asset officialy supports **uNET** only (because it's free and officialy supported by Unity developers), but it doesn't mean you can't use anything else.
-
 ## Focus Points Of The Framework
 
 When designing the framework, here's what I've been aiming for:
@@ -39,9 +42,9 @@ When designing the framework, here's what I've been aiming for:
 * Scalability - architecture must be scalable across multiple machines to support an increase of players
 * Networking Abstraction - in case there's something wrong with an underlying networking code, you can simply switch technologies and libraries without having to change your client and server communication code.
 
-## Why Run Every Server With Unity
+## Why Run Every Server With Unity's Process
 
-I used to think that Unity had a huge overhead. As it turns out - it doesn't! Hosting a single unity instance on a 5$/month machine takes about **60 MB's of RAM and 1% of CPU!**
+I used to think that Unity had a huge overhead. As it turns out - it doesn't! Launching a single headless unity instance on a 5$/month machine takes about **30 MB's of RAM and 3% of CPU!**
 
 Here are some of the best features of using unity as a server:
 * **Blazing Fast Development Cycle** - If you've ever worked in the environment, where your workflow was: edit server, build, start server, share dll's, edit client, start client, connect to server... You'd probably be amazed to hear that you can click a Start button in your editor, and everything starts automatically, in the editor, and your changes are visible instantly, for both client and server.
