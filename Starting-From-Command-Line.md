@@ -1,3 +1,23 @@
+## Examples
+
+Examples of the commands will be given in a context, where main executable file is named `DesktopBuild.exe`, and command line / terminal is opened at the same path the file is in.
+
+Starting a master server with default parameters:
+
+`./DesktopBuild.exe -bmMaster`
+
+Starting a master server with a different port for clients
+
+`./DesktopBuild.exe -bmClientsPort 85`
+
+You can start both, master server and spawner server in one instance:
+
+`./DesktopBuild.exe -bmMaster -bmSpawner`
+
+Starting a dedicated game server (capped at 20 fps, on scene "AwesomeGame", port 7777, with name "New Name"):
+
+`./DesktopBuild.exe -bmStartDedicated -fps 20 -bmScene AwesomeGame -bmGamePort 7777 -bmGameName "New Name"`
+
 ## List Of Supported Arguments
 
 Arguments are parsed in the `BmArgs` helper class
@@ -18,6 +38,7 @@ Arguments are parsed in the `BmArgs` helper class
 | -bmExe | "" (empty string)| Path to executable, which should start a game server. If empty, same executable, on which spawner is running, will be used |
 | -bmBatchmode | not set | If found, spawner server will start game servers in batchmode|
 | **Game Server:** |  |  |
+| -bmScene | null | If this argument is found, game server will first switch to that scene before starting a game server|
 | -bmIp | 127.0.0.1 | Public ip of the machine. This is used by game servers, so they know their public IP and can send it to clients, to let them know where to connect |
 | -bmStartUserCreated | not set | If this argument is found, it's considered that user created server needs to be started. |
 | -bmStartDedicated | not set | If this argument is found, dedicated game server will be started |
