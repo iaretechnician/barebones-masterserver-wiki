@@ -2,10 +2,6 @@
 
 :fire: **_If you found a section that's lacking, or if you want something covered in the documentation, post a feature request here, in GitHub (Issues tab)_**
 
-## Documentation Improvements
-
-If you find any section of documentation lacking or if there's something you'd like me to cover, please let me know, and I'll update the wiki accordingly.
-
 ## Regarding Feature Requests, Bugs and Improvement Ideas
 
 I want to make your experience of running Barebones Master Server as simple, easy and convenient as possible.
