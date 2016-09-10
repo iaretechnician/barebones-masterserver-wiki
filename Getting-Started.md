@@ -142,8 +142,6 @@ We now need to replace the standard NetworkManager with **EventfulNetworkManager
 
     ![](http://i.imgur.com/vPogsWG.png)
 
-6. Edit **TutNetworkManager **to extend **EventfulNetworkManager**, instead of the regular NetworkManager. You will also be required to delete OnServerAddPlayer method, so go ahead and do it. Your file should only contain `SpawnPlayer `method 
-
 :warning: If you try to launch the game now, your _**player character will not be spawned**_. This is because in order to allow players to join, game server must first be registered to Master, and then opened to public. In the next steps, we'll use some of the "helper components" to automate this process for us.
 
 ## Joining The Game
