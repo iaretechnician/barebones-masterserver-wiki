@@ -19,12 +19,12 @@ If you hit "Play" in the editor, you should see something like this at the botto
 
 It means that Master and Spawner servers are started, and client (you) is connected to master server. You might be wondering "Why and how these servers are started?" Take a look at the hierarchy:
 
-![](http://i.imgur.com/kmw7bUn.png)
+![](http://i.imgur.com/9uEm8vU.png)
 
 Here's what these objects are there for:
 
-* Connection - this object contains a component which connects client to Master Server
 * Barebones - object, used to conveniently separate framework related stuff from the level
+* Connection - this object contains a component which connects client to Master Server
 * MasterServer - this is a component, which starts the master server. It has an **Auto Start In Editor** option, which is why it starts automatically when we hit a "play" button in the editor.
 * GameServerStarter - contains a component, which starts a game server. It also contains an **Auto Start** option, but it should be **Not Selected** in the main screen. Technically, in the editor, when in main screen, it does pretty much nothing. Only when you start server through command line, it picks up necessary arguments provided, and starts a game server.
 * SpawnerServer - this script starts a server, which is responsible for spawning new game processes
@@ -66,74 +66,69 @@ public class MyProfileKeys
 
 This component simply sets a profiles factory (which is a simple method) when it's awakened. Our profile factory simply adds one property, called coins, and sets its default value to 10. Check out player profiles section of the documentation for more info on the matter.
 
-This script should be added to your main screen, and, later, to every other screen of your game (mainly to make debugging easier).
+This script should be added to your main screen and, later, to every other screen of your game (mainly to make debugging easier). In this example, it's added to component named **Shared**
 
-# Overview
+![](http://i.imgur.com/UU5q115.png)
 
-General steps to setting up a game server are as follows:
+# Game Scene Setup
+
+To guide you through game scene setup, we'll be using a small game, made with uNET, called **MiniGame**. You can find it at `Barebones/MiniGame`. 
+
+**MiniGame** represents a regular uNET game, where you host server and connect to it via NetworkManagerHUD.
+
+:information_source: If you're not familiar with uNET, I recommend you go through a tutorial in the [official unity's manual](https://docs.unity3d.com/Manual/UNetSetup.html)
+
+### Overview
+
+General steps to setting up a game scene are as follows:
 
 1. Add game server object (**IGameServer**) - it should handle receiving passes from clients, disconnecting players that are not allowed and etc.
 1. Add server **starter script** - this should be a script that reads command line arguments and starts the game server accordingly (example: `GameServerStarter.cs`)
 1. Add **connector script** - a script that connects client to game server, when client opens the scene. (example: `UnetConnector.cs`)
 1. Add **MasterServer** prefab - this is not necessary, but recommended for faster development. It will start master server automatically, so that you don't need to.
 
-In this tutorial, we'll use a basic uNET game, and try to properly connect it to Master Server.
+### Copy the Game Scene
 
-## Mini uNET Game
+Open the **MiniGame** scene, hit `File > Save Scene As`, and Save to to your scenes as you did with the main scene. In this example, we'll call it **MyGame**
 
-To guide you through this process, I've written a very simple game which uses uNET. Game files will be located at `Barebones > MasterserverTutorial` folder. 
-
-:information_source: If you're not familiar with uNET, I recommend you go through a tutorial in the [official unity's manual](https://docs.unity3d.com/Manual/UNetSetup.html)
-
-## Try out the provided example
-
-Open the **MasterTut** scene (_MasterTutComplete is a scene which is the end result of what we're doing_). The game is very simple and consists of 3 scripts and 3 prefabs. General steps to try the example:
-
-1. Add scene to build settings as the first scene
-1. Build the game
-1. Host the game in unity editor
-1. Join the game with the client you just built
-
-If you've managed start the server (or host) in unity's editor and joined with client, congratulations! If you're having trouble, feel free to contact me. Here's what you should be aiming for:
-
-![](http://i.imgur.com/D2hoH38.png)
-
-## Implementing IGameServer interface
+### Implementing IGameServer interface
 
 Our game server is only valid when it implements `IGameServer `interface. If you're using uNET HLAPI, general implementation is already written for you in script **`UnetGameServer.cs`**, this is what we'll be using to set things up faster. 
 
-1. Create a new script in `MasterserverTutorial > Scripts`, and call it **TutGameServer.cs**
+1. Create a new script in `MyGame/Scripts`, and call it **MyGameServer.cs**
 
 2. Make sure your newly created class extends `UnetGameServer`. To do that, you'll need to implement two methods: `OnServerUserJoined` and `OnServerUserLeft`. These methods are called when authenticated user joins and leaves a game.
 
-3. Call `TutNetworkManager.SpawnPlayer(client.Connection, client.Username)` in the `OnServerUserJoined`. As you might have guessed, this will spawn player's character when player successfully joins the game. OnServerUserJoined is called when the player has officially joined the game. 
+3. Call `MiniNetworkManager.SpawnPlayer(client.Connection, client.Username, "knife")` in the `OnServerUserJoined`. As you might have guessed, this will spawn player's character when player successfully joins the game. OnServerUserJoined is called when the player has officially joined the game. 
 
     Here's what your script should look like:
 
     ```C#
-    using Barebones.MasterServer;
+using Barebones.MasterServer;
 
-    public class TutGameServer : UnetGameServer {
+public class MyGameServer : UnetGameServer {
 
-        /// <summary>
-        /// Called, when user successfully passes to game server
-        /// </summary>
-        protected override void OnServerUserJoined(UnetClient client)
-        {
-            TutNetworkManager.SpawnPlayer(client.Connection, client.Username);
-        }
-
-        /// <summary>
-        /// Called, when user leaves a game server
-        /// </summary>
-        protected override void OnServerUserLeft(UnetClient client)
-        {
-        }
+    /// <summary>
+    /// Called, when authenticated user sends a valid access token
+    /// </summary>
+    /// <param name="client"></param>
+    protected override void OnServerUserJoined(UnetClient client)
+    {
+        MiniNetworkManager.SpawnPlayer(client.Connection, client.Username, "knife");
     }
-    ```
 
-4. Create a new empty game object as a child of **Networking **object and call it **GameServer**
-5. Attach a newly created component to it.
+    protected override void OnServerUserLeft(UnetClient client)
+    {
+    }
+}
+
+    ```
+4. Create a new object in the root of the hierarchy and name it **Networking**
+5. Create a new empty game object as a child of **Networking **object and call it **GameServer**
+6. Attach a newly created component to it.
+7. Add the **MyGameShared** component (the one you created earlier) to the scene as you did in the main scene.
+    
+    ![](http://i.imgur.com/d5tgVKe.png)    
 
     At this point, if you try to run the game, it will behave as it did earlier, except for a thrown error, which says that there's no EventfulNetworkManager in the scene, that's expected, and will be fixed in the next step
 
