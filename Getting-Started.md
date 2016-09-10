@@ -38,6 +38,35 @@ When your clients log in to master server, profiles module will try to construct
 
 This means that client and server should share the same logic for creating profiles. Create a new script called **MyGameShared** in the Scripts folder. and paste the code below:
 
+``` C#
+using UnityEngine;
+using Barebones.MasterServer;
+
+public class MyGameShared : MonoBehaviour {
+
+	void Awake () {
+        // Let the module know which factory to use
+        ProfilesModule.SetFactory(ProfileFactory);
+    }
+
+    public static ObservableProfile ProfileFactory(string username)
+    {
+        // Create a profile and add coins property to it
+        var profile = new ObservableProfile(username);
+        profile.AddProperty(new ObservableInt(MyProfileKeys.Coins, 10));
+        return profile;
+    }
+}
+
+public class MyProfileKeys
+{
+    public const int Coins = 0;
+}
+```
+
+This component simply sets a profiles factory (which is a simple method) when it's awakened. Our profile factory simply adds one property, called coins, and sets its default value to 10. Check out player profiles section of the documentation for more info on the matter.
+
+This script should be added to your main screen, and, later, to every other screen of your game (mainly to make debugging easier).
 
 # Overview
 
