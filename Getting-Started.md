@@ -1,8 +1,45 @@
-:fire: _Don't be discouraged by the length of this tutorial. All you'll actually need to do is add 3 scripts (that you don't even need to write) into the scene, and make a couple of small edits. If you know what you're doing, it's : 5 minutes tops_
+This page will guide you through the steps you can take to start working on your game and back-end server.
 
-:information_source: You can find a scene of completed tutorial at `Barebones -> MasterServerTutorial -> Scenes -> MasterTutComplete`
+## Preparations
 
-## Overview
+1. Create a new folder in your project asset's root, and name it **MyGame**
+1. Create two more folders within MyGame, called **Scripts** and **Scenes**
+
+![](http://i.imgur.com/I6iep44.png)
+
+# Setting Up Main Screen 
+
+To make things faster, a pre-made scene is provided in the within the asset, and it's located at `Barebones/MasterServer/Scenes -> MainEmpty`. When you work on your game, you're not forced to use this scene, but it's very convenient to make a copy of it and customize it the way you want.
+
+Open the scene, hit `File > Save Scene As`, name it **MyMain** and save it to `MyGame/Scenes`
+
+If you hit "Play" in the editor, you should see something like this at the bottom right:
+
+![](http://i.imgur.com/RJnPvIV.png)
+
+It means that Master and Spawner servers are started, and client (you) is connected to master server. You might be wondering "Why and how these servers are started?" Take a look at the hierarchy:
+
+![](http://i.imgur.com/kmw7bUn.png)
+
+Here's what these objects are there for:
+
+* Connection - this object contains a component which connects client to Master Server
+* Barebones - object, used to conveniently separate framework related stuff from the level
+* MasterServer - this is a component, which starts the master server. It has an **Auto Start In Editor** option, which is why it starts automatically when we hit a "play" button in the editor.
+* GameServerStarter - contains a component, which starts a game server. It also contains an **Auto Start** option, but it should be **Not Selected** in the main screen. Technically, in the editor, when in main screen, it does pretty much nothing. Only when you start server through command line, it picks up necessary arguments provided, and starts a game server.
+* SpawnerServer - this script starts a server, which is responsible for spawning new game processes
+* ClientConnector - takes care of connecting a player to game server. Depending on your game-joining flow, you might need to write your own connector
+
+:information_source: If you tried to log in , you probably got an error saying that there's no profile factory. We'll fix this in the next step
+
+# Profiles Factory / Shared Class 
+
+When your clients log in to master server, profiles module will try to construct a profile for each of them. Which is more, clients should also be able to construct their own profile, so that they can subscribe to various observable properties.
+
+This means that client and server should share the same logic for creating profiles. Create a new script called **MyGameShared** in the Scripts folder. and paste the code below:
+
+
+# Overview
 
 General steps to setting up a game server are as follows:
 
