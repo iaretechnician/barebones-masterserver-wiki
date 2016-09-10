@@ -24,6 +24,10 @@ At the time of writing, included modules are:
 
 Servers and modules communicate to each other through **Barebones Networking API**
 
+## Why I Wrote The Framework
+
+I love making small, experimental multiplayer games. Very often, I need to use a database or some sort of a back-end server, either for lobby, to allow some kind of persistence, 
+
 ## Networking API 
 
 It's a layer of abstraction on top of networking technologies / protocols, that simplifies communication between servers and clients. 
