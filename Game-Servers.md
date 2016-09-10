@@ -1,3 +1,5 @@
+:warning: This section is still a work in progress
+
 ## Types Of Game Servers
 
 ### Dedicated Server
@@ -32,5 +34,7 @@ If we ignore different server starting scenarios, there are five steps you need 
 1. Connect Game Server to Master. You can do that by calling
 `Connections.GameToMaster.Connect("127.0.0.1", 5002)`
 1. Register game server by calling:
-`GamesHelper.RegisterGame(registrationPacket, server, (game) => {})`
+`GamesModule.RegisterGame(registrationPacket, server, (game) => {})`
 1. Open game server to public. You can do that right after registration, by invoking `game.Open()`
+
+:information_source: If you are wondering why you can't make a simple call to master server and register without implementing IGameServer, you actually can. Under the hood, registration is quite simple. Inspect `GamesModule.RegisterGame` for more info.
