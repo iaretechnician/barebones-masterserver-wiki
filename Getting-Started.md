@@ -164,15 +164,21 @@ If you're using **uNET **for your games networking, there are a few scripts and 
 1. Add **UnetConnector** prefab to scene - it has a flag, called **Auto Join If Host**, which, as the name suggests, will try to automatically join the game, by first connecting to master and logging in.
 1. Add **Hud** prefab to the **Canvas** object in the hierarchy. It will help you see if the servers were started successfully.
 
-After adding these three prefabs, here's what your scene hierarchy should look like:
+After adding these prefabs, here's what your scene hierarchy should look like:
 
-![](http://i.imgur.com/EKfWtmI.png)
+![](http://i.imgur.com/QV0bllF.png)
 
-:white_check_mark: At this point, if you start the game in editor, Master server should start first, then game server, and after that - a user should join the game.
+:white_check_mark: At this point, if you start the game in editor, Master server should start first, then game server, and after that - a user should join the game. This should be confirmed in your hud:
 
-If something doesn't work, check the settings of GameServerStarter and UnetConnector components in the inspector. Make sure the addresses are correct and Master Server is running.
+![](http://i.imgur.com/qJuBYfg.png)
 
 :information_source: It's highly recommended that you take a look at how `GameServerStarter `and `UnetConnector `scripts work, especially if you're not using uNET, or if you're aiming for a custom flow of events. These scripts will give you a general idea of how you can setup your own development process 
+
+## Persistent Coins
+
+Even though we have added a coins property to the our custom profile, we never actually used it. To do that, we have to first retrieve the profile, read the value we want, and update it when user picks up a coin. 
+
+To do that, open the `MyGameServer` script, and modify `OnServerUserJoined` method like this:
 
 ## Making Sure Everything Works
 
