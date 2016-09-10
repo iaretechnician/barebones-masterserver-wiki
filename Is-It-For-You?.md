@@ -4,7 +4,7 @@
 
 This asset is **not a complete project**, but instead a framework, which you'd use to develop your back-end servers. Making multiplayer game is not a trivial task, so it's expected that you're familiar with writing C# code.
 
-**Framework Doesn't Replace Gameplay Networking Solutions
+**Framework Doesn't Replace Gameplay Networking Solutions**
 
 Your game servers will need to run on **uNET **or something else. PM me or ask in forum thread for more info
 
