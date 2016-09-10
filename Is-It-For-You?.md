@@ -39,7 +39,7 @@ When designing the framework, here's what I've been aiming for:
 * Scalability - architecture must be scalable across multiple machines to support an increase of players
 * Networking Abstraction - in case there's something wrong with an underlying networking code, you can simply switch technologies and libraries without having to change your client and server communication code.
 
-## Why Run Every Server With Unity's Process
+## Why Run Servers Within Unity's Process
 
 I used to think that Unity had a huge overhead. As it turns out - it doesn't! Launching a single headless unity instance on a 5$/month machine takes about **30 MB's of RAM and 3% of CPU!**
 
