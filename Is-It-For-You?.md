@@ -2,14 +2,11 @@
 
 ## Before You Buy
 
-This asset is **not a complete project**, but instead a framework, which you'd use to develop your back-end servers. Making multiplayer games is not a trivial task, so it's expected that you're familiar with writing C# code.
+This asset is **not a complete project**, but instead a framework, which you'd use to develop your back-end servers. Making multiplayer game is not a trivial task, so it's expected that you're familiar with writing C# code.
 
 **Framework Doesn't Do "Game Server Networking"**
 
-The reason for this is simple - there are too many solutions you might already be familiar with (**Unity's uNET**, Photon, Forge, Bolt, etc. ).
-
-:fire: This asset officialy supports **uNET** (because it's free and officialy supported by Unity developers), but you can make it work with anything else, that allows you to host game servers.
-
+Your game servers will need to run on **uNET **or something else. PM me or ask in forums for more info
 
 ## What Is The Master Server Framework
 
@@ -23,10 +20,6 @@ At the time of writing, included modules are:
 * **Chat module** - simple chat module with support for channels and private messaging
 
 Servers and modules communicate to each other through **Barebones Networking API**
-
-## Why I Wrote The Framework
-
-I love making small, experimental multiplayer games. Very often, I need to use a database or some sort of a back-end server, either for lobby, to allow some kind of persistence, 
 
 ## Networking API 
 
