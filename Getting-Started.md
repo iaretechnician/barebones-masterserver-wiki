@@ -180,12 +180,45 @@ Even though we have added a coins property to the our custom profile, we never a
 
 To do that, open the `MyGameServer` script, and modify `OnServerUserJoined` method like this:
 
+``` C#
+/// <summary>
+    /// Called, when authenticated user sends a valid access token
+    /// </summary>
+    /// <param name="client"></param>
+    protected override void OnServerUserJoined(UnetClient client)
+    {
+        // Retrieve a profile first
+        ProfilesModule.GetProfile(client.Username, MasterConnection, profile =>
+        {
+            if (profile == null)
+            {
+                // We failed to retrieve players profile, let's disconnect him
+                DisconnectPlayer(client.Username);
+                return;
+            }
+
+            // Get coins property
+            var coinsProperty = profile.GetProperty<ObservableInt>(MyProfileKeys.Coins);
+
+            // Spawn player (the same method we used earlier)
+            var player = MiniNetworkManager.SpawnPlayer(client.Connection, client.Username, "knife");
+            player.Coins = coinsProperty.Value;
+
+            // Subscribe to the coins change listener.
+            // It will be invoked on server, when client picks up a coin.
+            player.OnCoinsChanged += () =>
+            {
+                // Update clients profile by setting a different coins value
+                coinsProperty.Set(player.Coins);
+            };
+        });
+    }
+```
+
 ## Making Sure Everything Works
 
-Before publishing a game scene / game server, you want to make sure the following works:
+Build the game with two of your scenes, make sure that main scene is first.
 
-* Started server appears in the listing
-* Clients can join the game
-* Users can create new game rooms with the scene you just created
+![](http://i.imgur.com/yCQf7MC.png)
 
-TODO: Guide on how to check these points
+When you're in your game scene, hit "Play" in the editor. As before, it should start master and game servers automatically. You should be able to start the client you just built, and connect to the game.
