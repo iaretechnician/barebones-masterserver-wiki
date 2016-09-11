@@ -5,6 +5,8 @@ This page will guide you through the steps you can take to start working on your
 1. Create a new folder in your project asset's root, and name it **MyGame**
 1. Create two more folders within MyGame, called **Scripts** and **Scenes**
 
+:warning: If there's already a folder named **MyGame**, you can delete it. It contains the outcome of this tutorial.
+
 ![](http://i.imgur.com/I6iep44.png)
 
 # Setting Up Main Screen 
