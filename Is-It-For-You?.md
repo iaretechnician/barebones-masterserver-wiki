@@ -29,16 +29,6 @@ It allows you to easily start any number of socket servers (think "[Photon Serve
 
 It's decoupled from master server, so you're free to write any kind of socket-based server you need. For more info and code samples, [click here](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API).
 
-## Focus Points Of The Framework
-
-When designing the framework, here's what I've been aiming for:
-* Easy Prototyping - you should be able to start working on your game/server right away, without having to go through numerous configurations, projects and countless setup steps.
-* High Extend-ability - if one component doesn't fit your needs, you should be able to modify, replace it or not use it at all
-* No third-party services - dependencies, in general, suck. Paid dependencies suck even more.
-* Cheap Maintenance - servers can run on cheap VPS options, or on your own machine, if you fancy it.
-* Scalability - architecture must be scalable across multiple machines to support an increase of players
-* Networking Abstraction - in case there's something wrong with an underlying networking code, you can simply switch technologies and libraries without having to change your client and server communication code.
-
 ## Why Run Servers Within Unity's Process
 
 I used to think that Unity had a huge overhead. As it turns out - it doesn't! Launching a single headless unity instance on a 5$/month machine takes about **30 MB's of RAM and 3% of CPU!**
@@ -50,3 +40,13 @@ Here are some of the best features of using unity as a server:
 * **No Concurrency** - I love concurrent programming, I thrive in it, but after working on a server that has no way of getting hit by race conditions, I don't think I'm going back. "Single-threaded" server-side code is a breeze to work with. "But what about my CPU cores?" - you might ask? Trust me, there are many ways to use them (like running multiple sever processes, or running intensive tasks in separate threads (yes, you can still use concurrency if you want, so yeah, you don't really lose a thing)).
 
 **Rapid development** alone should attract you, because that's where most of your money and time can be saved. If these points didn't convince you, and you still think you shouldn't run your serves on Unity - I'd love to hear what you're working on and what worries you
+
+## Focus Points Of The Framework
+
+When designing the framework, here's what I've been aiming for:
+* Easy Prototyping - you should be able to start working on your game/server right away, without having to go through numerous configurations, projects and countless setup steps.
+* High Extend-ability - if one component doesn't fit your needs, you should be able to modify, replace it or not use it at all
+* No third-party services - dependencies, in general, suck. Paid dependencies suck even more.
+* Cheap Maintenance - servers can run on cheap VPS options, or on your own machine, if you fancy it.
+* Scalability - architecture must be scalable across multiple machines to support an increase of players
+* Networking Abstraction - in case there's something wrong with an underlying networking code, you can simply switch technologies and libraries without having to change your client and server communication code.
