@@ -2,6 +2,14 @@
 
 :fire: **_If you found a section that's lacking, or if you want something covered in the documentation, post a feature request here, in GitHub (Issues tab)_**
 
+## Links
+
+If you've just downloaded the asset and don't know where to start, you can start by
+* [Launching The Demo] (https://github.com/alvyxaz/barebones-masterserver/wiki/Launching-The-Demo) - good place to start if you like to learn from an example
+* [Getting Started](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started) - short guide on how to start working on your own game
+* [How to send / receive and handle messages](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API)
+
+
 ## Regarding Feature Requests, Bugs and Improvement Ideas
 
 I want to make your experience of running Barebones Master Server as simple, easy and convenient as possible.
