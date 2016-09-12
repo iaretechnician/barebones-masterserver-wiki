@@ -21,6 +21,20 @@ Scheme below illustrates the process of joining a game server:
 
 :information_source: When token is generated, game server **reserves** a slot for player - this ensures that an accident, where player loads the scene just to see that the server is full, doesn't happen. After creating access token, game server waits a limited amount of time before invalidating the token.
 
+## Registering Game Server to Master
+
+If we ignore different server starting scenarios, there are five steps you need to take to prepare your game server to work with master
+
+1. Make sure your game server implents the interface `IGameServer`. You'll find more info on what each method means and stands for in the comments of the interface file.
+1. Start game server. This step will depend on game server technology you are using. In uNET HLAPI you'll probably want to call `networkManager.StartServer()` or use the HUD script provided by unity
+1. Connect Game Server to Master. You can do that by calling
+`Connections.GameToMaster.Connect("127.0.0.1", 5002)`
+1. Register game server by calling:
+`GamesModule.RegisterGame(registrationPacket, server, (game) => {})`
+1. Open game server to public. You can do that right after registration, by invoking `game.Open()`
+
+:information_source: If you are wondering why you can't make a simple call to master server and register without implementing IGameServer, you actually can. Under the hood, registration is quite simple. Inspect `GamesModule.RegisterGame` for more info.
+
 ## Types Of Game Servers
 
 ### Dedicated Server
@@ -45,17 +59,3 @@ This is, as the name suggests, a server, created when user requests it. The star
 1. Game Server starts the actual game server _(from this point, it's the same as dedicated)_
 1. Game Server registers to Master
 1. Game Server sets itself as open
-
-## Registering Game Server to Master
-
-If we ignore different server starting scenarios, there are five steps you need to take to prepare your game server to work with master
-
-1. Make sure your game server implents the interface `IGameServer`. You'll find more info on what each method means and stands for in the comments of the interface file.
-1. Start game server. This step will depend on game server technology you are using. In uNET HLAPI you'll probably want to call `networkManager.StartServer()` or use the HUD script provided by unity
-1. Connect Game Server to Master. You can do that by calling
-`Connections.GameToMaster.Connect("127.0.0.1", 5002)`
-1. Register game server by calling:
-`GamesModule.RegisterGame(registrationPacket, server, (game) => {})`
-1. Open game server to public. You can do that right after registration, by invoking `game.Open()`
-
-:information_source: If you are wondering why you can't make a simple call to master server and register without implementing IGameServer, you actually can. Under the hood, registration is quite simple. Inspect `GamesModule.RegisterGame` for more info.
