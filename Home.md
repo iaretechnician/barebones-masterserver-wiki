@@ -4,7 +4,7 @@
 
 ## Links
 
-If you've just downloaded the asset and don't know where to start, you can start by
+If you've just downloaded the asset and don't know where to start, you can start by visiting these pages:
 * [Launching The Demo] (https://github.com/alvyxaz/barebones-masterserver/wiki/Launching-The-Demo) - good place to start if you like to learn from an example
 * [Getting Started](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started) - short guide on how to start working on your own game
 * [Creating Modules](https://github.com/alvyxaz/barebones-masterserver/wiki/Creating-Modules) - tutorial on how to extend master server functionality with your own modules
