@@ -65,6 +65,8 @@ Code below demonstrates how you can send two types of messages:
 * Reliable message without response
 * Reliable message with expected response
 
+Since these methods are static, you can add them anywhere you want, and invoke on client
+
 ``` C#
     public static void SavePersonalInfo(int age, string name)
     {
