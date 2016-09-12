@@ -186,6 +186,8 @@ public class MyModule : MasterModule
 }
 ```
 
+To handle a message from client, you'll need to add a handler by calling `master.AddClientHandler()`
+
 When Master Server starts, it automatically "scans" the scene for all of the components that extend `MasterModule`. 
 
 In general, it's convenient to add your modules as children of MasterServer component, like this:
