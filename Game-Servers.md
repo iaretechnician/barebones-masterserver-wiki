@@ -35,6 +35,14 @@ If we ignore different server starting scenarios, there are five steps you need 
 
 :information_source: If you are wondering why you can't make a simple call to master server and register without implementing IGameServer, you actually can. Under the hood, registration is quite simple. Inspect `GamesModule.RegisterGame` for more info.
 
+## Gameplay Networking
+
+Master Server Framework is mainly just that - a framework for kick-starting your back-end server. There are no scripts that do gameplay networking (for example, synchronizing animations and Transform's between clients, shooting and etc.).
+
+The reason why gameplay networking was not included is simple - there are many popular alternatives you can use and might be familiar with.
+
+In my games, I use **uNET**. It has some caveats, but it's free and maintained by Unity - you can be sure they are not dropping this any time soon. You should be able to use Forge Networking or any other solution **that allows you to Host** your games.
+
 ## Types Of Game Servers
 
 ### Dedicated Server
@@ -44,14 +52,6 @@ This is a type of server which is created by developers and most likely is alway
 2. Game application starts (and starts the server)
 3. Game server registers to master
 4. Game server sets itself as open
-
-### What Can I Use For Gameplay Networking
-
-Master Server Framework is mainly just that - a framework for kick-starting your back-end server. There are no scripts that do gameplay networking (for example, synchronizing animations and Transform's between clients, shooting and etc.).
-
-The reason why gameplay networking was not included is simple - there are many popular alternatives you can use and are familiar with. 
-
-In my games, I use **uNET**. It has some caveats, but it's free and maintained by Unity - you can be sure they are not dropping this any time soon. You should be able to use Forge Networking or any other solution **that allows you to Host** your games.
 
 ### User Created Server
 
