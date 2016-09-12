@@ -19,7 +19,7 @@ Scheme below illustrates the process of joining a game server:
 8. User sends an access token to the game server
 9. Game server uses the **access token** to find out which player joined, and then spawns that player
 
-When token is generated, game server **reserves** a slot for player - this ensures that an accident, where player loads the scene just to see that the server is full, doesn't happen. After creating access token, game server waits a limited amount of time before invalidating the token.
+:information_source: When token is generated, game server **reserves** a slot for player - this ensures that an accident, where player loads the scene just to see that the server is full, doesn't happen. After creating access token, game server waits a limited amount of time before invalidating the token.
 
 ## Types Of Game Servers
 
