@@ -6,7 +6,20 @@ Scheme below illustrates the process of joining a game server:
 
 ![](http://i.imgur.com/E6a8qCZ.png)
 
+1. Client sends a request with `GameId` to Master Server. Requests are indirect for security purposes
+2. Master server finds a game server with the given id and transfers the request to that server. Before transferring the request, master can check if the user is authorized, if the game password is correct and etc. 
+3. After receiving the request, game server check if the user can actually join the game. These checks might be simple checks to see if the server is full, or you could implement a banned players list within game server.
+4. If the player can join the game, game server creates an **Access Token** and sends it back to client. Actually, packet contains a little more info:
+   * AccessToken
+   * Public Address - so that client knows where to connect
+   * SceneName - so that client knows which scene to switch to
+5. Data is passed back to client 
+6. Client connects to game server
+7. Game server starts a **Timeout** period, after which, if no **access token** is received from the user, user connection is terminated
+8. User sends an access token to the game server
+9. Game server uses the **access token** to find out which player joined, and then spawns that player
 
+When token is generated, game server **reserves** a slot for player - this ensures that an accident, where player loads the scene just to see that the server is full, doesn't happen. After creating access token, game server waits a limited amount of time before invalidating the token.
 
 ## Types Of Game Servers
 
