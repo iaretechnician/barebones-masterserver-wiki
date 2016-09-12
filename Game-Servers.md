@@ -45,6 +45,14 @@ This is a type of server which is created by developers and most likely is alway
 3. Game server registers to master
 4. Game server sets itself as open
 
+### What Can I Use For Gameplay Networking
+
+Master Server Framework is mainly just that - a framework for kick-starting your back-end server. There are no scripts that do gameplay networking (for example, synchronizing animations and Transform's between clients, shooting and etc.).
+
+The reason why gameplay networking was not included is simple - there are many popular alternatives you can use and are familiar with. 
+
+In my games, I use **uNET**. It has some caveats, but it's free and maintained by Unity - you can be sure they are not dropping this any time soon. You should be able to use Forge Networking or any other solution **that allows you to Host** your games.
+
 ### User Created Server
 
 This is, as the name suggests, a server, created when user requests it. The starting process has more steps than dedicated server, but in the end, the process is pretty much the same: 
