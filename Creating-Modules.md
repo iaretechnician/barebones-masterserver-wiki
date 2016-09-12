@@ -113,6 +113,12 @@ Sometimes, you might want to send a simple notification. Example of this can be 
 
 ## Creating a Module Which Handles Requests
 
+Your modules should extend `MasterModule` class. It will force you to implement method `Initialize`. This method will be called when master server starts, and all of the modules dependencies can be resolved.
+
+In the example below, our module has one dependency, which is registered by calling `AddDependency<AuthModule>();`. AuthModule is not really used in the example, it's just there for demonstration purposes.
+
+Adding dependencies with `AddDependency` will make sure that `Initialize` method is not called until master server initializes dependencies first.
+
 ``` C#
 
 using Barebones.MasterServer;
@@ -171,6 +177,17 @@ public class MyModule : MasterModule
 
         // Update the property value
         message.Peer.SetProperty(MyPropCodes.PersonalInfo, info);
+
+        // Get the session (for no reason)
+        var session = message.Peer.GetProperty(BmPropCodes.Session) as ISession;
+
+        Debug.Log("Server saved personal info from user: " + session.Username);
     }
 }
 ```
+
+When Master Server starts, it automatically "scans" the scene for all of the components that extend `MasterModule`. 
+
+In general, it's convenient to add your modules as children of MasterServer component, like this:
+
+![](http://i.imgur.com/r62rDYm.png)
