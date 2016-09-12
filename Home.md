@@ -7,8 +7,8 @@
 If you've just downloaded the asset and don't know where to start, you can start by
 * [Launching The Demo] (https://github.com/alvyxaz/barebones-masterserver/wiki/Launching-The-Demo) - good place to start if you like to learn from an example
 * [Getting Started](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started) - short guide on how to start working on your own game
+* [Creating Modules](https://github.com/alvyxaz/barebones-masterserver/wiki/Creating-Modules) - tutorial on how to extend master server functionality with your own modules
 * [How to send / receive and handle messages](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API)
-
 
 ## Regarding Feature Requests, Bugs and Improvement Ideas
 
