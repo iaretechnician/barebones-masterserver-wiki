@@ -1,5 +1,13 @@
 :warning: This section is still a work in progress
 
+## How Clients Connect To Game Server
+
+Scheme below illustrates the process of joining a game server:
+
+![](http://i.imgur.com/E6a8qCZ.png)
+
+
+
 ## Types Of Game Servers
 
 ### Dedicated Server
