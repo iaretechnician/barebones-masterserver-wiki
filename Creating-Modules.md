@@ -1,3 +1,8 @@
+| :warning: :warning: :warning:  At the time of writing, asset has been modified but the changes are not yet approved.  
+| :warning: :warning: :warning:  If you're using the initial version of the asset, you will need to us `Master` instead of `IMaster`  
+| :warning: :warning: :warning:  And opCodes and property codes should **start from 100 (101, 102, etc...)**  
+| :warning: :warning: :warning:  **You'll be able to use numbers from 0 after the upgrade**.
+
 This section will guide you through the process of creating a custom master server module.
 
 Creating modules is a preferred way of extending Master Server functionality. Modular approach can help you reuse components in other games, and it makes testing and debugging easier.
