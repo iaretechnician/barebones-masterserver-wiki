@@ -154,7 +154,15 @@ public class MyModule : MasterModule
         _master.AddClientHandler(new PacketHandler(MyOpCodes.GetPersonalInfo, HandleGetInfo));
         _master.AddClientHandler(new PacketHandler(MyOpCodes.SavePersonalInfo, HandleSaveInfo));
 
+        // Listen to login event in the auth module
+        _auth.OnLogin += OnLogin;
+
         Debug.Log("My module has been initialized");
+    }
+
+    protected virtual void OnLogin(ISession session, IAccountData data)
+    {
+        Debug.Log("MyModule was informed about a user who logged in");
     }
 
     private void HandleGetInfo(IIncommingMessage message)
