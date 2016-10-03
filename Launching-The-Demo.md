@@ -1,11 +1,13 @@
-Add two scenes to the build settings (File > Build Settings) : `AwesomeGameMain` and `AwesomeGame`.
-Make sure `AwesomeGameMain` is the first one
+![](http://i.imgur.com/IHbHOxT.png)
+
+Navigate to folder `Barebones/Demos/MainDemo/Scenes` and add all of those scenes to your build.
+Make sure `DemoMain` is the first one
 
 ![](http://i.imgur.com/kXHUGbY.png)
 
-Now make a standalone build somewhere, for example at `D:/Build/Win/Build.exe`.
+Open the `DemoMain` scene, in the hierarchy, locate `Barebones >  SpawnerServer`, and change the **Override Exe Path** property in the inspector to your build path (for example `D:/Build/Win/Build.exe`). _This path will be used to start a game server process when you're in the editor._
 
-Open the `DemoMain` scene, in the hierarchy, locate `Barebones >  SpawnerServer`, and change the **Override Exe Path** property in the inspector to your build path. _This path will be used to start a game server process when you're in the editor._
+Now make a standalone build to the same path.
 
 ![](http://i.imgur.com/D6vJmMs.png)
 
