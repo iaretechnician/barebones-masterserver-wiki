@@ -19,7 +19,7 @@ At this point, you should be able to log into the game, and create a new room. Y
 
 ## Starting a World Demo
 
-If you've tried to open the world demo, you might have received an error indicating that a specific zone cannot be found. This is because you need to start zone servers. There are two ways to do it:
+If you've tried to open the world demo, you might have received an error indicating that a specific zone cannot be found. This is because you need to start zone servers. There are two ways to do it.
 
 If you're starting a master server from the editor, there's a flag on the **WorldGame** object, called `DontSpawnZonesInEditor`. If you uncheck it, it world demo will start game zones together with the master server, on editor.
 
@@ -28,3 +28,5 @@ If you're starting a master server from the editor, there's a flag on the **Worl
 Another approach could be to start the master server from the build, and add a `-spawnZones` flag to the command line arguments. You would start your server with a command similar to this:
 
 `./Build.exe -bmMaster -bmSpawner -spawnZones`
+
+:warning: If you run master server from a build and connect to it with a client in the editor, you might encounter a problem, because client in the editor will try to start another master server. To avoid this, you can unset a flag **AutoStartInEditor** on the **Master** object (in hierarchy `Barebones > MasterServer`)
