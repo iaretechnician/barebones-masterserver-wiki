@@ -35,3 +35,15 @@ If you send a request with dictionary of strings, these are the values that are 
 `Auth.LogOut()`
 
 Deletes a token (if there was one), disconnects from server and connects back. This approach is used to make sure that logged out user gets a new session, and there's no data "hanging" from the previous user. 
+
+### Confirming an E-mail
+
+`Auth.RequestEmailConfirmationCode()` - calling this method will send a request to master server, which will send an e-mail confirmation code to the e-mail address of a user who is logged in. 
+
+`Auth.ConfirmEmail(string code, AuthCallback callback)` - sends a request to master server, which uses the code given to confirm clients e-mail
+
+### Changing a Password
+
+`Auth.RequestPasswordReset(string email, AuthCallback callback)` - sends a request to master server, which sends a password-reset code to the given e-mail.
+
+`Auth.ChangePassword(PasswordChangeData data, AuthCallback callback)` - sends a request to master server, which users data provided to change a password.
