@@ -25,4 +25,4 @@ If you're starting a master server from the editor, there's a flag on the **Worl
 
 Another approach could be to start the master server from the build, and add a `-spawnZones` flag to the command line arguments. You would start your server with a command similar to this:
 
-`./Build.exe -bmMaster -bmSpawner -spawnZones`.
+`./Build.exe -bmMaster -bmSpawner -spawnZones`
