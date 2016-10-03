@@ -4,7 +4,7 @@
 
 :fire: **_If you found a section that's lacking, or if you want something covered in the documentation, post a feature request here, in GitHub (Issues tab)_**
 
-## Links
+## Getting Started
 
 If you've just downloaded the asset and don't know where to start, you can start by visiting these pages:
 * [Launching The Demo] (https://github.com/alvyxaz/barebones-masterserver/wiki/Launching-The-Demo) - good place to start if you like to learn from an example
