@@ -1,3 +1,5 @@
+![](http://i.imgur.com/IHbHOxT.png)
+
 This page will guide you through the steps you can take to start working on your game and back-end server.
 
 ## Preparations
@@ -5,13 +7,13 @@ This page will guide you through the steps you can take to start working on your
 1. Create a new folder in your project asset's root, and name it **MyGame**
 1. Create two more folders within MyGame, called **Scripts** and **Scenes**
 
-:warning: If there's already a folder named **MyGame**, you can delete it. It contains the outcome of this tutorial.
+:warning: If there's already a folder named **MyGame** in the `Barebones/Demos` folder, you can delete it. It contains the outcome of this tutorial.
 
 ![](http://i.imgur.com/I6iep44.png)
 
 # Setting Up Main Screen 
 
-To make things faster, a pre-made scene is provided in the within the asset, and it's located at `Barebones/MasterServer/Scenes -> MainEmpty`. When you work on your game, you're not forced to use this scene, but it's very convenient to make a copy of it and customize it the way you want.
+To make things faster, a pre-made scene is provided within the asset, and it's located at `Barebones/MasterFramework/Scenes -> MainEmpty`. When you work on your game, you're not forced to use this scene, but it's very convenient to make a copy of it and customize it the way you want.
 
 Open the scene, hit `File > Save Scene As`, name it **MyMain** and save it to `MyGame/Scenes`
 
@@ -74,7 +76,7 @@ This script should be added to your main screen and, later, to every other scree
 
 # Game Scene Setup
 
-To guide you through game scene setup, we'll be using a small game, made with uNET, called **MiniGame**. You can find it at `Barebones/MiniGame`. 
+To guide you through game scene setup, we'll be using a small game, made with uNET, called **MiniGame**. You can find it at `Barebones/Demos/MiniGame`. 
 
 **MiniGame** represents a regular uNET game, where you host server and connect to it via NetworkManagerHUD.
 
@@ -157,7 +159,7 @@ General steps for client to join a game are as follow:
 
 When you are developing your game, you probably want to test every iteration of changes as fast as possible. Normally you'd have to start the server, build a client, connect and login with the client and etc, just to get into the game. 
 
-If you're using **uNET **for your games networking, there are a few scripts and prefabs that can automate this process for you, so navigate to `Barebones > MasterServer > Prefabs`
+If you're using **uNET **for your games networking, there are a few scripts and prefabs that can automate this process for you, so navigate to `Barebones/MasterFramework/Prefabs`
 
 1. Add **MasterServer** to scene. This script will automatically start master server when you hit "play" button in the editor
 1. Add **GameServerStarter** prefab to scene- it will automatically start your game server (after master server starts)
