@@ -1,3 +1,5 @@
+![](http://i.imgur.com/IHbHOxT.png)
+
 ## Client API
 
 ` Auth` is a static class that handles most of the authentication functionality. It contains a number methods that can help you with user authentication.
