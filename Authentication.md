@@ -1,5 +1,24 @@
 ![](http://i.imgur.com/IHbHOxT.png)
 
+## Server 
+
+### Sending E-mail Messages
+
+A portion of the auth module functionality (resetting a password or confirming an e-mail), requires an ability to send e-mail messages. SMTP server is not within the scope of this framework, so you'll have to setup one of your own or use third-party services, like google's Gmail.
+
+You can configure access to an smtp server by changing default settings in the inspector, or by providing these command line arguments when starting a master server:
+
+| Argument       | Default value| Description|
+| -------------  |:-------------:| -----:|
+| -smtpUsername | taken from inspector | SMTP username (for example 'username@gmail.com') |
+| -smtpPassword | taken from inspector | SMTP password |
+| -smtpHost | taken from inspector | SMTP host (for example 'smtp.gmail.com')|
+| -smtpPort | taken from inspector | SMTP port (for example '587') |
+
+### Changing E-mail Sending Method
+
+If you want to use a third-party library for sending mail, or if you find current implementation of sending mail not sufficient for your needs, you can override `AuthModule.SendMail` method.
+
 ## Client API
 
 ` Auth` is a static class that handles most of the authentication functionality. It contains a number methods that can help you with user authentication.
