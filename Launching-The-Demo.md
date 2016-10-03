@@ -21,7 +21,7 @@ At this point, you should be able to log into the game, and create a new room. Y
 
 If you've tried to open the world demo, you might have received an error indicating that a specific zone cannot be found. This is because you need to start zone servers. There are two ways to do it.
 
-If you're starting a master server from the editor, there's a flag on the **WorldGame** object, called `DontSpawnZonesInEditor`. If you uncheck it, it world demo will start game zones together with the master server, on editor.
+If you're starting a master server from the editor, there's a flag on the **WorldGame** object, called `DontSpawnZonesInEditor`. If you uncheck it, world demo will start game zones together with the master server, on editor.
 
 ![](http://i.imgur.com/VFpneJ0.png)
 
