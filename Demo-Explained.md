@@ -45,4 +45,4 @@ For those of you who find visualizations easier to follow:
 1. When **Player** receives the access, he now knows where the other game server is (address and scene).
 1. **Player** uses that access to get into different game server
 
-ℹ️ This section describes how players go from one server to another in the demo. It doesn't mean that it's the only appropriate way to do it. Framework doesn't force any limits on this matter.
+ℹ️ This section describes how players go from one server to another in the demo. It doesn't mean that it's the only way to do it. Framework doesn't force any limits on this matter.
