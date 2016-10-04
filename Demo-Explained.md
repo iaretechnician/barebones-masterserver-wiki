@@ -1,3 +1,5 @@
+![](http://i.imgur.com/IHbHOxT.png)
+
 ## Core Parts Of The Demo
 
 At the moment of writing, there are two core parts in the demo:
