@@ -27,6 +27,12 @@ This section contains a generalized flow of the events that happen during the de
 
 #### Player Jumping From One Server to Another
 
+For those of you who find visualizations easier to follow: 
+
+![](http://i.imgur.com/ezZ5pHl.png)
+
+(Numbers in the image are not intended to correlate with numbers below)
+
 1. Player walks on a portal
 1. **Game server A** "sees" that the player collided to the Portal
 1. **Game server A** uses the portal name, and sends a teleport request to Master Server.
