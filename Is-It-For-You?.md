@@ -6,9 +6,7 @@ This asset is **not a complete project**, but instead a framework, which you'd u
 
 **Framework Doesn't Replace Gameplay Networking Solutions**
 
-Your game servers will need to run on **uNET **or something else (Forge, Bolt, etc...). If you're not sure about something PM me, ask in forum thread or post a question here, in github's issues tab.
-
-[**More info**](https://github.com/alvyxaz/barebones-masterserver/wiki/Game-Servers#gameplay-networking)
+Your game servers will need to run on **uNET **or something else (Forge, Bolt, etc...). If you're not sure about something PM me, ask in forum thread or post a question here, in github's issues tab. [**More info**](https://github.com/alvyxaz/barebones-masterserver/wiki/Game-Servers#gameplay-networking)
 
 ## What Is The Master Server Framework
 
@@ -21,7 +19,7 @@ At the time of writing, included modules are:
 * **Spawner Servers module** - allows to spawn game servers on users request (user created game rooms). Spawned servers will have full authority - users don't need to act as hosts, which allows even **Browser and mobile users** to create game rooms - no need for relay servers or NAT punch-through.
 * **Chat module** - simple chat module with support for channels and private messaging
 
-Servers and modules communicate to each other through **Barebones Networking API**
+Servers and modules communicate to each other via **Barebones Networking API**
 
 ## Networking API 
 
