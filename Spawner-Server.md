@@ -27,13 +27,13 @@ Scheme below illustrates the spawning process.
 
 ## API
 
-#### Spawning a Server From Client (As User)
+### Spawning a Server From Client (As User)
 
 `SpawnersModule.CreateUserGame(Dictionary<string,string> data, GameCreationStartedCallback callback)`
 
 Calling this static method sends a request from user to Master Server. `GameCreationStartedCallback` has to parameters: `GameCreationProcess` and `error`. If request was not successfull, callback will be called with error message and `GameCreationProcess` will be set to `null`
 
-#### Spawning a Server From Master Server
+### Spawning a Server From Master Server
 
 Spawning a server from within the master server can be done in these steps:
 
@@ -48,7 +48,7 @@ Default implementation of `Spawn` method goes through these steps:
 2. Picks the least busy spawner (`SpawnerLink`)
 3. Calls `spawnerLink.OrderSpawn()`
 
-#### Implementing Specific Logic For Picking an appropriate Spawner Server
+### Implementing Specific Logic For Picking an appropriate Spawner Server
 
 `Spawn ` method calls `GetSpawners(Dictionary<string, string> properties) method`. This method should analyse properties in the dictionary to filter spawner servers. 
 
