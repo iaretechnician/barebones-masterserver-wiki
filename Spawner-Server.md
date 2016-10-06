@@ -42,9 +42,15 @@ module = master.GetModule<SpawnersModule>()
 var task = module.Spawn(properties);
 ```
 
-`Spawn` method automatically picks an appropriate spawner for you:
+Default implementation of `Spawn` method goes through these steps:
 
-1. It calls `GetSpawners(Dictionary<string, string> properties) method`. This method should analyse properties in the dictionary to filter spawner servers. 
+1. Analyzes the given properties in the `GetSpawners` method to filter appropriate spawners
+2. Picks the least busy spawner (`SpawnerLink`)
+3. Calls `spawnerLink.OrderSpawn()`
+
+#### Implementing Specific Logic For Picking an appropriate Spawner Server
+
+`Spawn ` method calls `GetSpawners(Dictionary<string, string> properties) method`. This method should analyse properties in the dictionary to filter spawner servers. 
 
  For example, if you wanted to filter spawners by region, **you could override** the `GetSpawners(properties)` method to check the region property like this:
 
@@ -65,7 +71,3 @@ public override IEnumerable<SpawnerLink> GetSpawners(Dictionary<string, string> 
         }
 
  ```
-2. Picks the least busy spawner (`SpawnerLink`)
-3. Calls `spawnerLink.OrderSpawn()`
-
-#### Implementing Specific Logic For Picking an appropriate Spawner Server
