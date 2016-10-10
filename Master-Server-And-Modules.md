@@ -41,15 +41,16 @@ As described above, master server merely initializes other modules. You can find
 
 ![](http://i.imgur.com/JxvmvFQ.png)
 
-A few words on modules:
-* Modules are intended to **add functionality to Master Server**.
-* Modules are unity components, and can be **extended/modified by overriding their virtual methods**.
+Modules are intended to **add functionality** to Master Server.
 
 Let's say you've decided to add a shop to your game. Shop processes (buy/sell, etc.) should be handled in the central server (master server).
 
-So, to add new functionality (shop) to the master server, we can create a **ShopModule**, which will handle buy / sell requests from clients.
+So, to add new functionality (shop) to the master server, you can create a **ShopModule**, which will handle buy / sell requests from clients.
 
 When working on a game, your Master Server will be a combination of custom modules and modules from the framework
 
 :link: [**More info about creating modules**](https://github.com/alvyxaz/barebones-masterserver/wiki/Creating-Modules)
 
+## Modifying/Extending Modules
+
+Modules are unity components, and can be **extended/modified by overriding their virtual methods**
