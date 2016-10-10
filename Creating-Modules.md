@@ -1,3 +1,7 @@
+ℹ️ Tip: Initialized modules should not be destroyed when changing scenes.
+
+ℹ️ Tip: When switching to another scene and back again, another instance of already initialized module might be created. It should be destroyed (most likely in `Awake()`)
+
 This section will guide you through the process of creating a custom master server module.
 
 Creating modules is a preferred way of extending Master Server functionality. Modular approach can help you reuse components in other games, and it makes testing and debugging easier.
