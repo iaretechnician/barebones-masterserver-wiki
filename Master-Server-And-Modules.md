@@ -51,6 +51,8 @@ When working on a game, your Master Server will be a combination of custom modul
 
 :link: [**More info about creating modules**](https://github.com/alvyxaz/barebones-masterserver/wiki/Creating-Modules)
 
+ℹ️ Its recommended to have modules as children of `Master` component, because then you can save it as a prefab and use in other scenes when developing. 
+
 ## Modifying/Extending Modules
 
 Modules are unity components, and can be **extended/modified by overriding their virtual methods**
