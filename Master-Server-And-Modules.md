@@ -23,6 +23,7 @@ To add modules, you simply add new game objects and attach module components (sc
 ## Starting The Master Server
 
 There are three ways in which you can start the Master Server:
+
 1. In the editor: `Master` component has a flag in the inspector called "**Auto Start In Editor**". When it's set, Master Server will be started automatically when you hit the Play button in the editor.
 2. Through command line arguments: 🔗 [Command Line Arguments](https://github.com/alvyxaz/barebones-masterserver/wiki/Command-Line-Arguments#list-of-supported-arguments)
 3. By manually calling `Master.Start()` in your scripts.
