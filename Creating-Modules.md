@@ -2,7 +2,7 @@
 
 ℹ️ Tip: When switching to another scene and back again, another instance of already initialized module might be created. It should be destroyed (most likely in `Awake()`)
 
-ℹ️ Modules are unity components, and can be extended by extending their virtual methods.
+ℹ️ Tip: Modules are unity components, and can be extended by extending their virtual methods.
 
 This section will guide you through the process of creating a custom master server module.
 
