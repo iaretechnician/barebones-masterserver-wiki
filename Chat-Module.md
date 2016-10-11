@@ -16,11 +16,37 @@ For the **chat terminal** - there's already one created for you as a prefab in `
 
 If the need arises, you can use the API to create your own "chat view" from scratch.
 
-## How Chat Works
+## How "Chat View" Prefab Works
 
-TODO
+## Inner Workings
 
-## Receiving Chat Messages
+### Sending Chat Messages
+
+Chat messages are instances of `ChatMessagePacket`. It contains these properties:
+
+* `byte Type` - determines the type of message sent (for example, a private message or a channel message)
+* `string Receiver` - receiver of the message, which will depend on the type. For example, if sending a private message, receiver will be username of the account you are sending the message to. If it's a channel message - receiver should be the name of the channel.
+* `string Message` - contents of the message
+* `string Sender` - username of the sender. When sending a message from client, you can leave this empty, and it will be set automatically in the server
+
+### Message Types
+
+At the moment of writing, chat module supports two types of messages:
+
+* **Private Message** - a message sent to a connected user
+* **Channel Message** - a message sent to a specific channel and broadcast to its members
+
+#### Local Message
+
+If you send a channel message with empty string as channels name, message will be considered a to be a **Local Message**. 
+
+When master server receives such message, it will check senders **peer properties** to check if he has a local channel, like this:
+
+`var channel = sender.Peer.GetProperty(BmPropCodes.LocalChatChannel) as ChatChannel;`
+
+If the channel is found in the property, message will be broadcasted to that channel.
+
+### Receiving Chat Messages
 
 Chat messages will be pushed to client. To listen to them, client can simply add a handler to the connection:
 
@@ -43,15 +69,6 @@ protected virtual void HandleMessage(IIncommingMessage message) {
 }
 
 ```
-
-## Sending Chat Messages
-
-Chat messages are instances of `ChatMessagePacket`. It contains these properties:
-
-* `byte Type` - determines the type of message sent (for example, a private message or a channel message)
-* `string Receiver` - receiver of the message, which will depend on the type. For example, if sending a private message, receiver will be username of the account you are sending the message to. If it's a channel message - receiver should be the name of the channel.
-* `string Message` - contents of the message
-* `string Sender` - username of the sender. When sending a message from client, you can leave this empty, and it will be set automatically in the server
 
 Created messages can be send by invoking the static method `ChatModule.SendMessage`
 
