@@ -12,13 +12,22 @@ To add the chat functionality to your game, you'll need to:
 
 Adding the chat module to the master server is pretty simple - all you need is an empty game object with a `ChatModule` script, in the same scene as the Master Server
 
-For the **chat terminal** - there's already one created for you as a prefab in `Barebones/MasterModules/Chat/Prefabs/Chat`. You can drag it into the `Canvas` (Unity UI) element in your scene.
+ℹ️ For the **chat terminal** - there's already one created for you as a prefab in `Barebones/MasterModules/Chat/Prefabs/Chat`. You can drag it into the `Canvas` (Unity UI) element in your scene.
+
+ℹ️ Most of the **ChatView** methods are virtual so you can override them.
 
 If the need arises, you can use the API to create your own "chat view" from scratch.
 
-## How "Chat View" Prefab Works
+## Chat View Prefab
 
-Currently writing...
+If you decide to use the chat view prefab, here are some of it's features:
+
+* Send private messages with command: `/w username message`
+* Reply to the person who last sent you a message: `/r message`
+* Join channel: `/join channelName`
+* Leave channel: `/leave channelName`
+* Write in channel: `/c message`, `/ch message`, `/csay message`
+* Get a list of channels we're in: `/c`
 
 ## Inner Workings
 
