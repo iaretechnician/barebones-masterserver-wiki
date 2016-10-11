@@ -34,6 +34,13 @@ You'll probably want to start the server in editor when you're developing, throu
 
 ℹ️ `Master` component also looks for a special command line argument
 
+## Connecting to Master Server From Client
+
+You can connect to master server simply by calling
+
+`Connections.ClientToMaster.Connect(IpAddress, Port)`
+
+Or you can do it manually by creating a socket 🔗 [More info in Networking](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API#connecting-with-a-client)
 
 ## Modules Explained
 
