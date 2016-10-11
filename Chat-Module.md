@@ -16,7 +16,9 @@ For the **chat terminal** - there's already one created for you as a prefab in `
 
 If the need arises, you can use the API to create your own "chat view" from scratch.
 
-## Working Principles
+## How Chat Works
+
+TODO
 
 ## Receiving Chat Messages
 
