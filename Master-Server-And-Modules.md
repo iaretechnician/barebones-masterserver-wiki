@@ -40,7 +40,7 @@ You can connect to master server simply by calling
 
 `Connections.ClientToMaster.Connect(IpAddress, Port)`
 
-Or you can do it manually by creating a socket 🔗 [More info in Networking](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API#connecting-with-a-client)
+Or you can do it manually by creating a socket 🔗 [More info on Networking](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API#connecting-with-a-client)
 
 ## Modules Explained
 
