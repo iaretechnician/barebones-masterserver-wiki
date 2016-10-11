@@ -18,6 +18,8 @@ If the need arises, you can use the API to create your own "chat view" from scra
 
 ## How "Chat View" Prefab Works
 
+Currently writing...
+
 ## Inner Workings
 
 ### Sending Chat Messages
