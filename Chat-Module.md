@@ -14,6 +14,8 @@ Adding the chat module to the master server is pretty simple - all you need is a
 
 For the **chat terminal** - there's already one created for you as a prefab in `Barebones/MasterModules/Chat/Prefabs/Chat`. You can drag it into the `Canvas` (Unity UI) element in your scene.
 
+If the need arises, you can use the API to create your own "chat view" from scratch.
+
 ## Working Principles
 
 ## Receiving Chat Messages
