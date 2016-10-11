@@ -20,14 +20,31 @@ If the need arises, you can use the API to create your own "chat view" from scra
 
 ## Chat View Prefab
 
-If you decide to use the chat view prefab, here are some of it's features:
+If you decide to use the chat view prefab, here's a list of commands you can use:
 
 * Send private messages with command: `/w username message`
 * Reply to the person who last sent you a message: `/r message`
-* Join channel: `/join channelName`
+* Join / Create channel: `/join channelName` (if channel doesn't exist, it will be created)
 * Leave channel: `/leave channelName`
 * Write in channel: `/c message`, `/ch message`, `/csay message`
 * Get a list of channels we're in: `/c`
+
+ℹ️ These commands are parsed in the View script on the client, and used to create the `ChatMessagePacket` instance, which represents the actual message. In other words, these commands are only **client-specific**
+
+ChatView has two special properties:
+
+* **AutoJoinChannels** - it's a list of channel names, to which client will connect automatically
+* **ChannelMasks** - a list of strings. If client sends or receives a message from a channel with name contains at least one of the words in the list, channel name will be masked.
+
+Main use for channel masks is to hide names of "Local Channels" that are generated. Consider the use case where you want each game to have a unique channel, to which users can write "locally".
+
+1. Chat Module gets a notification saying that client joined a game with id 10
+1. Chat Module creates a special channel or finds an existing one with name `Game-10`
+1. User who joined the game is added to that channel, and it's set as "local" in the players peer properties
+1. When client sends a channel message with an empty string for a channel - chat module interprets it as a local message, and sends to the client.
+1. Client receives a message from channel `Game-10`.
+1. Chat View sees that a message came from a channel which has a word `Game-` (this word is added to the ChannelMasks property of the view),
+1. Chat View masks the channel, and the message is displayed as not in a channel.
 
 ## Inner Workings
 
@@ -105,6 +122,8 @@ Created messages can be send by invoking the static method `ChatModule.SendMessa
 ```
 
 ## API
+
+Static methods can be accessed through `ChatModule` class, for example `ChatModule.JoinChannel(..)`
 
 `public static void JoinChannel(string name, ChatCallback callback)`
 
