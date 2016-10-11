@@ -13,13 +13,13 @@ If you've just downloaded the asset and don't know where to start, you can start
 * [Creating Modules](https://github.com/alvyxaz/barebones-masterserver/wiki/Creating-Modules) - tutorial on how to extend master server functionality with your own modules
 * [How to send / receive and handle messages](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API)
 
-## Regarding Feature Requests, Bugs and Improvement Ideas
+## Feature Requests, Bugs and Improvement Ideas
 
 I want to make your experience of running Barebones Master Server as simple, easy and convenient as possible.
 
 Even if you've downloaded this illegally, feel free to contact me with ideas for improvements or feature requests.
 
-## Regarding Editing Source code
+## Editing Source code
 
 It's highly advised that you don't make any changes to source code. In most cases, you should be able to make changes by implementing interfaces, extending classes or subscribing to events. If you edit the source, it's possible that your project will break when you download an update, because your changes will be overwritten.
 
