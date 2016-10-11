@@ -4,7 +4,7 @@ When a player joins game server, game server can obtain players profile, make ch
 
 ![](http://i.imgur.com/pYZ9MhY.png)
 
-:fire: It's important to remember that game server receives profile only once, and doesn't get any notifications about changes, made in master server (if you edit profile in master server while player is in game server, game server might override your changes). This is by design, because omni-directional synchronization performs much better and allows a high level of optimizations. Bi-directional profile properties are planned to be released in the near future.
+:fire: It's important to remember that game server receives profile only once, and doesn't get any notifications about changes, made in master server (if you edit profile in master server while player is in game server, game server might override your changes). This is by design, because one-directional synchronization performs much better and allows a high level of optimizations. Bi-directional profile properties are planned to be released in the near future.
 
 ## Defining a Profile Structure
 
