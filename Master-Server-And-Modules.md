@@ -44,11 +44,11 @@ Or you can do it manually by creating a socket 🔗 [More info on Networking](ht
 
 ## Modules Explained
 
+Modules are simple unity scripts (MonoBehaviours) intended to **add functionality** to Master Server.
+
 As described above, master server merely initializes other modules. You can find modules in the `Barebones/MasterModules/` folder.
 
 ![](http://i.imgur.com/JxvmvFQ.png)
-
-Modules are intended to **add functionality** to Master Server.
 
 Let's say you've decided to add a shop to your game. Shop processes (buy/sell, etc.) should be handled in the central server (master server).
 
