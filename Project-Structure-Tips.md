@@ -39,6 +39,7 @@ An example might illustrate this point better:
 It wouldn't be very efficient, if every time you made a change to your game, you had to make a build, start the Master Server, start Spawner server, then start a client, connect to master server, login with your credentials, create a game, and then join the game. It sounds more like a nightmare, rather than development process!
 
 Instead, a better approach would be to automate the whole process by:
+
 1. Adding a script to start the master server
 2. When master server is started, establish a client connection with it.
 3. Send an authentication request (login)
