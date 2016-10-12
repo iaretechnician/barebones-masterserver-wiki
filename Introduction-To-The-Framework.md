@@ -1,3 +1,5 @@
+⚠️ I'm currently editing this document in real time, so "be careful" ^_^
+
 ## What is The Master Server Framework
 
 In general, **Master Server** is a type of server to which everything connects (a central server). 
