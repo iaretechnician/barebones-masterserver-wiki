@@ -6,7 +6,9 @@ When choosing how to store data within the framework, I was looking for three th
 
 Achieving these points would mean that new developers don't have to worry about how their data is stored and structured, and they can launch demo with one click, without further setting up.
 
-So to achieve these points, I decided to integrate an **embedded NoSQL database - LiteDB**. 🔗 [Homepage](http://www.litedb.org/)
+So to achieve these points, I decided to integrate an **embedded NoSQL database - LiteDB**. 
+
+🔗 [Homepage](http://www.litedb.org/)
 
 ⚠️ LiteDB is the default solution, but if the need arises, you can switch it with something else.
 
