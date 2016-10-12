@@ -17,11 +17,14 @@ Under the hood, framework is quite simple, but variety of different concepts mig
  1. [**Integrating to uNET game**](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started) - short guide on implementing master server functionality in a simple uNET game.
  1. [**Creating Modules**](https://github.com/alvyxaz/barebones-masterserver/wiki/Creating-Modules) - tutorial on how to extend master server functionality with your own modules
  1. [**Send, receive and handle messages**](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API) - this guide contains examples that will help you get familiar with networking abstraction layer.
+ 1. [**Tips on how to structure your project/scenes**](https://github.com/alvyxaz/barebones-masterserver/wiki/Project-Structure-Tips)
 1. Modules
  1. [**Profiles Module**](https://github.com/alvyxaz/barebones-masterserver/wiki/Player-Profiles)
  1. [**Chat Module**](https://github.com/alvyxaz/barebones-masterserver/wiki/Chat-Module)
  1. [**Game Rooms Module**](https://github.com/alvyxaz/barebones-masterserver/wiki/Game-Servers) - general overview, describing how game servers register to master.
  1. [**Spawner Server**](https://github.com/alvyxaz/barebones-masterserver/wiki/Spawner-Server) - describes inner workings of spawner server and how you can use it to spawn game servers.
+1. Production
+ 1. [**Hosting your game**](https://github.com/alvyxaz/barebones-masterserver/wiki/Hosting-Your-Game)
 
 ## Feature Requests, Bugs and Improvement Ideas
 
