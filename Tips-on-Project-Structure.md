@@ -1,6 +1,6 @@
 One of the most difficult concepts of the framework to grasp is understanding how everything starts, and how everything connects together.
 
-The short answer is - you can do everything the way you want and the way it is convenient to you.
+The short answer is - you can do everything the way you want and the way it is convenient to you. There's really no preferred way to structure your code / scenes. If you find a specific setup convenient - it's a perfect setup.
 
 I couldn't think of a better way to fill this page than with series of questions and answers.
 
@@ -8,7 +8,7 @@ I couldn't think of a better way to fill this page than with series of questions
 
 Not necessarily. This approach might actually slow down your development process, because of scene switching.
 
-ℹ️ How I do it? : I start servers in the main scene
+ℹ️ When in production, I usually start servers in the main scene,. When working on the gameplay, I start them right in the scene of the game.
 
 ## Can I Have Servers In Separate Unity Projects?
 
@@ -28,11 +28,11 @@ Example in the Demo is set up this way.
 
 ## Can I Do The Whole Project in One Scene?
 
-Yes, you can! This approach is great for development. 
+Yes, you can! This approach is great for development, or for small games.
 
 ## Tip For Faster Development
 
-Even if you have a special scene in which your clients connect to Master, authorize and do other stuff, it's great to automate this process in your game scenes, so you don't have to jump through scenes every time you want to test the game.
+Even if you have a special scene in which your clients connect to Master Server, authorize and do other stuff, it's great to automate this process in your game scenes, so you don't have to jump through scenes every time you want to test the game.
 
 An example might illustrate this point better:
 
@@ -46,6 +46,6 @@ Instead, a better approach would be to automate the whole process by:
 5. Register the game to master server
 6. Send a request to join the game.
 
-Framework actually contains the code that does this for you, there's more info in the 🔗 [Getting Started Guide](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started) contains 
+Framework actually contains the code that does this for you, there's more info in the 🔗 [Getting Started Guide](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started).
 
-⚠️ I'm editing this document live, it might change after you refresh the page ^_^
+This way, when you hit a "Play" button in the editor, you go into the game instantly, without having to go through the "preparation" steps.
