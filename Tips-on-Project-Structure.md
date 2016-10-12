@@ -2,7 +2,7 @@ One of the most difficult concepts of the framework to grasp is understanding ho
 
 The short answer is - you can do everything the way you want and the way it is convenient to you. There's really no preferred way to structure your code / scenes. If you find a specific setup convenient - it's a perfect setup.
 
-I couldn't think of a better way to fill this page than with series of questions and answers.
+I'll try to answer a few questions that you might have. If you have a question that's not covered in the documentation - feel free to ask.
 
 ## Should I Have Different Scenes For Different Servers?
 
