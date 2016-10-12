@@ -8,7 +8,7 @@ I'll try to answer a few questions that you might have. If you have a question t
 
 Not necessarily. This approach might actually slow down your development process, because of scene switching.
 
-ℹ️ When in production, I usually start servers in the main scene,. When working on the gameplay, I start them right in the scene of the game.
+ℹ️ When I work on my games, I like to make a prefab of Master Server component and it's modules as it's children in the hierarchy. I would then add it to the main scene (the one that first opens when starting the build), and to the game scene (this allows me to automatically start master server before starting a game server, and it makes development a lot easier and more convenient.).
 
 ## Can I Have Servers In Separate Unity Projects?
 
