@@ -24,4 +24,4 @@ Being an embedded database, LiteDBs' performance is not as good compared to spec
 
 If you found out that database is your bottleneck, you can easily change usage of LiteDB to something else by implementing database-related interfaces, because interactions with db are abstracted.
 
-ℹ️ Due to "synchronous" nature of LiteDB, interfaces are suited mainly for "blocking" interactions. I'll update the framework to allow asynchronous calls in the near future (probably by the end of the beta).
+ℹ️ Due to "synchronous" nature of LiteDB, interfaces were designed mainly for "blocking" interactions. I'll update the framework to allow asynchronous calls in the near future (probably by the end of the beta).
