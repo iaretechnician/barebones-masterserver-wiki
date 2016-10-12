@@ -12,7 +12,7 @@ Under the hood, framework is quite simple, but variety of different concepts mig
 1. Demo Related
  1. [**Demo Explained**] (https://github.com/alvyxaz/barebones-masterserver/wiki/Demo-Explained)
  1. [**Launching The Demo**] (https://github.com/alvyxaz/barebones-masterserver/wiki/Launching-The-Demo) - good place to start if you like to learn from an example
-1. Getting Started
+1. Development / Getting Started
  1. [**Master Server And Modules**](https://github.com/alvyxaz/barebones-masterserver/wiki/Master-Server-And-Modules) - a short guide that will help you better understand what is the Master Server and how modules work
  1. [**Integrating to uNET game**](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started) - short guide on implementing master server functionality in a simple uNET game.
  1. [**Creating Modules**](https://github.com/alvyxaz/barebones-masterserver/wiki/Creating-Modules) - tutorial on how to extend master server functionality with your own modules
