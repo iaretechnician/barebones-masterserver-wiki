@@ -1,5 +1,3 @@
-![](http://i.imgur.com/IHbHOxT.png)
-
 Navigate to folder `Barebones/Demos/MainDemo/Scenes` and add all of those scenes to your build.
 Make sure `DemoMain` is the first one
 
