@@ -1,5 +1,3 @@
-![](http://i.imgur.com/IHbHOxT.png)
-
 ## Server 
 
 ### Sending E-mail Messages
