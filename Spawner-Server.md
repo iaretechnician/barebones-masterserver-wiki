@@ -1,5 +1,7 @@
 ⚠️ This section is still in development
 
+⚠️ 🔴 Make sure to build your game so that it can **run in the background** - it's necessary for any game that needs networking. Otherwise, you might experience some nasty glitches. You'll find the setting in **File > Build Settings > Player Settings > Run In Background**
+
 ## What is The Spawner Server
 
 It is a special server whose main purpose is to "spawn" game servers. 
