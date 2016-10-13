@@ -1,5 +1,7 @@
 :warning: This section is still a work in progress
 
+⚠️ 🔴 Make sure to build your game so that it can **run in the background** - it's necessary for any game that needs networking. Otherwise, you might experience some nasty glitches. You'll find the setting in **File > Build Settings > Player Settings > Run In Background**
+
 ## How Clients Connect To Game Server
 
 Scheme below illustrates the process of joining a game server:
