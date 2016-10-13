@@ -1,5 +1,3 @@
-![](http://i.imgur.com/IHbHOxT.png)
-
 :information_source: _This wiki is constantly updated, so it's not recommended to use the documentation provided with the asset - it's most likely outdated_
 
 ## Contents Of The Wiki
