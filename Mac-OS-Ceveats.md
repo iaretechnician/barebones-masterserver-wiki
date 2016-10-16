@@ -14,7 +14,7 @@ You can do that by passing an absolute path to build with parameter `-bmExe`, fo
 
 `sudo /Users/admin/Documents/Build.app/Contents/MacOS/Build -bmMaster -bmSpawner -bmExe "/Users/admin/Documents/Build.app/Contents/MacOS/Build"`
 
-This will be fixed in an update 1.02
+**This will be fixed in an update v1.02**
 
 ### Running Spawner Server In Editor
 
