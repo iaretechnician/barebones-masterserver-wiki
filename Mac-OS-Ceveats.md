@@ -1,4 +1,4 @@
-## Start Unity Or Servers With Sudo
+## Start "Things" With Sudo
 
 When you try to start a socket server on Mac OS, it will require you to start the process with elevated permissions. Here's how you start unity with elevated permission:
 
