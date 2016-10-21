@@ -8,6 +8,10 @@ This asset is **not a complete project**, but instead a framework, which you'd u
 
 Your game servers will need to run on **uNET **or something else (Forge, Bolt, etc...). If you're not sure about something PM me, ask in forum thread or post a question here, in github's issues tab. [**More info**](https://github.com/alvyxaz/barebones-masterserver/wiki/Game-Servers#gameplay-networking)
 
+### If I Use uNET, Does It Mean I Have To Use Unity Services?
+
+No. Framework was designed to allow developers to use uNET without having to use costly Unity Services.
+
 ## What Is The Master Server Framework
 
 It's a framework that helps you write back-end servers for your games, with ease, **within unity**, without having to worry about third-party services. It contains boilerplate code for user authentication, dynamic / automatically synchronized player profiles, and highly scalable game servers (rooms) architecture. 
