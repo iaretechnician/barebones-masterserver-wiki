@@ -46,3 +46,5 @@ protected virtual IAuthDatabase SetupDatabase()
 As you can see, default implementation of this method creates an instance of `AuthDatabaseLdb`, which implements interface `IAuthDatabase`. 
 
 You can change the database solution by creating a new class, which would implement `IAuthDatabase`, and then overriding the `SetupDatabase` method to return an instance of it.
+
+Other modules that interact with database have a similar virtual method, which you can override to switch concrete implementation to one of your own.
