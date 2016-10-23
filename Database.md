@@ -25,3 +25,24 @@ Being an embedded database, LiteDBs' performance is not as good compared to spec
 If you found out that database is your bottleneck, you can easily change usage of LiteDB to something else by implementing database-related interfaces, because interactions with db are abstracted.
 
 ℹ️ Due to "synchronous" nature of LiteDB, interfaces were designed mainly for "blocking" interactions. I'll update the framework to allow asynchronous calls in the near future (probably by the end of the beta).
+
+## Using Another Database Solution
+
+All the modules that use database have an interface for interactions. For example, `AuthModule` interacts with database through interface `IAuthDatabase`.
+
+`AuthModule` generates it's concrete database interactions by calling a method `SetupDatabase`, at the moment of writing, it's defined like this:
+
+``` C#
+protected virtual IAuthDatabase SetupDatabase()
+{
+            IAuthDatabase database = null;
+#if (!UNITY_WEBGL && !UNITY_IOS) || UNITY_EDITOR
+            database =  new AuthDatabaseLdb(new LiteDatabase("./auth.db"));
+#endif
+            return database;
+}
+```
+
+As you can see, default implementation of this method creates an instance of `AuthDatabaseLdb`, which implements interface `IAuthDatabase`. 
+
+You can change the database solution by creating a new class, which would implement `IAuthDatabase`, and then overriding the `SetupDatabase` method to return an instance of it.
