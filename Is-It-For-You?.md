@@ -6,7 +6,7 @@ This asset is **not a complete project**, but instead a framework, which you'd u
 
 **Framework Doesn't Replace Gameplay Networking Solutions**
 
-Your game servers will need to run on **uNET **or something else (Forge, Bolt, etc...). If you're not sure about something PM me, ask in forum thread or post a question here, in github's issues tab. [**More info**](https://github.com/alvyxaz/barebones-masterserver/wiki/Game-Servers#gameplay-networking)
+Your game servers will need to run on **uNET **or something else (Forge, Bolt, etc...). If you're not sure about something PM me, ask in forum thread or post a question here, in github's issues tab. [**More info**]. Framework works with uNET out of the box, but for anything else you'll need to write your own implementations. (https://github.com/alvyxaz/barebones-masterserver/wiki/Game-Servers#gameplay-networking)
 
 ### If I Use uNET, Does It Mean I Have To Use Unity Services?
 
