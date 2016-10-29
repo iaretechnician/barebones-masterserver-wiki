@@ -6,11 +6,19 @@ This asset is **not a complete project**, but instead a framework, which you'd u
 
 **Framework Doesn't Replace Gameplay Networking Solutions**
 
-Your game servers will need to run on **uNET **or something else (Forge, Bolt, etc...). If you're not sure about something PM me, ask in forum thread or post a question here, in github's issues tab. [**More info**]. Framework works with uNET out of the box, but for anything else you'll need to write your own implementations. (https://github.com/alvyxaz/barebones-masterserver/wiki/Game-Servers#gameplay-networking)
+Your game servers will need to run on **uNET** or something else (Forge, Bolt, etc...). If you're not sure about something PM me, ask in forum thread or post a question here, in github's issues tab. [**More info**]. Framework works **with uNET out of the box**, but for anything else you'll need to write your own implementations. (https://github.com/alvyxaz/barebones-masterserver/wiki/Game-Servers#gameplay-networking)
 
 ### If I Use uNET, Does It Mean I Have To Use Unity Services?
 
-No. Framework was designed to allow developers to use uNET without having to use costly Unity Services.
+No. Framework was designed to allow developers to use uNET without having to use costly Unity Services. 
+
+### How Does The Framework Get Around Unity's CCU limit?
+
+Unity limits CCU for their matchmaker and their relay server. Framework includes other solutions for matchmaking, but there's no direct replacement for Relay servers. Relay server is used to allow users to host games when they are behind a router / don't have a public IP. Relay servers increases networking latency by a lot.
+
+To avoid latency issues and CCU constraints, instead of allowing clients to host games directly on their machine, framework encourages to "spawn" game servers in your "cloud", which can be accessed by any client directly. 
+
+This **does not** mean that you are not allowed to let clients host their games. You can do that, but framework does not include any NAT traversal solutions at the moment, so the issue where clients wont be able to connect to a host without a "public IP" will remain.
 
 ## What Is The Master Server Framework
 
