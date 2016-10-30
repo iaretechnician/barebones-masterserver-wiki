@@ -10,7 +10,7 @@ Your game servers will need to run on **uNET** or something else (Forge, Bolt, e
 
 ### If I Use uNET, Does It Mean I Have To Use Unity Services?
 
-No. Framework was designed to allow developers to use uNET without having to use costly Unity Services. 
+No. Framework was designed to allow developers to use uNET without having to use costly Unity Services. :warning: **It's important to understand how the framework works around the limited CCU**
 
 ### How Does The Framework Get Around Unity's CCU limit?
 
