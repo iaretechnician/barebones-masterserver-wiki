@@ -16,7 +16,7 @@ No. Framework was designed to allow developers to use uNET without having to use
 
 Unity limits CCU for their matchmaker and their relay server. Framework includes other solutions for matchmaking, but there's no direct replacement for Relay servers. Relay server is used to allow users to host games when they are behind a router / don't have a public IP. Relay servers increases networking latency by a lot.
 
-To avoid latency issues and CCU constraints, instead of allowing clients to host games directly on their machine, framework encourages to "spawn" game servers in your "cloud", which can be accessed by any client directly. 
+⚠️ **To avoid latency issues and CCU constraints, instead of allowing clients to host games directly on their machine, framework encourages to "spawn" game servers in your "cloud", which can be accessed by any client directly.**
 
 This **does not** mean that you are not allowed to let clients host their games. You can do that, but framework does not include any NAT traversal solutions at the moment, so the issue where clients wont be able to connect to a host without a "public IP" will remain.
 
