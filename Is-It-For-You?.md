@@ -1,5 +1,23 @@
 :information_source: The purpose of this page is to help you determine whether or not you need this asset. If, after reading everything, you're still not sure if this asset is for you, feel free to send me a message with your questions or feature requests
 
+## :warning: **Read this** :warning: 
+
+**After the first month in the asset store, here are a few things that I feel needs to be said regarding the direction and vision of the framework**
+
+To any inexperienced developers **who are not willing to learn** things or get their hands dirty - **you should not buy this**. It's not a magic solution - it's a convenient tool for **developers**.
+
+ This framework is a lot like web frameworks, except it runs in Unity and instead of HTTP protocol, uses long lasting and stateful TCP / UDP connections (high performance, low overhead, just like a game server). When you start using a web framework - you don't expect it to develop the whole website for you automatically, instead, you're happy you don't need to do authorization and url routing. The same goes for this framework - it's a framework, not a complete game. It contains some helpful modules out of the box, and you can either use them, or use the core of the framework to develop your own.
+
+When you buy it, you don't buy a black box which you should be afraid to touch and extend. **It's made to be extended, it's a framework!**
+
+It seems like this framework attracts people mainly because of the **Spawner server** module, which, to them, seems like a holy grail to avoid uNET services. You need to understand that it's just a helpful module, and not exactly the main feature of the framework. **The main feature is that you can develop the Master Server within Unity**, which I personally find incredibly convenient.
+
+If you're bad at programming and if you have no experience in networking, you should not expect to be able to buy this framework, throw it into a game as it is, and expect everything to be ready for production in a few minutes. I'm sure some people can do this, but they usually have tons of experience. If you're a beginner, you'll need to spend time learning a lot of new concepts.
+
+To conclude, **I'm not saying that beginners should not buy this** - it contains years of my knowledge and experience in developing back-end servers for multiplayer games, and if you're willing to learn - **you'll learn a lot**! And when you understand it, you'll be able to bake a game after a game in a matter of days!
+
+If you're a beginner who wants to learn - feel free to contact me, and I'll do my best to teach and guide you. I love helping people. But if you're not willing to do any development on your own - I'd rather you ask for a refund.
+
 ## Before You Buy
 
 This asset is **not a complete project**, but instead a framework, which you'd use to develop your back-end servers. Making multiplayer game is not a trivial task, so it's expected that you're familiar with writing C# code.
