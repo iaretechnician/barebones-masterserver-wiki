@@ -49,5 +49,122 @@ Lobby contains a state property, which is a value of `LobbyState` enum. This sta
 5. Player sends a request to get all of the lobby info
 6. Player displays that information
 
+## Quick Tutorial
 
+### Create a New Lobby Factory
+
+Create a new script and call it `MyLobbyFactory`
+
+``` C#
+using System.Collections.Generic;
+
+namespace Barebones.MasterServer
+{
+    public class MyLobbyFactory : ILobbyFactory
+    {
+        private readonly LobbiesModule _module;
+
+        public MyLobbyFactory(LobbiesModule module)
+        {
+            _module = module;
+        }
+
+        public GameLobby CreateLobby(Dictionary<string, string> properties)
+        {
+            // Create the teams
+            var teamA = new LobbyTeam("Counter Terrorists")
+            {
+                MaxPlayers = 5,
+                MinPlayers = 0
+            };
+            var teamB = new LobbyTeam("Terrorists")
+            {
+                MaxPlayers = 5,
+                MinPlayers = 0
+            };
+
+            // Set their colors (this could be any property)
+            teamA.SetProperty("color", "0000FF");
+            teamB.SetProperty("color", "FF0000");
+
+            // Create configuration
+            var config = new LobbyConfig();
+            config.EnableManualStart = true;
+            config.AllowJoiningWhenGameIsLive = true;
+            config.EnableGameMasters = true;
+
+            // Get the lobby name
+            var lobbyName = properties.ContainsKey(GameProperty.GameName)
+                ? properties[GameProperty.GameName]
+                : "Default name";
+
+            // Create the lobby
+            var lobby = new GameLobby(_module.GenerateLobbyId(),
+                new[] { teamA, teamB }, _module, config)
+            {
+                Name = lobbyName
+            };
+
+            // Override properties with what user provided
+            lobby.SetLobbyProperties(properties);
+
+            // Add control for the game speed
+            lobby.AddControl(new LobbyPropertyData()
+            {
+                Label = "Game Speed",
+                Options = new List<string>() { "1x", "2x", "3x" },
+                PropertyKey = "speed"
+            }, "2x"); // Default option
+
+            // Add control to enable/disable gravity
+            lobby.AddControl(new LobbyPropertyData()
+            {
+                Label = "Gravity",
+                Options = new List<string>() { "On", "Off" },
+                PropertyKey = "gravity",
+            });
+
+            return lobby;
+        }
+    }
+}
+```
+
+This script will be responsible for creating lobbies from the user request.
+
+### Register Factory to Lobbies Module
+
+Let's add our new factory to our lobbies module. There are multiple ways to do it. We can call `lobbiesModule.RegisterFactory()` method, by adding this line of code anywhere in our scripts:
+
+``` C#
+FindObjectOfType<LobbiesModule>().RegisterFactory(new MyLobbyFactory("myFactory"));
+``` 
+
+Or by extending the LobbiesModule and overriding `SetupFactories()` method.
+
+**myFactory** is the unique identifier of our new factory, by which lobbies module decides which factory to choose when it receives a request from user
+
+### Sending a Request To Create a Lobby
+
+From a client, you can call a static method `LobbiesModule.CreateLobby`, like this:
+
+``` C#
+            // Create the dictionary of lobby settings
+            var properties = new Dictionary<string, string>()
+            {
+                {"map", "Super map" },
+                {GameProperty.SceneName, "GameRoom" }
+            };
+
+            // Send a request
+            LobbiesModule.CreateLobby("myFactory", properties, (id, error) =>
+            {
+                if (!id.HasValue)
+                {
+                    Debug.LogError("Failed to create the lobby: " + error);
+                }
+
+                Debug.Log("Lobby created successfully!");
+            });
+```
 
