@@ -102,7 +102,8 @@ namespace Barebones.MasterServer
             var lobby = new GameLobby(_module.GenerateLobbyId(),
                 new[] { teamA, teamB }, _module, config)
             {
-                Name = lobbyName
+                Name = lobbyName,
+                Type = Id
             };
 
             // Override properties with what user provided
