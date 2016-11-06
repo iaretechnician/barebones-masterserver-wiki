@@ -1,9 +1,12 @@
-⚠️ 🔴  If you're here, you probably got here ahead of time - the lobbies module is not yet released!
-
 ## Module Info
 
 * Main script: `LobbiesModule`
 * Dependencies: **SpawnersModule** and **GamesModule**
+* Status: ⚠️🔴 **Experimental Feature**
+
+## Why Experimental Feature
+
+I didn't get any (almost) requirements for the lobby, and there are simply too many types of lobbies with too many features to create a single solution for them all. So for the initial release, I'm releasing it as sort of like a **draft** version for people to try out and give some feedback.
 
 ## What Is The Lobbies Module
 
@@ -145,7 +148,7 @@ Or by extending the LobbiesModule and overriding `SetupFactories()` method.
 
 **myFactory** is the unique identifier of our new factory, by which lobbies module decides which factory to choose when it receives a request from user
 
-### Sending a Request To Create a Lobby
+### Sending a Request To Create the Lobby
 
 From a client, you can call a static method `LobbiesModule.CreateLobby`, like this:
 
