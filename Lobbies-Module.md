@@ -40,7 +40,7 @@ Lobby contains a state property, which is a value of `LobbyState` enum. This sta
 3. When the game server is ready, it switches to the `GameInProgress` state
 4. When the game is over, it's in the `GameOver`state
 
-### Flow of Events To Create Lobby
+### Flow of Events When Creating A Lobby
 
 1. User makes a request to create a lobby. This request consists of **Lobby Factory id** and **properties** dictionary.
 2. Master server handles the requests, and finds a specific factory
