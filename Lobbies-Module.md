@@ -1,5 +1,7 @@
 ![](http://i.imgur.com/pFKm8X9.png)
 
+⚠️This page will be fully finished before V1.02 gets into the asset store
+
 ## Module Info
 
 * Main script: `LobbiesModule`
