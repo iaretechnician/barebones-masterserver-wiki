@@ -1,3 +1,5 @@
+![](http://i.imgur.com/pFKm8X9.png)
+
 ## Module Info
 
 * Main script: `LobbiesModule`
