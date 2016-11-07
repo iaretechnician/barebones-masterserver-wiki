@@ -25,6 +25,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
  1. [**Profiles Module**](https://github.com/alvyxaz/barebones-masterserver/wiki/Player-Profiles)
  1. [**Chat Module**](https://github.com/alvyxaz/barebones-masterserver/wiki/Chat-Module)
  1. [**Game Rooms Module**](https://github.com/alvyxaz/barebones-masterserver/wiki/Game-Servers) - general overview, describing how game servers register to master.
+ 1. [**Lobbies Module**](https://github.com/alvyxaz/barebones-masterserver/wiki/Lobbies-Module) 🆕 
  1. [**Spawner Server**](https://github.com/alvyxaz/barebones-masterserver/wiki/Spawner-Server) - describes inner workings of spawner server and how you can use it to spawn game servers.
 1. Platform Specific
  1. [**Mac OS Ceveats**](https://github.com/alvyxaz/barebones-masterserver/wiki/Mac-OS-Ceveats)
