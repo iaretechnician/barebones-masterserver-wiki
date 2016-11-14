@@ -2,8 +2,6 @@
 
 ## Contents Of The Wiki
 
-![](http://i.imgur.com/pFKm8X9.png)
-
 Under the hood, framework is quite simple, but variety of different concepts might be a bit difficult to grasp at first - these guides are here to help you find your away around it.
 
 _**If you found a section that's lacking**, or if you want something covered in the documentation, post a feature request here, in GitHub (Issues tab)_, or send me a personal message. I know how awesome it is to own a product with great documentation, so I'll be more than happy to assist. 🌞 
