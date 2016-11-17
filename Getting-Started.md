@@ -36,7 +36,7 @@ Here's what these objects are there for:
 
 :information_source: If you tried to log in , you probably got an error saying that there's no profile factory. We'll fix this in the next step
 
-# Profiles Factory / Shared Class 
+# Profiles Factory (Optional) / Shared Class 
 
 When your clients log in to master server, profiles module will try to construct a profile for each of them. Which is more, clients should also be able to construct their own profile, so that they can subscribe to various observable properties.
 
