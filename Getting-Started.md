@@ -1,5 +1,3 @@
-![](http://i.imgur.com/IHbHOxT.png)
-
 This page will guide you through the steps you can take to start working on your game and back-end server.
 
 ⚠️ 🔴 Make sure to build your game so that it can **run in the background** - it's necessary for any game that needs networking. Otherwise, you might experience some nasty glitches. You'll find the setting in **File > Build Settings > Player Settings > Run In Background**
