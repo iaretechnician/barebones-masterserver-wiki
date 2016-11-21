@@ -62,7 +62,13 @@ On one of my games, game server consumes about 70 MB ram, and about 5% of CPU. O
 
 With current architecture of the framework, numbers can be doubled by buying another VPS. 
 
-## A Few Points About The Framework
+## What The Framework Does and Doesn't
+
+* Helps to build a master server
+* Helps to connect everything together
+* **Doesn't** help you with your Game Server and gameplay logic. You'll use uNET or something else for that. Framework contains a simple example to get you on track.
+
+## A Few More Points About The Framework
 
 * ℹ️ **UI is decoupled from the functionality** - UI components are included in the asset mainly to demonstrate how you can use the API. For example, if you want to display Game Servers list in a special way, you don't have to use the example provided - you can make a request to server and display the data received however you want
 * ⚠️ **Source code should not be edited** - asset will be updated regularly, and your changes might get lost in the process of updating. To avoid this, modify functionality by extending classes and listening to events.
