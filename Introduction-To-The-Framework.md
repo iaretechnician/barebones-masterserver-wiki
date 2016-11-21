@@ -8,6 +8,8 @@ Server is a computer or a program that manages access to a centralized resource 
 
 To put it plainly, in our context, server is a piece of software, which runs on a remote computer, to which clients can connect.
 
+ℹ️ Framework contains "Networking API" which allows you to easily create "empty" socket servers, in Unity, **from scratch**. Core of the Master Server is created using this API.
+
 ### Why Would Anyone Need a Server For Their Game?
 
 Having a server allows you to do all kinds of things - chats, authentication, "cloud saves", authoritative shops and etc. Even for simple things, such as "daily gifts", you'd need a server to make sure that a player doesn't hack the client to retrieve an infinite amount of free stuff.
