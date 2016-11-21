@@ -41,6 +41,8 @@ Usually, game servers have these characteristics:
 * Large network traffic consumption - all the flying bullets, all the moving objects and characters need to be constantly synchronized between players, and it consumes a lot of traffic
 * Higher CPU usage - quite often, it needs to run physics, calculate collisions, do raycasting, process inputs from all of the players and etc.
 
+This "intensive" nature of game servers creates a limit on how many game servers you can run within a single machine. Master Server mitigates that problem by allowing you to have game servers running on multiple machines, and redirecting users to seamlessly connect to them.
+
 ## What is The Master Server **Framework**
 
 Master Server Framework is a framework designed to kick-start the development of **Master Server**. 
