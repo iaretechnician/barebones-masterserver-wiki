@@ -49,7 +49,7 @@ Networking API included in the framework allows you to build not just a master s
 
 ## The Big Picture
 
-![](http://i.imgur.com/G3a4Wv6.png)
+![](http://i.imgur.com/72zLq6U.png)
 
 To make Barebones Framework more scalable, backend logic was split into three main types of servers (server instances):
 * **Master Server** - this is the central server, which handles authentication and connects together other types of servers
