@@ -52,9 +52,15 @@ Networking API included in the framework allows you to build not just a master s
 ![](http://i.imgur.com/72zLq6U.png)
 
 To make Barebones Framework more scalable, backend logic was split into three main types of servers (server instances):
-* **Master Server** - this is the central server, which handles authentication and connects together other types of servers
+* **Master Server** - the central point to which everything connects
 * **Game Server** - this is where players connect to play the actual game.
 * **Spawner Server** - responsible for spawning game servers within it’s host. When client requests to create a room, master server finds an appropriate spawner server and sends it instructions to create a game. 
+
+All of these servers can run within a single VPS or on your local machine. However, when your player base increases, you will need to support more game servers. To do that, you'll have need to have more VPS'es or dedicated servers running.
+
+On one of my games, game server consumes about 70 MB ram, and about 5% of CPU. On a 2GB RAM VPS (10$/month), I can run about 20 game servers, with 30 players each, which allows me to have 600 concurrent users for just 10$/month, which is very, very cheap. 
+
+With current architecture of the framework, numbers can be doubled by buying another VPS. 
 
 ## A Few Points About The Framework
 
