@@ -1,5 +1,7 @@
 :information_source: The purpose of this page is to help you determine whether or not you need this asset. If, after reading everything, you're still not sure if this asset is for you, feel free to send me a message with your questions or feature requests
 
+[![](http://i.imgur.com/RB1F4Ym.png)](https://github.com/alvyxaz/barebones-masterserver/wiki/Introduction-To-The-Framework)
+
 ## :warning: **Read this** :warning: 
 
 **After the first month in the asset store, here are a few things that I feel needs to be said regarding the direction and vision of the framework**
