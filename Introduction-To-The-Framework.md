@@ -26,15 +26,26 @@ This means that master server **knows about everyone who connected to it**, and 
 * Assign players to game servers
 * Allow players to communicate to each other when they play in different servers
 
-## What is The Master Server Framework
+## What is The Game Server
+
+![] (http://i.imgur.com/azBQXyN.png)
+
+Game server is a server which is resposible for **gameplay logic**.
+
+Usually, game servers have these characteristics:
+
+* Large network traffic consumption - all the flying bullets, all the moving objects and characters need to be constantly synchronized between players, and it consumes a lot of traffic
+* Higher CPU usage - quite often, it needs to run physics, calculate collisions, do raycasting, process inputs from all of the players and etc.
+
+## What is The Master Server **Framework**
 
 Master Server Framework is a framework designed to kick-start the development of **Master Server**. 
 
 It contains solutions to some of the common problems when developing master servers, and servers in general.
 
-Networking API included in the framework allows you to build not just a master server, but any kind of server you want, within unity.
+Networking API included in the framework allows you to build not just a master server, but **any kind of server you want**, within unity.
 
-#### A Few Points About The Framework
+## A Few Points About The Framework
 
 * ℹ️ **UI is decoupled from the functionality** - UI components are included in the asset mainly to demonstrate how you can use the API. For example, if you want to display Game Servers list in a special way, you don't have to use the example provided - you can make a request to server and display the data received however you want
 * ⚠️ **Source code should not be edited** - asset will be updated regularly, and your changes might get lost in the process of updating. To avoid this, modify functionality by extending classes and listening to events.
