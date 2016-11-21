@@ -14,7 +14,9 @@ To put it plainly, in our context, server is a piece of software, which runs on 
 
 Having a server allows you to do all kinds of things - chats, authentication, "cloud saves", authoritative shops and etc. Even for simple things, such as "daily gifts", you'd need a server to make sure that a player doesn't hack the client to retrieve an infinite amount of free stuff.
 
-You could use a server to build a forum in your game, or a suggestions box. (these features are not in the framework, but you can use it to make them)
+You could use a server to build a forum in your game, or a suggestions box, or any number of other features (these features are not in the framework, but you can use it to make them)
+
+It doesn't matter if you work on a multiplayer or a single player game - there are a lot of benefits of having a central server either way.
 
 ## What is The Master Server (In General)
 
