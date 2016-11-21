@@ -1,4 +1,4 @@
-This page is designed to give you a general idea on what this framework does
+This page is designed to give you a general idea on what this framework does, and what it's trying to solve
 
 ## What is a Server
 
