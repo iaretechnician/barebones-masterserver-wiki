@@ -2,6 +2,13 @@
 
 [![](http://i.imgur.com/RB1F4Ym.png)](https://github.com/alvyxaz/barebones-masterserver/wiki/Introduction-To-The-Framework)
 
+## To Those Who Are Too Lazy to Read Everything
+
+* Framework focuses on helping you to build a Master Server, not Game Server (you'll use uNET or something else for that)
+* Servers can run locally, but for production, you'll probably need to host them on a VPS or a dedicated server
+* Framework encourages having game servers within your host (fully authoritative), and not on your client computers. You can either have some pre-defined game servers running 24/7, or you can have a Spawner server "Spawn" a game server on clients request (this imitates client hosting).
+* Framework is all about the programming API. UI elements are just there to show you how you can use the framework on your games. For example - if you want to display a list of ongoing games, you don't need to use the UI that comes with the package - you can make a request manually, and display received data however you want.
+
 ## :warning: **Read this** :warning: 
 
 **After the first month in the asset store, here are a few things that I feel needs to be said regarding the direction and vision of the framework**
