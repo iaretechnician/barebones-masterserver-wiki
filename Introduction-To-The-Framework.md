@@ -1,8 +1,38 @@
+This page is designed to give you a general idea on what this framework does
+
+## What is a Server
+
+![](http://i.imgur.com/nrphozU.png)
+
+Server is a computer or a program that manages access to a centralized resource or a service. 
+
+To put it plainly, in our context, server is a piece of software, which runs on a remote computer, to which clients can connect.
+
+### Why Would Anyone Need a Server For Their Games?
+
+Having a server allows you to do all kinds of things - chats, authentication, "cloud saves", authoritative shops and etc. Even for simple things, such as "daily gifts", you'd need a server to make sure that a player doesn't hack the client to retrieve an infinite amount of free stuff.
+
+You could use a server to build a forum in your game, or a suggestions box. (these features are not in the framework, but you can use it to make them)
+
+## What is The Master Server (In General)
+
+![](http://i.imgur.com/PW2NHrv.png)
+
+In general, **Master Server** is a type of server to which everything connects. Not just clients (players), but game servers and other types of servers too.
+
+This means that master server **knows about everyone who connected to it**, and can use this information to do various things:
+
+* Tell players which game servers are running
+* Assign players to game servers
+* Allow players to communicate to each other when they play in different servers
+
 ## What is The Master Server Framework
 
-In general, **Master Server** is a type of server to which everything connects (a central server). 
+Master Server Framework is a framework designed to kick-start the development of **Master Server**. 
 
-Master Server Framework is a framework designed to kick-start the development of such server.
+It contains solutions to some of the common problems when developing master servers, and servers in general.
+
+Networking API included in the framework allows you to build not just a master server, but any kind of server you want, within unity.
 
 #### A Few Points About The Framework
 
