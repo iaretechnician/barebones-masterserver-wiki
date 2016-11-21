@@ -2,6 +2,10 @@ This page will guide you through the steps you can take to start working on your
 
 ⚠️ 🔴 Make sure to build your game so that it can **run in the background** - it's necessary for any game that needs networking. Otherwise, you might experience some nasty glitches. You'll find the setting in **File > Build Settings > Player Settings > Run In Background**
 
+⚠️ I accidentally published the version where game scene name is set to "AwesomeGame". Change it in Canvas > Create Game Window
+
+![](http://i.imgur.com/Y46sjiy.png)
+
 ## Preparations
 
 1. Create a new folder in your project asset's root, and name it **MyGame**
@@ -224,3 +228,7 @@ Build the game with two of your scenes, make sure that main scene is first.
 ![](http://i.imgur.com/yCQf7MC.png)
 
 When you're in your game scene, hit "Play" in the editor. As before, it should start master and game servers automatically. You should be able to start the client you just built, and connect to the game.
+
+⚠️ I accidentally published the version where game scene name is set to "AwesomeGame". Change it in Canvas > Create Game Window
+
+![](http://i.imgur.com/Y46sjiy.png)
