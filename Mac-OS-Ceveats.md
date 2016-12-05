@@ -1,20 +1,16 @@
-## Start "Things" With Sudo
+## All Ports need to be >1024
 
-When you try to start a socket server on Mac OS, it will require you to start the process with elevated permissions. Here's how you start unity with elevated permission:
+All framework versions up to v1.03 have a default port for master server set to 90. This won't work on MacOS, and you'll need to change it. Here's how I get demo running on MacOS and a fresh installation of Unity:
 
-`sudo /Applications/Unity/Unity.app/Contents/MacOS/Unity`
+* Open Unity
+* Create a new Unity project
+* Install the framework asset
+* Open **DemoMain** scene
+* Change port in hierarchy Barebones > Master Server >Client Port to **1500**
+* Change port in hierarchy Barebones > Connection > Port to **1500**
+* Hit the editor "Play" button, and everything should be working
 
 ## Path To Executable
-
-### Running Spawner Server From Build
-
-:warning: Normally, if you don't supply a parameter for a path to executable, spawner server uses the same executable that it was started from. However, version v1.01 fails to resolve a path to "current file", so you'll need to override it manually. 
-
-You can do that by passing an absolute path to build with parameter `-bmExe`, for example:
-
-`sudo /Users/admin/Documents/Build.app/Contents/MacOS/Build -bmMaster -bmSpawner -bmExe "/Users/admin/Documents/Build.app/Contents/MacOS/Build"`
-
-**This will be fixed in an update v1.02**
 
 ### Running Spawner Server In Editor
 
