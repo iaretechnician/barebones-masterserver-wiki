@@ -20,7 +20,8 @@ _**If you found a section that's lacking**, or if you want something covered in 
  1. [**Database**](https://github.com/alvyxaz/barebones-masterserver/wiki/Database)
  1. [**Command Line Arguments**](https://github.com/alvyxaz/barebones-masterserver/wiki/Command-Line-Arguments) - a list of default arguments you can use when starting servers
 1. Modules
- 1. [**Profiles Module**](https://github.com/alvyxaz/barebones-masterserver/wiki/Player-Profiles)
+ 1. [**Authentication**] (https://github.com/alvyxaz/barebones-masterserver/wiki/Authentication)
+ 1. [**Profiles Module**] (https://github.com/alvyxaz/barebones-masterserver/wiki/Player-Profiles)
  1. [**Chat Module**](https://github.com/alvyxaz/barebones-masterserver/wiki/Chat-Module)
  1. [**Game Rooms Module**](https://github.com/alvyxaz/barebones-masterserver/wiki/Game-Servers) - general overview, describing how game servers register to master.
  1. [**Lobbies Module**](https://github.com/alvyxaz/barebones-masterserver/wiki/Lobbies-Module) 🆕 
