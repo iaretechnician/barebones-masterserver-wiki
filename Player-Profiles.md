@@ -10,7 +10,9 @@ When a player joins game server, game server can obtain players profile, make ch
 
 In most cases, you'll need your profiles to be constructed the same way, in all servers and clients. To do that, you'll need to call `ProfilesModule.SetFactory` method, and provide a parameter with your construction method. 
 
-Here's an example of how you can create your own profile factory. This component should be added to all of your scenes (or at least the ones, where client and servers are using profiles)
+> You'll need to set the profiles factory on every scene where you use profiles, because this factory is used to Serialize / Deserialize profiles data.
+
+Here's an example of how you can create your own profile factory. **This component should be added to all of your scenes** (or at least the ones, where client and servers are using profiles, because, as mentioned earlier, this factory is used to serialize / deserialize profiles data)
 
 ``` C#
 using UnityEngine;
