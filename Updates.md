@@ -30,7 +30,7 @@
 * RSA key size - can be changed via static `BmSecurity.RsaKeySize` field
 * Guest login can now be disabled via field AuthModule.EnableGuestLogin (inspector)
 * Added two methods to `IObservableProperty` - `SerializeToString` and `DeserializeFromString` - these can be used when writing custom database implementations, so that you can save data in human-readable formats (previously it was just binary)
-* A bunch of other fixes that I forgot / didn't take notes / made unintentionally
+* A bunch of other things I forgot to note
 
 
 
