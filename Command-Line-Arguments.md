@@ -1,6 +1,6 @@
 ### History:
 
-* Current version: **v1.03**. Previous: [v1.02](https://github.com/alvyxaz/barebones-masterserver/wiki/Command-Line-Arguments/9b1049e46a506702434153d220bfffdd85aab02a)
+* :warning: Current version: **v1.03**. Previous: [v1.02](https://github.com/alvyxaz/barebones-masterserver/wiki/Command-Line-Arguments/9b1049e46a506702434153d220bfffdd85aab02a)
 
 ## Examples
 
