@@ -18,9 +18,9 @@ You can start both, master server and spawner server in one instance:
 
 `./DesktopBuild.exe -bmMaster -bmSpawner`
 
-Starting a dedicated game server (capped at 20 fps, on scene "AwesomeGame", port 7777, with name "New Name"):
+Starting a dedicated game server (capped at 20 fps, on scene "GameRoom", port 7777, with name "New Name"):
 
-`./DesktopBuild.exe -bmStartDedicated -fps 20 -bmScene AwesomeGame -bmGamePort 7777 -bmGameName "New Name"`
+`./DesktopBuild.exe -bmStartManual -fps 20 -bmScene GameRoom -bmGamePort 7777 -bmGameName "New Name"`
 
 ## List Of Supported Arguments
 
@@ -44,9 +44,9 @@ Arguments are parsed in the `BmArgs` helper class
 | **Game Server:** |  |  |
 | -bmScene | null | If this argument is found, game server will first switch to that scene before starting a game server|
 | -bmIp | 127.0.0.1 | Public ip of the machine. This is used by game servers, so they know their public IP and can send it to clients, to let them know where to connect |
-| -bmStartUserCreated | not set | If this argument is found, it's considered that user created server needs to be started. |
-| -bmStartDedicated | not set | If this argument is found, dedicated game server will be started |
-| -bmInstanceId | -1 | Instance id, which is used to tell which process was started before creating a user created game server|
+| -bmStartSpawned :new: | not set | If this argument is found, it's considered that game server is being spawned by spawner |
+| -bmStartManual :new: | not set | If this argument is found, it's considered that a game server is being started manually |
+| -bmSpawnId :new: | -1 | Spawn id, which is used to tell which process was started before starting a spawned game server |
 | -bmPrivate | not set | If arg is found when launching a game server, it will not appear in the listings|
 | -bmMasterIp | 127.0.0.1 | Ip of the master server, to which game servers and spawner servers will try to connect|
 | -bmGamePort | 7777 | Read by game server, to know at which port to open the socket |
