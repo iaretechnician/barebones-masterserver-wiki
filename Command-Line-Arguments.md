@@ -18,7 +18,7 @@ You can start both, master server and spawner server in one instance:
 
 `./DesktopBuild.exe -bmMaster -bmSpawner`
 
-Starting a dedicated game server (capped at 20 fps, on scene "GameRoom", port 7777, with name "New Name"):
+Starting a game server manually (capped at 20 fps, on scene "GameRoom", port 7777, with name "New Name"):
 
 `./DesktopBuild.exe -bmStartManual -fps 20 -bmScene GameRoom -bmGamePort 7777 -bmGameName "New Name"`
 
