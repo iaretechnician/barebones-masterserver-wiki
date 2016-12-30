@@ -8,6 +8,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
 
 1. [**Introduction to the framework**](https://github.com/alvyxaz/barebones-masterserver/wiki/Introduction-To-The-Framework) - great read to understand "The Big Picture"
 1. ⚠️ 🔴 [**Important Stuff**](https://github.com/alvyxaz/barebones-masterserver/wiki/Important-Stuff)
+1. [**Updates (v1.03)**](https://github.com/alvyxaz/barebones-masterserver/wiki/Updates) :new:
 1. Demo Related
  1. [**Demo Explained**] (https://github.com/alvyxaz/barebones-masterserver/wiki/Demo-Explained)
  1. [**Launching The Demo**] (https://github.com/alvyxaz/barebones-masterserver/wiki/Launching-The-Demo) - good place to start if you like to learn from an example
