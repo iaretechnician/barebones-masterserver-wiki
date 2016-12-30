@@ -1,3 +1,8 @@
+
+## Previous Versions Of This Page:
+
+* v1.02
+
 ## Examples
 
 Examples of the commands will be given in a context, where main executable file is named `DesktopBuild.exe`, and command line / terminal is opened at the same path the file is in.
