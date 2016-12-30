@@ -28,6 +28,8 @@ Arguments are parsed in the `BmArgs` helper class
 
 | Argument       | Default value| Description|
 | -------------  |:-------------:| -----:|
+| **General:** |  |  |
+| -bmDestroy :new: | no set | If found, objects that have an "ObjectDestroyer" component will be destroyed (mainly for destroying canvas elements on headless servers) |
 | **Master:** |  |  |
 | -bmMaster | no set | If found, Master server will be started|
 | -bmMasterKey | "" (empty string)| Key, which is used by master server and **game servers** (when registering to master, they must match)|
@@ -36,6 +38,7 @@ Arguments are parsed in the `BmArgs` helper class
 | -bmSpawnersPort | 5002 | Port opened in master server, to which spawner servers will connect |
 | **Spawner:** |  |  |
 | -bmSpawner| not set| If found, Spawner server will be started|
+| -bmRegion :new: | not set| A string, which represents a region to which spawner server belongs (for example US / EU or anything else)|
 | -bmMinPort | 1000| When Spawner server starts a game server, it will assign to them ports starting from this number|
 | -bmMaxPort | 2000| |
 | -bmMaxGames| 5 | Max number of game servers this spawner can spawn|
