@@ -33,7 +33,7 @@ Arguments are parsed in the `BmArgs` helper class
 | **Master:** |  |  |
 | -bmMaster | no set | If found, Master server will be started|
 | -bmMasterKey | "" (empty string)| Key, which is used by master server and **game servers** (when registering to master, they must match)|
-| -bmClientsPort | 90 | Port opened in master server, to which clients will connect |
+| -bmClientsPort | 5000 | Port opened in master server, to which clients will connect |
 | -bmGamesPort | 5001 | Port opened in master server, to which game servers will connect |
 | -bmSpawnersPort | 5002 | Port opened in master server, to which spawner servers will connect |
 | **Spawner:** |  |  |
