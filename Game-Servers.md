@@ -1,4 +1,8 @@
-:warning: This section is still a work in progress
+### History:
+
+* :warning: Current version: **v1.03**. Previous: [v1.02](https://github.com/alvyxaz/barebones-masterserver/wiki/Game-Servers/5e24bfd52ee7a50744fa3630973213c6baed8b6d)
+
+### Warning
 
 ⚠️ 🔴 Make sure to build your game so that it can **run in the background** - it's necessary for any game that needs networking. Otherwise, you might experience some nasty glitches. You'll find the setting in **File > Build Settings > Player Settings > Run In Background**
 
