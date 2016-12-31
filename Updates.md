@@ -5,6 +5,12 @@
 ## V1.03
 
 ### Breaking Changes
+
+API Compatibility level will need to be changed to .NET 2.0
+(`File > Build Settings > Player Settings > Other Settings`)
+
+![](http://i.imgur.com/61WRlSD.png)
+
 :warning: This version contains a relatively large number of breaking changes, mainly in:
 
 * 🔥 **Default port for client connections changed from 90 to 5000** - this is to accomodate permission issues on MacOS
