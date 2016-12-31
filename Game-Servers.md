@@ -51,17 +51,20 @@ In my games, I use **uNET**. It has some caveats, but it's free and maintained b
 
 ## Types Of Game Servers
 
-### Dedicated Server
-This is a type of server which is created by developers and most likely is always online. In general, here's how you start a dedicated server:
+### Manually Started Game Server
+
+This is a type of server which is created by developers and most likely is always online. In general, here's how game servers start manually:
 
 1. Developer starts the game executable with command line arguments (more info)
 2. Game application starts (and starts the server)
 3. Game server registers to master
 4. Game server sets itself as open
 
-### User Created Server
+### Spawned Game Server
 
-This is, as the name suggests, a server, created when user requests it. The starting process has more steps than dedicated server, but in the end, the process is pretty much the same: 
+This is, as the name suggests, a server, created by spawner (not by developer directly). The starting process has more steps than manual server, but in the end, the process is pretty much the same. 
+
+Here's the generalized flow of events when client wants to start a game server:
 
 1. User sends a request to Master Server
 1. Master Server finds an appropriate spawner, which is not busy (by region or something else)
