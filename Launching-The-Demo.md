@@ -5,9 +5,13 @@ Make sure `DemoMain` is the first one
 
 Open the `DemoMain` scene, in the hierarchy, locate `Barebones >  SpawnerServer`, and change the **Override Exe Path** property in the inspector to your build path (for example `D:/Build/Win/Build.exe`). _This path will be used to start a game server process when you're in the editor._
 
+![](http://i.imgur.com/D6vJmMs.png)
+
 Now make a standalone build to the same path.
 
-![](http://i.imgur.com/D6vJmMs.png)
+:warning: Make sure that client tries to connect to your local server, by setting the IP to "127.0.0.1". This should be set for you by default.
+
+![](http://i.imgur.com/SH69SLE.png)
 
 Now, with `DemoMain` scene in the editor, you should be able to hit a **Play** button in the editor, and the example should work. A HUD at the bottom right should show an indication that Master and Spawner servers were started, and the client has connected to the master:
 
