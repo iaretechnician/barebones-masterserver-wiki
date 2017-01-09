@@ -11,7 +11,8 @@ _**If you found a section that's lacking**, or if you want something covered in 
 1. [**Updates (v1.03)**](https://github.com/alvyxaz/barebones-masterserver/wiki/Updates) :new:
 1. :new: :fire: **From Scratch** -Great place to understand the framework
  1. [**Introduction**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Introduction)
- 1. (I'll try to write as much of this today (2017.01.09) as possible)
+ 1. [**Setup Projects**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Setting-Up-The-Projects/_edit)
+ 1. (I'll try to write as much of this today (2017.01.09) as possible. Don't follow it until it's done)
 1. Demo Related
  1. [**Demo Explained**] (https://github.com/alvyxaz/barebones-masterserver/wiki/Demo-Explained)
  1. [**Launching The Demo**] (https://github.com/alvyxaz/barebones-masterserver/wiki/Launching-The-Demo) - good place to start if you like to learn from an example
