@@ -12,6 +12,8 @@ _**If you found a section that's lacking**, or if you want something covered in 
 1. Demo Related
  1. [**Demo Explained**] (https://github.com/alvyxaz/barebones-masterserver/wiki/Demo-Explained)
  1. [**Launching The Demo**] (https://github.com/alvyxaz/barebones-masterserver/wiki/Launching-The-Demo) - good place to start if you like to learn from an example
+1. :new: :fire: From Scratch (Great place to understand the framework)
+ 1. [**Introduction**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Introduction)
 1. Development / Getting Started
  1. [**Master Server And Modules**](https://github.com/alvyxaz/barebones-masterserver/wiki/Master-Server-And-Modules) - a short guide that will help you better understand what is the Master Server and how modules work
  1. [**Integrating to uNET game**](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started) - short guide on implementing master server functionality in a simple uNET game.
