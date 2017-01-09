@@ -2,31 +2,30 @@
 
 ### 1. Create a New Scene Named "MasterServer" In The "MasterServer" project
 
-### 2. Create a New Game Object
+### 2. Create a "wrapper" (parent) for our objects
 
-Name it **Networking**
+* Create an empty game object
+* Name it **Networking**
 
-### 3. Create a New Game Object
+### 3. Create a Master Server object
 
-It should be a child of **Networking**, and name it **Master Server**
+* Create an empty game object as a child of **Networking**
+* Name it **Master Server**
+* Add **Master** Component 
+* Select "Auto Start In Editor" in inspector
 
 ![](http://i.imgur.com/HmqjbI8.png)
 
-### 4. Add **Master** Component to the **Master Server** object
-
-### 5. Select "Auto Start In Inspector"
-
-This option will make sure that when you hit "Play" in the editor, master server will start automatically
+**Auto Start In Editor** option will make sure that when you hit "Play" in the editor, master server will start automatically
 
 > **Alternative:** Create a new script that will find **Master** in the scene, and call the `master.StartServer()` whenever you want (click of a button and so on)
 
-### 6. Add The Hud To Scene
+### 4. Add The Hud To Scene
 
-Create a canvas in the scene: `GameObject > UI > Canvas`.
+* Create a canvas in the scene: `GameObject > UI > Canvas`.
+* Drag a prefab from `Barebones/MasterFramework/Prefabs/Ui/Hud` to the Canvas
 
-Drag a prefab from `Barebones/MasterFramework/Prefabs/Ui/Hud` to the Canvas
-
-### 7. Add LogController to the scene
+### 5. Add LogController to the scene
 
 Drag a prefab from `Barebones/MasterFramework/Prefabs/Ui/LogController` to the scene
 
