@@ -1,4 +1,3 @@
-:warning: Work in progress
 # Setup
 
 ### 1. Create a New Scene Named "MasterServer" In The "MasterServer" project
