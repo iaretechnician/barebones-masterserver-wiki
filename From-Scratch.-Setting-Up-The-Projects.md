@@ -1,5 +1,3 @@
-:warning: Work in progress
-
 ## 1. Create Two Unity Projects
 
 Let's start by creating two Unity projects:
