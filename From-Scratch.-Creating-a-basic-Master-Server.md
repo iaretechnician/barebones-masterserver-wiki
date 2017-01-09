@@ -1,4 +1,4 @@
-# Setup
+## Setup
 
 ### 1. Create a New Scene Named "MasterServer" In The "MasterServer" project
 
@@ -35,7 +35,7 @@ Hierarchy view after all of these steps (Note: **EventSystem** appears automatic
 
 ![](http://i.imgur.com/Us31621.png)
 
-# Test If It Works
+## Test If It Works
 
 ### Editor
 
