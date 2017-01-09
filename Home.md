@@ -8,7 +8,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
 
 1. [**Introduction to the framework**](https://github.com/alvyxaz/barebones-masterserver/wiki/Introduction-To-The-Framework) - great read to understand "The Big Picture"
 1. ⚠️ 🔴 [**Important Stuff**](https://github.com/alvyxaz/barebones-masterserver/wiki/Important-Stuff)
-1. [**Updates (v1.03)**](https://github.com/alvyxaz/barebones-masterserver/wiki/Updates) :new:
+1. [**Updates (v1.03.1)**](https://github.com/alvyxaz/barebones-masterserver/wiki/Updates) :new:
 1. :new: :fire: **From Scratch** -Great place to understand the framework
  1. [**Introduction**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Introduction)
  1. [**Setting Up Unity Projects**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Setting-Up-The-Projects/_edit)
