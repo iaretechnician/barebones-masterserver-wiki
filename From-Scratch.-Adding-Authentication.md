@@ -1,6 +1,3 @@
-
-# Setup
-
 ## Server Side
 
 ### 1. Add Auth module
@@ -22,3 +19,8 @@
 Instead of using databases directly, all of the modules use (depend on) simple interfaces. It means that modules don't really care about which database is used, as long as it implements the required interface. This allows us to switch database implementations when necessary.
 
 Database factory is a central script, responsible for creating / giving concrete database implementations. In this example, we're using LiteDB.
+
+![](http://i.imgur.com/2qKKAbT.png)
+
+## Client
+
