@@ -13,7 +13,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
  1. [**Introduction**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Introduction)
  1. [**Setting Up Unity Projects**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Setting-Up-The-Projects/_edit)
  1. [**Basic Master Server**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Creating-a-basic-Master-Server)
- 1. [**Basic Client**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Connecting-with-Client)
+ 1. [**Basic Client**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Creating-a-Basic-Client)
  1. (I'll try to write as much of this today (2017.01.09) as possible. Don't follow it until it's done)
 1. Demo Related
  1. [**Demo Explained**] (https://github.com/alvyxaz/barebones-masterserver/wiki/Demo-Explained)
