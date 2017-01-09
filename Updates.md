@@ -2,6 +2,12 @@
 
 :warning: It's very important to make a backup before upgrading. Always.
 
+## V1.03.1 (Micro release)
+
+* Bug Fix: Fixed Android builds (when args list is returned as null)
+* Bug Fix: Master Key
+* Bug Fix: Defualt IP's are set to 127.0.0.1
+
 ## V1.03
 
 ### Breaking Changes
