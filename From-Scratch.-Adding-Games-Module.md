@@ -110,6 +110,10 @@ public class GamesRequester : MonoBehaviour {
 
 ```
 
+### :fire: (Optional) "Games List" component
+
+> Framework contains a prefab that retrieves a list of available games. You can find it at `Barebones/MasterModules/Games/Prefabs/GamesList`. You can use it, extend it or create your own
+
 ## Testing If It Works
 
 * Start The Master Server
