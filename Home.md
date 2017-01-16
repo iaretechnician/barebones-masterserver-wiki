@@ -40,12 +40,6 @@ _**If you found a section that's lacking**, or if you want something covered in 
 1. Production
  1. [**Hosting your game**](https://github.com/alvyxaz/barebones-masterserver/wiki/Hosting-Your-Game)
 
-## Feature Requests, Bugs and Improvement Ideas
-
-I want to make your experience of running Barebones Master Server as simple, easy and convenient as possible.
-
-Even if you've downloaded this illegally, feel free to contact me with ideas for improvements or feature requests.
-
 ## Editing Source code
 
 It's highly advised that you don't make any changes to source code. In most cases, you should be able to make changes by implementing interfaces, extending classes or subscribing to events. If you edit the source, it's possible that your project will break when you download an update, because your changes will be overwritten.
