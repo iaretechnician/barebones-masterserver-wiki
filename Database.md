@@ -36,21 +36,20 @@ If you found out that database is your bottleneck, you can easily change usage o
 
 All the modules that use database have an interface for interactions. For example, `AuthModule` interacts with database through interface `IAuthDatabase`.
 
-`AuthModule` generates it's concrete database interactions by calling a method `SetupDatabase`, at the moment of writing, it's defined like this:
+Concrete implementations of the interface are created in what's called a **Database Factory**.
 
-``` C#
-protected virtual IAuthDatabase SetupDatabase()
-{
-            IAuthDatabase database = null;
-#if (!UNITY_WEBGL && !UNITY_IOS) || UNITY_EDITOR
-            database =  new AuthDatabaseLdb(new LiteDatabase("./auth.db"));
-#endif
-            return database;
-}
-```
+To change a database solution: 
 
-As you can see, default implementation of this method creates an instance of `AuthDatabaseLdb`, which implements interface `IAuthDatabase`. 
+1. Create a script which extends `DatabaseAccessorFactory`
+1. Define necessary accessors by calling `SetAccessor<Type>(imlementation)`
+1. Add this component to the scene
 
-You can change the database solution by creating a new class, which would implement `IAuthDatabase`, and then overriding the `SetupDatabase` method to return an instance of it.
+By default, framework supports two databases, and you can see how they are implemented:
 
-Other modules that interact with database have a similar virtual method, which you can override to switch concrete implementation to one of your own.
+* LiteDB - `LiteDbFactory.cs`
+* MongoDB - `MongoDbFactory.cs`
+
+![](http://i.imgur.com/mGKe8RD.png)
+
+
+
