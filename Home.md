@@ -26,7 +26,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
  1. [**Creating Modules**](https://github.com/alvyxaz/barebones-masterserver/wiki/Creating-Modules) - tutorial on how to extend master server functionality with your own modules
  1. [**Networking API. Send, receive and handle messages**](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API) - this guide contains examples that will help you get familiar with networking abstraction layer.
  1. [**Tips on how to structure your project/scenes**](https://github.com/alvyxaz/barebones-masterserver/wiki/Project-Structure-Tips)
- 1. [**Database**](https://github.com/alvyxaz/barebones-masterserver/wiki/Database)
+ 1. [**Database**](https://github.com/alvyxaz/barebones-masterserver/wiki/Database) :new:
  1. [**Command Line Arguments**](https://github.com/alvyxaz/barebones-masterserver/wiki/Command-Line-Arguments) - a list of default arguments you can use when starting servers
 1. Modules
  1. [**Authentication**] (https://github.com/alvyxaz/barebones-masterserver/wiki/Authentication)
