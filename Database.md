@@ -1,3 +1,9 @@
+### History:
+
+* :warning: Current version: **v1.03**. Previous: [v1.02](https://github.com/alvyxaz/barebones-masterserver/wiki/Command-Line-Arguments/9b1049e46a506702434153d220bfffdd85aab02a)
+
+## Introduction
+
 When choosing how to store data within the framework, I was looking for three things
 
 1. Fastest possible development process - this means avoiding databases with tedious table/column/field setups.
