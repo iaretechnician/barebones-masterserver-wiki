@@ -10,6 +10,6 @@ In essence, to register a game server, you'd need to call `GamesModule.RegisterG
 
 So `GamesModule.RegisterGame()`takes these parameters:
 
-* RegisterGameServerPacket - you can simply create an instance of this class, and fill in the details about the game
-* IGameServer implementation - I'm not sure if generic implementation will work for you (UnetGameServer), but you can see how specific methods are implemented, and do something similar
+* `RegisterGameServerPacket` - information about the game server ⚠️ _This parameter will most likely be removed in 1.03.2, because the `IGameServer` already has a method for creating it._
+* `IGameServer` implementation - I'm not sure if generic implementation will work for you (), but you can see how specific methods are implemented, and do something similar
 * GameServerRegisterCallback - callback, which will be called when the game server is registered to master server. This callback receives RegisteredGame object, which is sort of a link between master server and game server. You'll need to call `registeredGame.Open()` to make the game visible in the Games List
