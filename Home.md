@@ -16,6 +16,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
  1. [**Basic Client**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Creating-a-Basic-Client)
  1. [**Adding Authentication module**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Adding-Authentication)
  1. [**Adding Games Module**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Adding-Games-Module)
+ 1. [**Registering Game Server**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Registering-a-Game-Server) - shows how to register any kind of game server (even a fake one) to the master server
  1. (Still a work in progress (last edit: 2017.01.16))
 1. Demo Related
  1. [**Demo Explained**] (https://github.com/alvyxaz/barebones-masterserver/wiki/Demo-Explained)
