@@ -103,7 +103,8 @@ public class GamesRequester : MonoBehaviour {
 
         if (data.Count > 0)
         {
-            Debug.Log(data.Select(g => string.Format("Name: {0}, Address: {1} \n", g.Name, g.Address)));
+            var games = data.Select(g => string.Format("Name: {0}, Address: {1} \n", g.Name, g.Address));
+            Debug.Log(string.Join(", ", games.ToArray()));
         }
     }
 }
