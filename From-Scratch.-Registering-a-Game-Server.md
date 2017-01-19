@@ -33,3 +33,9 @@ Creating a fake game server should give you an idea on how to use the API to reg
 ### 5. Add a UI button as a child of FakeGameServer, name it "StopAndDisconnect"
 
 ![](http://i.imgur.com/tChr9Qs.png)
+
+* Start And Register - will start our fake game server, and register it to the master
+* Stop And Disconnect - will stop the game server and disconnect it from master
+
+### 6. Writing the code for game server
+
