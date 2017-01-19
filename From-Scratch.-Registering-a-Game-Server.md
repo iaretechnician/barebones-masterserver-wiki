@@ -39,3 +39,206 @@ Creating a fake game server should give you an idea on how to use the API to reg
 
 ### 6. Writing the code for game server
 
+:warning: There's a bug, `WaitConnection` is invoked multiple times after reconnecting. It's fixed in V1.03.2
+:warning: _In V1.03.2, an overload method for `GamesModule.RegisterGame()` was introduced, and it no longer requires `RegisterGameServerPacket` parameter_
+
+Study the comments in the code.
+
+``` C#
+using System.Collections.Generic;
+using Barebones.MasterServer;
+using Barebones.Networking;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+/// <summary>
+/// Our game server needs to implement <see cref="IGameServer"/>
+/// </summary>
+public class FakeGameServer : MonoBehaviour, IGameServer
+{
+    public Button StartButton;
+    public Button StopButton;
+
+    public string MasterKey = "";
+    public string MasterIp = "127.0.0.1";
+    public int MasterPort = 5001;
+
+	// Use this for initialization
+	void Awake () {
+	    StartButton.onClick.AddListener(OnStartClick);	
+	    StopButton.onClick.AddListener(OnStopClick);
+
+        StopButton.gameObject.SetActive(false);
+	    Application.runInBackground = true;
+	}
+
+    private void OnStartClick()
+    {
+        // Connect to master server
+        Debug.Log("---------------------");
+        Debug.Log("Connecting to master server");
+
+        // Connect to master
+        if (!Connections.GameToMaster.IsConnected)
+        {
+            Connections.GameToMaster.Connect(MasterIp, MasterPort, 10000);
+        }
+
+        StartButton.interactable = false;
+
+        Connections.GameToMaster.WaitConnection(socket =>
+        {
+            if (!socket.IsConnected)
+            {
+                Debug.LogError("Failed to connect to master server");
+                return;
+            }
+
+            Debug.Log("Connected to master");
+            Debug.Log("Sending registration request");
+
+            GamesModule.RegisterGame(this.CreateRegisterPacket(MasterKey), this, game =>
+            {
+                if (game == null)
+                {
+                    Debug.LogError("Failed to register game server");
+                    return;
+                }
+
+                // Edit button visibility
+                StartButton.gameObject.SetActive(false);
+                StopButton.gameObject.SetActive(true);
+
+                // Open the game for public access
+                game.Open();
+            });
+        });
+    }
+
+    private void OnStopClick()
+    {
+        // Unregister the game
+        GamesModule.CurrentGame.Unregister();
+
+        // Disconnect from master
+        Connections.GameToMaster.Disconnect();
+
+        // Update button visibility
+        StopButton.gameObject.SetActive(false);
+        StartButton.gameObject.SetActive(true);
+        StartButton.interactable = true;
+    }
+
+    #region IGameServer implementation
+
+    /// <summary>
+    /// This method should create a registration packet, which will be sent
+    /// to master server. It gives master server some information about itself
+    /// </summary>
+    /// <param name="masterKey"></param>
+    /// <returns></returns>
+    public RegisterGameServerPacket CreateRegisterPacket(string masterKey)
+    {
+        // Create the packet
+        var packet =  new RegisterGameServerPacket()
+        {
+            Name = "Fake game room",
+            MaxPlayers = 10,
+            PublicAddress = "xxx.xxx.xxx.xxx:xxxx",
+            Properties = new Dictionary<string, string>()
+            // There are more fields, but they are not necessary
+        };
+
+        packet.Properties.Add(GameProperty.MapName, "Best Map");
+
+        return packet;
+    }
+
+    /// <summary>
+    /// This should force-disconnect user by its name
+    /// </summary>
+    /// <param name="username"></param>
+    public void DisconnectPlayer(string username)
+    {
+    }
+
+    /// <summary>
+    /// This should return a scene of the game server,
+    /// it can be used when client wants to go to a specific scene before
+    /// joining a game server
+    /// </summary>
+    /// <returns></returns>
+    public string GetClientConnectionScene()
+    {
+        return SceneManager.GetActiveScene().name;
+    }
+
+    /// <summary>
+    /// Called when server registers to master server
+    /// </summary>
+    /// <param name="masterConnection"></param>
+    /// <param name="game"></param>
+    public void OnRegisteredToMaster(IClientSocket masterConnection, RegisteredGame game)
+    {
+        Debug.Log("Server registered to master");
+    }
+
+    /// <summary>
+    /// Called, when game server is opened and can be accesses by players
+    /// </summary>
+    public void OnOpenedToPublic()
+    {
+        Debug.Log("Game server is Open for public access");
+    }
+
+    /// <summary>
+    /// Should force-shutdown the server (for example, when master server decides
+    /// that this game server should no longer be running)
+    /// </summary>
+    public void Shutdown()
+    {
+        Application.Quit();
+    }
+
+    /// <summary>
+    /// Checks if access should be given to the requester.
+    /// Returns false, if access should not be given.
+    /// This is a good place to implement custom logic for player bans and etc.
+    /// </summary>
+    public bool ValidateAccessRequest(GameAccessRequestPacket request, out string error)
+    {
+        error = null;
+        return true;
+    }
+
+    /// <summary>
+    /// This is called right before game server gives access data to a player.
+    /// You can use this method to add custom properties to access data.
+    /// </summary>
+    public void FillAccessProperties(GameAccessRequestPacket request, GameAccessPacket accessData)
+    {
+    }
+
+    #endregion
+}
+```
+
+### 7. Add buttons references to the script in the inspector
+
+![](http://i.imgur.com/nqGXDVR.png)
+
+## Testing If It Works
+
+* Start the master server
+* Start the client
+* Click on the "Start And Register" button
+* Click on the "Get Games" button
+
+You should see something similar. 
+
+![] (http://i.imgur.com/XLpLIA4.png)
+
+If you have the "Games List" component in your scene, it should also contain our new fake game server
+
+![](http://i.imgur.com/kjUMYLk.png)
