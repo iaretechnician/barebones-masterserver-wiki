@@ -2,7 +2,7 @@
 
 ### Players can't connect to game server, says "Connecting to 127.0.0.1:xxxx"
 
-If you've hosted your servers somewhere, and when players try to access a game server and it says "connecting to **127.0.0.1**", the most likely problem is that players try to connect to game server, which is located at "the same device" (127.0.0.1 address). 
+If you've hosted your servers somewhere, and when players try to access a game server and it says "connecting to **127.0.0.1**" (NetworkManagerHUD), the most likely problem is that players try to connect to game server, which is located at "the same device" (127.0.0.1 address), when it's actually somewhere else. 
 
 This happens because game server doesn't know it's own public IP, thus, when giving access to player, sends it the default IP address (127.0.0.1). If game server is started by spawner, spawner should provide it's IP to game server through cmd args. 
 
