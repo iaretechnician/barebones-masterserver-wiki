@@ -76,3 +76,7 @@ Here are the indications that game server is running:
 ![](http://i.imgur.com/J2HIvuc.png)
 
 You can also try launching a client in the editor and click a "Get Games" button - it should retrieve your newly created game server.
+
+## Starting With Spawner Server
+
+## 
