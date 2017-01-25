@@ -66,9 +66,13 @@ public class FakeGameServerStarter : MonoBehaviour {
 
 ### 4. Test if it works
 
-* Make sure the **master server is running**
+* Make sure that **master server is running**
 * Make a build
 * Run it from command line, for example, like this:
   `./Build.exe -bmStartManual`
 
+Here are the indications that game server is running:
+
 ![](http://i.imgur.com/J2HIvuc.png)
+
+You can also try launching a client in the editor and click a "Get Games" button - it should retrieve your newly created game server.
