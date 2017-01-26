@@ -77,6 +77,41 @@ Here are the indications that game server is running:
 
 You can also try launching a client in the editor and click a "Get Games" button - it should retrieve your newly created game server.
 
-## Starting With Spawner Server
+## Starting Game Server With Spawner
 
-## 
+This section will go through steps of explaining how any kind of game server can be started by a spawner server.
+
+### ⚠️ On Master Server Project
+
+### 1. Add a Spawner Server component
+
+* Create a new, empty game object as a child of Networking
+* Name it "Spawner Server"
+* Attach a "SpawnerServer" component to it
+
+![](http://i.imgur.com/icAwITW.png)
+
+### 2. Configure Spawner Server
+
+* Make sure you have a correct executable path (path to game server build)
+* Uncheck **Run In Batch Mode**
+* Check **Auto Start**, so that spawner would start automatically in editor
+* Check **Wait For Master**, so that spawner starts only after the master server is started
+
+![](http://i.imgur.com/qZbcXwr.png)
+
+### Test if it spawner server is running
+
+Hit a play button in the editor, and HUD should display that Spawner Server is running
+
+![](http://i.imgur.com/g4ziXpG.png)
+
+### ⚠️ On Client Project
+
+On client project, we will add an input field and a button. Here's the flow of events that should happend:
+
+* Client clicks a "Create game" button
+* Sends a "create game server" request to Master Server
+* Master server notifies a spawner to spawn a game server
+* Game server starts
+
