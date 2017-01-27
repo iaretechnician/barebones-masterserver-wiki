@@ -26,7 +26,7 @@ If you decide to use the chat view prefab, here's a list of commands you can use
 * Reply to the person who last sent you a message: `/r message`
 * Join / Create channel: `/join channelName` (if channel doesn't exist, it will be created)
 * Leave channel: `/leave channelName`
-* Write in channel: `/c message`, `/ch message`, `/csay message`
+* Write in channel: `/c channelName message`, `/ch channelName message`, `/csay channelName message`
 * Get a list of channels we're in: `/c`
 
 ℹ️ These commands are parsed in the View script on the client, and used to create the `ChatMessagePacket` instance, which represents the actual message. In other words, these commands are only **client-specific**
