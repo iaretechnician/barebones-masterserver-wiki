@@ -27,7 +27,7 @@
 
 ### 5. Add LogController to the scene
 
-Drag a prefab from `Barebones/MasterFramework/Prefabs/Ui/LogController` to the scene
+Drag a prefab from `Barebones/MasterFramework/Prefabs/LogController` to the scene
 
 > **What the hell is LogController?**. For logging, framework uses a small wrapper. It allows developers to implement custom log listeners (appenders). Great use case for it would be to have a custom appender which sends logs to another server (like a central log listener), so that you can see what's happening in your "cloud". At the moment of writing, logging is still a **work in progress**
 
