@@ -13,7 +13,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
 1. [**Updates (v1.03.1)**](https://github.com/alvyxaz/barebones-masterserver/wiki/Updates) :new:
 1. :new: :fire: **From Scratch** -Great place to understand the framework
  1. [**Introduction**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Introduction)
- 1. [**Setting Up Unity Projects**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Setting-Up-The-Projects/_edit)
+ 1. [**Setting Up Unity Projects**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Setting-Up-The-Projects)
  1. [**Basic Master Server**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Creating-a-basic-Master-Server)
  1. [**Basic Client**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Creating-a-Basic-Client)
  1. [**Adding Authentication module**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Adding-Authentication)
