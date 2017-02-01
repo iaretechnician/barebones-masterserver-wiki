@@ -166,9 +166,9 @@ When you are developing your game, you probably want to test every iteration of 
 If you're using **uNET **for your games networking, there are a few scripts and prefabs that can automate this process for you, so navigate to `Barebones/MasterFramework/Prefabs`
 
 1. Add **MasterServer** to scene. This script will automatically start master server when you hit "play" button in the editor
-1. Add **GameServerStarter** prefab to scene- it will automatically start your game server (after master server starts)
-1. Add **UnetConnector** prefab to scene - it has a flag, called **Auto Join If Host**, which, as the name suggests, will try to automatically join the game, by first connecting to master and logging in.
-1. Add **Hud** prefab to the **Canvas** object in the hierarchy. It will help you see if the servers were started successfully.
+1. Add **GameServerStarter** prefab to the Networking object - it will automatically start your game server (after master server starts)
+1. Add **UnetConnector** prefab to the Networking object- it has a flag, called **Auto Join If Host**, which, as the name suggests, will try to automatically join the game, by first connecting to master and logging in.
+1. Add **Hud** prefab in the UI folder to the **Canvas** object in the hierarchy. It will help you see if the servers were started successfully.
 
 After adding these prefabs, here's what your scene hierarchy should look like:
 
