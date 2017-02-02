@@ -19,7 +19,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
  1. [**Adding Authentication module**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Adding-Authentication)
  1. [**Adding Games Module**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Adding-Games-Module)
  1. [**Registering Game Server :new:**](https://github.com/alvyxaz/barebones-masterserver/wiki/From-Scratch.-Registering-a-Game-Server) - guide on how to register any kind of game server (even a fake one) to the master server
- 1. **Automating game server launching** ( ⚠️ sorry about the delay to finish these series. While writing this section, I felt that the process is overly confusing, and am now trying to think of the easiest / most straightforward approach to setting things up (2017.01.30))
+ 1. **Automating game server launching** ( ⚠️ I'm working on the V1.04 update, which will slightly change the way the framework sets up. It's going to take about a week to finish. (Date of writing: 2017.02.02). I'll finish this tutorial when the update is completed)
  1. **Using what we know to setup an existing uNet game server** (WIP)
 1. Demo Related
  1. [**Demo Explained**] (https://github.com/alvyxaz/barebones-masterserver/wiki/Demo-Explained)
