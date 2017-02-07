@@ -2,7 +2,7 @@
 
 ## Contents Of The Wiki
 
-### ⚠️ :fire: I'm working on the V1.04 update, which will change the way the framework sets up (should make it a lot easier). It's going to take about a week to finish. (Date of writing: 2017.02.02)
+### ⚠️ :fire: I'm working on making the framework easier to use (v1.04). It would be great to hear your suggestions and requests here: https://github.com/alvyxaz/barebones-masterserver/issues/41
 
 Under the hood, framework is quite simple, but variety of different concepts might be a bit difficult to grasp at first - these guides are here to help you find your away around it.
 
