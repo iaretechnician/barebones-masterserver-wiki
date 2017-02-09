@@ -29,7 +29,7 @@ There are two options:
 * Upgrade from v1.03 to v2 - most likely, it will not be too difficult to upgrade, unless you've got a huge amount of custom extensions
 * Keep using the v1.03 - it's stable, and if you don't want to upgrade - don't.
 
-### What about production until the V2 is released?
+### What about development until the V2 is released?
 
 You can keep working on your project with V1.03, and upgrade later on. Don't think that it's a waste of time working with something that will be replaced soon - upgrading should not be too difficult, and most of your custom functionality will remain the same
 
