@@ -27,7 +27,7 @@ I'll try to release testable versions earlier, so that those of you who are inte
 There are two options:
 
 * Upgrade from v1.03 to v2 - most likely, it will not be too difficult to upgrade, unless you've got a huge amount of custom extensions
-* Keep using the v1.03 - it's stable, and if you don't want to upgrade - don't.
+* Keep using the v1.03 - it's stable, and if you don't want to upgrade - you don't have to.
 
 ### What about development until the V2 is released?
 
