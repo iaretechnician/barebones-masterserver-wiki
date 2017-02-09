@@ -1,8 +1,43 @@
 :information_source: _This wiki is constantly updated, so it's not recommended to use the documentation provided with the asset - it's most likely outdated_
 
-## Contents Of The Wiki
+## ⚠️ V2.0 announcement
 
-### ⚠️ :fire: I'm working on making the framework easier to use (v1.04). It would be great to hear your suggestions and requests here: https://github.com/alvyxaz/barebones-masterserver/issues/41
+As you might have heard, I was recently working on v1.04 (which was supposed to make the framework easier to use, for both beginners and advanced developers). While working on it, I've tried to minimize the amount of breaking changes, but realized that to make meaningful changes, a large amount of breaking changes is **unavoidable**.
+
+Today, **I know much more about how you use the framework** than I did when I first started working on it. Now, I can use this knowledge to make something greater.
+
+### How long will it take, and how much will it cost?
+
+My estimate is about 2 weeks - probably until the **27th of February**. And it's a **free update**.
+
+I'll try to release testable versions earlier, so that those of you who are interested in the process can give me feedback, or just see what to expect from v2 early on.
+
+### What will the new framework look like
+
+* Main focus on simple to use **API**
+* **Multithreaded** database accesses - accessing db is currently the most resource-intensive work
+* Single port for all connections 
+* Core structure will remain the same - there will be **master** and **spawner** servers, and master server will remain to be modular, so most of your custom scripts and modules should still work, or work with minimal changes
+* Underlaying **Networking API will remain the same**
+* Scripts to ensure that servers, after crashing, can be started again automatically
+* Reduced interference with your game code
+
+### What if I have a project in production with current version?
+
+There are two options:
+
+* Upgrade from v1.03 to v2 - most likely, it will not be too difficult to upgrade, unless you've got a huge amount of custom extensions
+* Keep using the v1.03 - it's stable, and if you don't want to upgrade - don't.
+
+### What about production until the V2 is released?
+
+You can keep working on your project with V1.03, and upgrade later on. Don't think that it's a waste of time working with something that will be replaced soon - upgrading should not be too difficult, and most of your custom functionality will remain the same
+
+ℹ️ If you have suggestions, feel free to share them in forums, by sending a PM, e-mail, or by starting an "issue" in github (the best option)
+
+-----
+
+## Contents Of The Wiki
 
 Under the hood, framework is quite simple, but variety of different concepts might be a bit difficult to grasp at first - these guides are here to help you find your away around it.
 
