@@ -2,6 +2,8 @@
 
 ## ⚠️ V2.0 announcement
 
+EDIT: Now that I've started working on it - I can see that V2.0 is going to be **BEAUTIFUL** 😄 
+
 As you might have heard, I was recently working on v1.04 (which was supposed to make the framework easier to use, for both beginners and advanced developers). While working on it, I've tried to minimize the amount of breaking changes, but realized that to make meaningful changes, a large amount of breaking changes is **unavoidable**.
 
 Today, **I know much more about how you use the framework** than I did when I first started working on it. Now, I can use this knowledge to make it greater.
