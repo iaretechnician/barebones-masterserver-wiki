@@ -33,7 +33,9 @@ There are two options:
 
 ### What about development until the V2 is released?
 
-You can keep working on your project with V1.03, and upgrade later on. Don't think that it's a waste of time working with something that will be replaced soon - upgrading should not be too difficult, and most of your custom functionality will remain the same
+:warning: If it's a new project - I'd recommend to wait until the V2, because it will take some time to learn V1.03, and by that time, there should be V2 preview available :)
+
+If you're already familiar with V1.03, you can keep working on your project with it, and upgrade later on. Don't think that it's a waste of time working with something that will be replaced soon - upgrading should not be too difficult, and most of your custom functionality will remain the same
 
 ℹ️ If you have suggestions, feel free to share them in forums, by sending a PM, e-mail, or by starting an "issue" in github (the best option)
 
