@@ -4,7 +4,7 @@
 
 EDIT: Now that I've started working on it - I can see that V2.0 is going to be **BEAUTIFUL** 
 
-⚠️🔥 **EDIT 2**: I'm really sorry to say this, but the amount of changes in V2.0 will be HUGE. To tell you the truth, I'm rewriting the framework from the ground up, so if you can wait, I would recommend to wait for the release of V2.0 instead of using the V1.03. In a couple of days I'll push some of the functionality to the private GitHub repository, so that you can start working on your awesome games as soon as possible. 
+⚠️🔥 **EDIT 2**: I'm really sorry to say this, but the amount of changes in V2.0 will be **HUGE**. To tell you the truth, I'm rewriting the framework from the ground up, so if you can wait, I would recommend to wait for the release of V2.0 instead of using the V1.03. In a couple of days I'll push some of the functionality to the private GitHub repository, so that you can start working on your awesome games as soon as possible. 
 
 As you might have heard, I was recently working on v1.04 (which was supposed to make the framework easier to use, for both beginners and advanced developers). While working on it, I've tried to minimize the amount of breaking changes, but realized that to make meaningful changes, a large amount of breaking changes is **unavoidable**.
 
