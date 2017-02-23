@@ -2,7 +2,7 @@
 
 ## ⚠️ V2.0 announcement
 
-EDIT: Now that I've started working on it - I can see that V2.0 is going to be **BEAUTIFUL** 
+**EDIT 3, 2017 02 24** Sorry for taking so long with V2.0! I have underestimated the amount of work it would take to rewrite the framework. I've managed to finish most of the modules, except for **lobby** and **profiles**. After wrapping up the Demo, I'll submit the preview without these modules, and finish them in the next few days. I'm hoping the demo will be finished tomorrow. Thank you for your patience!
 
 ⚠️🔥 **EDIT 2**: I'm really sorry to say this, but the amount of changes in V2.0 will be **HUGE**. To tell you the truth, I'm rewriting the framework from the ground up, so if you can wait, I would recommend to wait for the release of V2.0 instead of using the V1.03. In a couple of days I'll push some of the functionality to the private GitHub repository, so that you can start working on your awesome games as soon as possible. 
 
