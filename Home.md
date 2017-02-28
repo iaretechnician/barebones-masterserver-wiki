@@ -1,10 +1,16 @@
 :information_source: _This wiki is constantly updated, so it's not recommended to use the documentation provided with the asset - it's most likely outdated_
 
+--
+
+## NEWS
+
+⚠️🔥 **2017 02 28** Some of the **V2.0** functionality is uploaded to the private github repository, for those of you who are interested - feel free to play around with it and send your feedback. Documentation is still not ready, and demo doesn't cover everything, so it's only recommended for more advanced developers. If you don't have an invitation to private GitHub repository - send me an e-mail with your invoice ;)
+
+---
+
 ## ⚠️ V2.0 announcement
 
-⚠️🔥 **NEWS | 2017 02 28** Some of the V2.0 functionality is uploaded to the private github repository, for those of you who are interested - feel free to play around with it and send your feedback. Documentation is still not ready, and demo doesn't cover everything, so it's only recommended for more advanced developers. If you don't have an invitation to private GitHub repository - send me an e-mail with your invoice ;)
-
-I'm rewriting the framework to make it cleaner, easier to use and extend (this is a VERY short description of a very big change)
+I'm rewriting the framework to make it API focused, cleaner, easier to use and extend (this is a VERY short description of a very big change)
 
 ***What about development until the V2 is released?*** If it's a new project - I'd recommend to wait until the V2, because it will take some time to learn V1.03, and by that time, there should be V2 preview available. 
 
