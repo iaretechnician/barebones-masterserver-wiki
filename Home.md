@@ -2,44 +2,13 @@
 
 ## ⚠️ V2.0 announcement
 
-⚠️🔥 **EDIT 3 | 2017 02 24** Sorry for taking so long with V2.0! I have underestimated the amount of work it would take to rewrite the framework. I've managed to finish most of the modules, except for **lobby** and **profiles**. After wrapping up the Demo, I'll submit the preview without these modules, and finish them in the next few days. I'm hoping the demo will be finished tomorrow. Thank you for your patience!
+⚠️🔥 **NEWS | 2017 02 28** Some of the V2.0 functionality is uploaded to the private github repository, for those of you who are interested - feel free to play around with it and send your feedback. Documentation is still not ready, and demo doesn't cover everything, so it's only recommended for more advanced developers. 
 
-⚠️🔥 **EDIT 2**: I'm really sorry to say this, but the amount of changes in V2.0 will be **HUGE**. To tell you the truth, I'm rewriting the framework from the ground up, so if you can wait, I would recommend to wait for the release of V2.0 instead of using the V1.03. In a couple of days I'll push some of the functionality to the private GitHub repository, so that you can start working on your awesome games as soon as possible. 
+I'm rewriting the framework to make it cleaner, easier to use and extend (this is a VERY short description of a very big change)
 
-As you might have heard, I was recently working on v1.04 (which was supposed to make the framework easier to use, for both beginners and advanced developers). While working on it, I've tried to minimize the amount of breaking changes, but realized that to make meaningful changes, a large amount of breaking changes is **unavoidable**.
+***What about development until the V2 is released?*** If it's a new project - I'd recommend to wait until the V2, because it will take some time to learn V1.03, and by that time, there should be V2 preview available. 
 
-Today, **I know much more about how you use the framework** than I did when I first started working on it. Now, I can use this knowledge to make it greater.
-
-### How long will it take, and how much will it cost?
-
-My estimate is about 2 weeks - probably until the **27th of February**. And it's a **free update**.
-
-I'll try to release testable versions earlier, so that those of you who are interested in the process can give me feedback, or just see what to expect from v2 early on.
-
-### What will the new framework look like
-
-* Main focus on simple to use **API**
-* **Multithreaded** database accesses - accessing db is currently the most resource-intensive work
-* Single port for all connections 
-* Core structure will remain the same - there will be **master** and **spawner** servers, and master server will remain to be modular, so most of your custom scripts and modules should still work, or work with minimal changes
-* Underlaying **Networking API will remain the same**
-* Scripts to ensure that servers, after crashing, can be started again automatically
-* Reduced interference with your game code
-
-### What if I have a project in production with current version?
-
-There are two options:
-
-* Upgrade from v1.03 to v2 - most likely, it will not be too difficult to upgrade, unless you've got a huge amount of custom extensions
-* Keep using the v1.03 - it's stable, and if you don't want to upgrade - you don't have to.
-
-### What about development until the V2 is released?
-
-:warning: If it's a new project - I'd recommend to wait until the V2, because it will take some time to learn V1.03, and by that time, there should be V2 preview available :)
-
-If you're already familiar with V1.03, you can keep working on your project with it, and upgrade later on. Don't think that it's a waste of time working with something that will be replaced soon - upgrading should not be too difficult, and most of your custom functionality will remain the same
-
-ℹ️ If you have suggestions, feel free to share them in forums, by sending a PM, e-mail, or by starting an "issue" in github (the best option)
+If you are already using the V1.03 on existing project - you should probably keep using it, and switch to V2 when you have some free development time :)
 
 -----
 
