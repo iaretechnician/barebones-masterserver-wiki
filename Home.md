@@ -4,6 +4,8 @@
 
 ## NEWS
 
+**2017 03 08** | Still working hard on the V2.0. Got a bit swamped with e-mails, but it's nearing the completion! I apologize to everyone, to whom I've promised to release earlier. It's a bit more work than expected, and I'm trying to make everything as perfect as I can :). If you have suggestions or questions - email me, or catch me on Discord!
+
 **2017 02 28** | I've opened a Discord server for those who want to chat: [https://discord.gg/ZqGummZ](https://discord.gg/ZqGummZ)
 
 ⚠️🔥 **2017 02 28** | Some of the **V2.0** functionality is uploaded to the private github repository, for those of you who are interested - feel free to play around with it and send your feedback. Documentation is still not ready, and demo doesn't cover everything, so it's only recommended for more advanced developers. If you don't have an invitation to private GitHub repository - send me an e-mail with your invoice ;)
