@@ -4,6 +4,8 @@
 
 ## NEWS
 
+**2017 03 10** | For the next couple of days, I will stop replying (or reply sparingly) to e-mails and messages. I realized that because of all the messaging, I hardly have any time to work on the framework, which is why it's taking so long to finish V2.0. I'll release V2.0 on **Sunday evening (12th)**. 
+
 **2017 03 08** | Still working hard on the V2.0. Got a bit swamped with e-mails, but it's nearing the completion! I apologize to everyone, to whom I've promised to release earlier. It's a bit more work than expected, and I'm trying to make everything as perfect as I can :). If you have suggestions or questions - email me, or catch me on Discord! (**I hope to finish it within 1-2 days**)
 
 **2017 02 28** | I've opened a Discord server for those who want to chat: [https://discord.gg/ZqGummZ](https://discord.gg/ZqGummZ)
