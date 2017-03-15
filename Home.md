@@ -4,6 +4,10 @@
 
 ## NEWS
 
+**2017 03 15** | Good and bad news. Good - I'm "releasing" the V2.0 today. Bad news (well, not necessarily bad) - demos, that come with it, will be relatively "smaller". Demo in the V1.03 was overwhelming. I've tried to make it easier (which I've been doing for the past two weeks, but just couldn't do it). What I've realized is that it's impossible to display all functionality in "one scene", and make it "easy to understand". I could spend a few more weeks working on it, but I don't think I can make any progress. And you probably want to start working on V2.0 as soon as possible. 
+
+So I decided to start smaller, and include demos on your requests - if you want a tutorial on something, or a demo, or if there's something you find hard to understand - let me know, and I'll try to cover it ;)
+
 **2017 03 12** | V2.0 is **almost** finished. Due to rushing, I made some quick "hacks" and work-arounds that I still need to revisit, after that - RELEASE. I feel too exhausted to do it this evening, so I'll continue tomorrow.
 
 **2017 03 10** | For the next couple of days, I will stop replying (or reply sparingly) to e-mails and messages. I realized that because of all the messaging, I hardly have any time to work on the framework, which is why it's taking so long to finish V2.0. I'll release V2.0 on **Sunday evening (12th)**. 
