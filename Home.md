@@ -4,7 +4,8 @@
 
 ## NEWS
 
-**2017 03 16** | Submitted the V2.0 to the asset store. Until it's approved, you can grab it from the private GitHub repository, or send me an e-mail with your invoice/order number, and I'll send you the .unitypackage.
+### 2017 03 16
+Submitted the V2.0 to the asset store. While it's not approved, you can grab it from the private GitHub repository, or send me an e-mail with your invoice/order number, and I'll send you the .unitypackage.
 
 ⚠️ **There's almost no documentation**. I'll start writing documentation **tomorrow** - feeling a bit burned out today 💀 
 
@@ -13,16 +14,6 @@ If you find bugs or strange behaviours - let me know. For the past couple of wee
 I'll be at the Discord tomorrow. Today - I celebrate!
 
 **Discord server** for those who want to chat: [https://discord.gg/ZqGummZ](https://discord.gg/ZqGummZ)
-
----
-
-## ⚠️ V2.0 announcement
-
-I'm rewriting the framework to make it API focused, cleaner, easier to use and extend (this is a VERY short description of a very big change)
-
-***What about development until the V2 is released?*** If it's a new project - I'd recommend to wait until the V2, because it will take some time to learn V1.03, and by that time, there should be V2 preview available. 
-
-If you are already using the V1.03 on existing project - you should probably keep using it, and switch to V2 when you have some free development time :)
 
 -----
 
