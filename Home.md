@@ -4,19 +4,15 @@
 
 ## NEWS
 
-**2017 03 15** | Good and bad news. Good - I'm "releasing" the V2.0 today. Bad news (well, not necessarily bad) - demos, that come with it, will be relatively "smaller". Demo in the V1.03 was overwhelming. I've tried to make it easier (which I've been doing for the past two weeks, but just couldn't do it). What I've realized is that it's impossible to display all functionality in "one scene", and make it "easy to understand". I could spend a few more weeks working on it, but I don't think I can make any progress. And you probably want to start working on V2.0 as soon as possible. 
+**2017 03 16** | Submitted the V2.0 to the asset store. Until it's approved, you can grab it from the private GitHub repository, or send me an e-mail with your invoice/order number, and I'll send you the .unitypackage.
 
-So I decided to start smaller, and include demos on your requests - if you want a tutorial on something, or a demo, or if there's something you find hard to understand - let me know, and I'll try to cover it ;)
+⚠️ **There's almost no documentation**. I'll start writing documentation **tomorrow** - feeling a bit burned out today 💀 
 
-**2017 03 12** | V2.0 is **almost** finished. Due to rushing, I made some quick "hacks" and work-arounds that I still need to revisit, after that - RELEASE. I feel too exhausted to do it this evening, so I'll continue tomorrow.
+If you find bugs or strange behaviours - let me know. For the past couple of weeks, I've been rushing, so I expect that we might need a few "hotfix'es" (Even AAA games need them, haha). I'd also like to hear your suggestions if you have any. I feel like V2.0 is a great base to achieve something great!
 
-**2017 03 10** | For the next couple of days, I will stop replying (or reply sparingly) to e-mails and messages. I realized that because of all the messaging, I hardly have any time to work on the framework, which is why it's taking so long to finish V2.0. I'll release V2.0 on **Sunday evening (12th)**. 
+I'll be at the Discord tomorrow. Today - I celebrate!
 
-**2017 03 08** | Still working hard on the V2.0. Got a bit swamped with e-mails, but it's nearing the completion! I apologize to everyone, to whom I've promised to release earlier. It's a bit more work than expected, and I'm trying to make everything as perfect as I can :). If you have suggestions or questions - email me, or catch me on Discord! (**I hope to finish it within 1-2 days**)
-
-**2017 02 28** | I've opened a Discord server for those who want to chat: [https://discord.gg/ZqGummZ](https://discord.gg/ZqGummZ)
-
-⚠️🔥 **2017 02 28** | Some of the **V2.0** functionality is uploaded to the private github repository, for those of you who are interested - feel free to play around with it and send your feedback. Documentation is still not ready, and demo doesn't cover everything, so it's only recommended for more advanced developers. If you don't have an invitation to private GitHub repository - send me an e-mail with your invoice ;)
+**Discord server** for those who want to chat: [https://discord.gg/ZqGummZ](https://discord.gg/ZqGummZ)
 
 ---
 
