@@ -12,22 +12,6 @@ var accountInfo = Msf.Client.Auth.AccountInfo;
 Debug.Log("Logged in as: " + accountInfo.Username);
 ```
 
-### Accessing Data From a Remote Server
-
-If a remote server, for example, a game server, needs to get account data of a user, remote server will need to make a request:
-
-``` C#
-// This is a peer id, which was given to client when he connected to master server
-var peerId = 5; 
-Msf.Server.Auth.GetPeerAccountInfo(peerId, (info, error) =>
-{
-    if (info == null)
-        Debug.LogError(error);
-
-    Debug.Log(info);
-});
-```
-
 ### Logging In
 
 ``` C# 
@@ -74,5 +58,22 @@ var registrationData = new Dictionary<string, string>
 Msf.Client.Auth.Register(registrationData, (successful, error) =>
 {
     Debug.Log("Is successful: " + successful + "; Error (if exists): " + error);
+});
+```
+
+
+### Accessing Data From a Remote Server
+
+If a remote server, for example, a game server, needs to get account data of a user, remote server will need to make a request:
+
+``` C#
+// This is a peer id, which was given to client when he connected to master server
+var peerId = 5; 
+Msf.Server.Auth.GetPeerAccountInfo(peerId, (info, error) =>
+{
+    if (info == null)
+        Debug.LogError(error);
+
+    Debug.Log(info);
 });
 ```
