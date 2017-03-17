@@ -26,8 +26,6 @@ If you're bad at programming and if you have no experience in networking, you sh
 
 To conclude, **I'm not saying that beginners should not buy this** - it contains years of my knowledge and experience in developing back-end servers for multiplayer games, and if you're willing to learn - **you'll learn a lot**! And when you understand it, you'll be able to bake a game after a game in a matter of days!
 
-If you're a beginner who wants to learn - feel free to contact me, and I'll do my best to teach and guide you. I love helping people. But if you're not willing to do any development on your own - I'd rather you ask for a refund.
-
 ## Before You Buy
 
 This asset is **not a complete project**, but instead a framework, which you'd use to develop your back-end servers. Making multiplayer game is not a trivial task, so it's expected that you're familiar with writing C# code.
