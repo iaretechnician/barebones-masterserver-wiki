@@ -19,7 +19,7 @@ One of the most important changes was the introduction of `Msf` class. API of th
 
 You no longer need to create message objects, which was a bit tedious. Now, you can send packets and other serializable data in-line, like this:
 
-``` 
+``` C#
 // Sending a Unet messages (instances of MessageBase) to server
 Msf.Connection.SendMessage(777, new IntegerMessage(5));
 
