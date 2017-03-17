@@ -32,7 +32,7 @@ This means that master server **knows about everyone who connected to it**, and 
 
 ## What is The Game Server
 
-![] (http://i.imgur.com/azBQXyN.png)
+![](http://i.imgur.com/azBQXyN.png)
 
 Game server is a server which is resposible for **gameplay logic**.
 
