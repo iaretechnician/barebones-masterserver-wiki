@@ -1,7 +1,7 @@
 ### 
 :warning: For those, who are using V1.xx version of the framework -  [**V1.03 documentation**](https://github.com/alvyxaz/barebones-master-v1/wiki)
 
-## Table Of Content (V2)
+## Table Of Contents (V2)
 
 ℹ️ [**Main Changes In V2**](https://github.com/alvyxaz/barebones-masterserver/wiki/Main-Changes-in-V2)
 
