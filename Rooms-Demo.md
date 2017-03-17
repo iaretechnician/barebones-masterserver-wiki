@@ -20,7 +20,7 @@ Make a build with all the scenes, located at `Barebones/Demos/RoomsDemo/Scenes/`
    1. Click "Master + Spawner" button
    1. Click "Start Master Server"
    1. Click "Start Spawner"
-1. Starting the client
+1. Starting the **client**
    1. Open another instance of your build (run the "game")
    1. Click "Client Scene"
    1. Click "Play as Guest"
