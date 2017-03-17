@@ -11,12 +11,30 @@ _**If you found a section that's lacking**, or if you want something covered in 
 
 1. [**Introduction to the framework**](https://github.com/alvyxaz/barebones-masterserver/wiki/Introduction-To-The-Framework) - a general introduction to the main concepts of the framework
 1. [**Folder Structure**](https://github.com/alvyxaz/barebones-masterserver/wiki/Folder-Structure)
-2. API
+1. API
    1. [**Authentication module examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Authentication)
    1. [**Rooms module examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Rooms)
    1. [**Spawners module examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Spawner)
    1. [**Chat module examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Chat)
-
+1. Getting Started
+   1. Core concepts / Basic examples
+   1. Rooms Demo
+   1. Worlds Demo
+1. Development
+   1. Creating modules
+   1. Peer Extensions / States
+   1. Sending / Receiving messages
+   1. uNET + Rooms Module
+   1. Switching database implementations
+   1. Command Line Arguments
+1. Production
+   1. Make sure your IP addresses are correct
+1. Modules
+   1. Auth Module
+   1. Chat Module
+   1. Rooms Module
+   1. Profiles Module
+   1. Spawners Module
 
 (I'm writing content at the moment ^_^)
 
