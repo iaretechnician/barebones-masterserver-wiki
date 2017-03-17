@@ -8,7 +8,7 @@ At the time of writing, folder structure of the framework is as follows:
   * **WorldsDemo** - shows how you can utilize the framework to create game servers, that are connected to each other
 * **Documentation** - self explanatory ^_^
 * **Msf** - contains the core of the master server framework
-   * **Prefabs** - a collection of some helpful prefabs
+   * **Prefabs** - a collection of some helpful prefabs. Click on them for explanation
 * **MsfDatabaseImplementations** - contains implementations of different database accessors
 * **MsfUiSamples** - contains UI examples, that demonstrate how you can use MSF API inside your UI components
 * **Networking** - this is a core networking API, on top of which master server framework is written
