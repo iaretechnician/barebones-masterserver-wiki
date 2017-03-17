@@ -1,5 +1,5 @@
 ### 
-:warning: For those, who are using V1.xx version of the framework -  [**V1.03 documentation**](https://github.com/alvyxaz/barebones-master-v1/wiki)
+:warning: If you're using V1.xx version of the framework -  [**V1.03 documentation**](https://github.com/alvyxaz/barebones-master-v1/wiki)
 
 ## Table Of Contents (V2)
 
