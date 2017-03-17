@@ -4,3 +4,5 @@
 ## Table Of Content (V2)
 
 1. [Introduction to the framework](https://github.com/alvyxaz/barebones-masterserver/wiki/Introduction-To-The-Framework)
+
+(I'm writing content at the moment ^_^)
