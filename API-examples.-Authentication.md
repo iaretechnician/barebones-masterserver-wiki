@@ -1,17 +1,3 @@
-### Accessing Account Data of The Client Who Is Logged In
-
-These methods should most likely be used on the Client.
-
-``` C#
-// Check if client is logged in
-if (Msf.Client.Auth.IsLoggedIn)
-    Debug.Log("Client is logged in");
-
-// Access info of user who is logged in
-var accountInfo = Msf.Client.Auth.AccountInfo;
-Debug.Log("Logged in as: " + accountInfo.Username);
-```
-
 ### Logging In
 
 ``` C# 
@@ -41,6 +27,20 @@ Msf.Client.Auth.LogIn(data, (successful, error) =>
 {
     Debug.Log("Is successful: " + successful + "; Error (if exists): " + error);
 });
+```
+
+### Accessing Account Data of The Client Who Is Logged In
+
+These methods should most likely be used on the Client.
+
+``` C#
+// Check if client is logged in
+if (Msf.Client.Auth.IsLoggedIn)
+    Debug.Log("Client is logged in");
+
+// Access info of user who is logged in
+var accountInfo = Msf.Client.Auth.AccountInfo;
+Debug.Log("Logged in as: " + accountInfo.Username);
 ```
 
 ### Register a New Account
