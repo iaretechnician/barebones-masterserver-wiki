@@ -5,6 +5,8 @@
 
 ℹ️ [**Main Changes In V2**](https://github.com/alvyxaz/barebones-masterserver/wiki/Main-Changes-in-V2)
 
+⚠️ If you've downloaded framework from the asset store, you'll find V2.0 as a separate .unitypackage within `Barebones` folder. Read the `V2 README !IMPORTANT.txt` for more information.
+
 Under the hood, framework is quite simple, but variety of different concepts might be a bit difficult to grasp at first - these guides are here to help you find your away through it.
 
 _**If you found a section that's lacking**, or if you want something covered in the documentation - post a feature request here, in GitHub (Issues tab)_, or send me a personal message. I know what it feels to own a product with great documentation, so I'll be more than happy to assist. 🌞 
