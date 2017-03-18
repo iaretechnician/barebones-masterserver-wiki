@@ -30,6 +30,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
 1. Production
    1. Debugging Connection
    1. Make sure your IP addresses are correct
+   1. Performance considerations
 1. Modules
    1. Auth Module
    1. Chat Module
