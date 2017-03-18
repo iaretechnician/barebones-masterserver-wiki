@@ -38,8 +38,6 @@ _**If you found a section that's lacking**, or if you want something covered in 
    1. Profiles Module
    1. Spawners Module
 
-(I'm writing content at the moment ^_^)
-
 ## Editing Source code
 
 It's highly advised that you don't make any changes to source code. In most cases, you should be able to make changes by implementing interfaces, extending classes or subscribing to events. If you edit the source, it's possible that your project will break when you download an update, because your changes will be overwritten.
