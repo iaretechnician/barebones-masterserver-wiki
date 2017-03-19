@@ -15,8 +15,8 @@ When connection is established, both server and client will see each other as pe
 
 ## Starting a Server Socket 
 Server sockets implemet `IServerSocket` interface. It exposes two events and two methods
-* `OnConnected` (event) - invoked, when client connects to this socket. `IPeer` instance, which represents a connected client, will be provided as an argument
-* `OnDisconnect` (event) - invoked, when client disconnects
+* `Connected` (event) - invoked, when client connects to this socket. `IPeer` instance, which represents a connected client, will be provided as an argument
+* `Disconnected` (event) - invoked, when client disconnects
 * `Listen(port)` - opens the socket and starts listening to the port. After calling this method, clients can start connecting
 * `Stop()` - stops listening
 
@@ -26,7 +26,7 @@ Server sockets implemet `IServerSocket` interface. It exposes two events and two
         // Create a server socket
         IServerSocket server = new ServerSocketUnet();
 
-        server.OnConnected += peer =>
+        server.Connected += peer =>
         {
             Debug.Log("Server: client connected: " + peer.Id);
         };
@@ -43,9 +43,9 @@ Client socket implements `IClientSocket` interface. Exposed properties and metho
 * `Status` - Status of the connection
 * `IsConnected` - Returns true, if we are connected to another socket
 * `IsConnecting` - Returns true, if we're in the process of connecting
-* `OnConnected` (event) - Invoked on successful connection
-* `OnDisconnected` (event) - Invoked when disconnected from server socket
-* `OnStatusChange` (event) - Invoked when connection status changes
+* `Connected` (event) - Invoked on successful connection
+* `Disconnected` (event) - Invoked when disconnected from server socket
+* `StatusChanged` (event) - Invoked when connection status changes
 * `Connect(ip, port)` - Starts connecting to server socket at given address
 * `Disconnect()` - Closes the connection
 * `WaitConnection(callback)` - a helpful method, which will invoke a callback when connection is established, or after a failed attempt to connect. If already connected - callback will be invoked istantly.
@@ -57,7 +57,7 @@ Client socket implements `IClientSocket` interface. Exposed properties and metho
         // Create a server socket
         IClientSocket client = new ClientSocketUnet();
 
-        client.OnConnected += () =>
+        client.Connected += () =>
         {
             Debug.Log("Client: I've connected to server");
         };
@@ -71,13 +71,13 @@ Client socket implements `IClientSocket` interface. Exposed properties and metho
 Client and server communicate to each other through `IPeer` interface. 
 Server will get clients peer when it connects, and client can access servers peer object through `IClientSocket.Peer`
 
-There are many overload methods for sending and responding to messages. You can check them by opening `IPeer` and `IIncommingMessage` interfaces. Examples below will show you some of the basic methods you can use and how to use them.
+There are many overload methods for sending and responding to messages. You can check them by opening `IMsgDispatcher` and `IIncommingMessage` interfaces. Examples below will show you some of the basic methods you can use and how to use them.
 
 ### Client to Server
 To receive messages, server will need to listen to the event on `IPeer`:
 
 ``` C#
-        server.OnConnected += peer =>
+        server.Connected += peer =>
         {
             // Client just connected
             peer.OnMessage += message =>
@@ -88,13 +88,12 @@ To receive messages, server will need to listen to the event on `IPeer`:
         };
 ```
 
-Client can send a message like this:
+Client can send a simple string message like this:
 
 ``` C#
-        client.OnConnected += () =>
+        client.Connected += () =>
         {
-            var msg = MessageHelper.Create(0, "Yo!");
-            client.Peer.SendMessage(msg, DeliveryMethod.Reliable);
+            client.Peer.SendMessage(0, "Hey!");
         };
 ```
 
@@ -104,11 +103,10 @@ You can do it pretty much the same way you sent messages from client to server.
 
 Server code:
 ``` C#
-        server.OnConnected += peer =>
+        server.Connected += peer =>
         {
             // Client just connected
-            var msg = MessageHelper.Create(0, "Sup?");
-            peer.SendMessage(msg, DeliveryMethod.Reliable);
+            peer.SendMessage(0, "What's up?");
         };
 ```
 
@@ -127,12 +125,12 @@ Client code:
 However, it's not the only way for client to handle a message. You can add a handler which would handle a message with specific op code, such as:
 
 ``` C#
-        client.AddHandler(new PacketHandler(0, message =>
+        client.SetHandler(0, message =>
         {
             Debug.Log("I've got the message!: " + message.AsString());
-        }));
+        });
 
-        client.OnConnected += () =>
+        client.Connected += () =>
         {
         };
 ```
@@ -143,27 +141,27 @@ If you want to send a message and get something in return, a.k.a send a request 
 
 **Server:** 
 ``` C#
-        server.OnConnected += peer =>
+        server.Connected += peer =>
         {
             // Send a message to client
-            var msg = MessageHelper.Create(0, "What's up?");
-            peer.SendMessage(msg, (status, response) =>
+            peer.SendMessage(0, "What's up?", (status, response) =>
             {
                 // This get's called when client responds
-                if (status == AckResponseStatus.Success)
+                if (status == ResponseStatus.Success)
                 {
                     Debug.Log("Client responded: " + response.AsString());
                 }
-            })
+            });
+        };
 ```
 
 **Client:**
 ``` C#
-        client.AddHandler(new PacketHandler(0, message =>
+        client.SetHandler(0, message =>
         {
             // Message received, let's respond to it
-            message.Respond("Not much", AckResponseStatus.Success);
-        }));
+            message.Respond("Not much", ResponseStatus.Success);
+        });
 ```
 
 ## Creating Messages
@@ -183,7 +181,7 @@ When receiver handles this message and receives an `IIncommingMessage`, it can u
 ## Serialization
 Every single peace of data you send is converted into `byte[]`
 
-To avoid reflection and AOT methods, I didn't use any third party serialization libraries. Instead, every packet is serialized manually - it's really not too difficult to do, and gives you full control.
+To avoid reflection and AOT methods, I didn't use any third party serialization libraries. Instead, every packet is serialized manually - it's not difficult to do, and gives you full control.
 
 :information_source: It doesn't mean you can't use serialization libs, such as **Json.NET** or **protobuf-net**. As long as they can turn objects into bytes and back again, and your platform supports them - have fun!
 
