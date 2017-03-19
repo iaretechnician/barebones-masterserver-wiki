@@ -38,6 +38,6 @@ Start spawner only:
 
 `./Build.exe -msfStartSpawner`
 
-Using a different build for game server:
+Using a different build for game server, and limiting the number of processes than can be started:
 
-`./Build.exe -msfStartSpawner -msfExe 'D:/SomethingElse/build.exe'`
+`./Build.exe -msfStartSpawner -msfExe 'D:/SomethingElse/build.exe'` -msfMaxProcesses 10
