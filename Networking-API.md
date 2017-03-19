@@ -80,7 +80,7 @@ To receive messages, server will need to listen to the event on `IPeer`:
         server.Connected += peer =>
         {
             // Client just connected
-            peer.OnMessage += message =>
+            peer.MessageReceived += message =>
             {
                 // Handle peer messages
                 Debug.Log("Server: I've got a message from client: " + message.AsString());
@@ -113,9 +113,9 @@ Server code:
 Client code:
 
 ``` C#
-        client.OnConnected += () =>
+        client.Connected += () =>
         {
-            client.Peer.OnMessage += message =>
+            client.Peer.MessageReceived += message =>
             {
                 Debug.Log("I've got the message!: " + message.AsString());
             };
@@ -244,9 +244,9 @@ If you're using `SerializablePacket`, here's how you serialize, send, receive an
 Receive a packet:
 
 ``` C#
-            server.OnConnected += peer =>
+            server.Connected += peer =>
             {
-                peer.OnMessage += message =>
+                peer.MessageReceived += message =>
                 {
                     // We received a message
                     var data = message.Deserialize(new RoomAccessPacket());
