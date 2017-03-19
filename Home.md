@@ -10,7 +10,7 @@
 _**If you found a section that's lacking**, or if you want something covered in the documentation - post a feature request here, in GitHub (Issues tab)_, or send me a personal message. I know what it feels to own a product with great documentation, so I'll be more than happy to assist. 🌞 
 
 1. [**Introduction to the framework**](https://github.com/alvyxaz/barebones-masterserver/wiki/Introduction-To-The-Framework) - a general introduction to the main concepts of the framework
-1. Updates - (Latest: **V2.0.1**, waiting for approval)
+1. [**Updates**](https://github.com/alvyxaz/barebones-masterserver/wiki/Updates) - (Latest: **V2.0.1**, waiting for approval)
 1. [**Folder Structure**](https://github.com/alvyxaz/barebones-masterserver/wiki/Folder-Structure)
 1. API
    1. [**Authentication module examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Authentication)
