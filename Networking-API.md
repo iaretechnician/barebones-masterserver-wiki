@@ -164,28 +164,31 @@ If you want to send a message and get something in return, a.k.a send a request 
         });
 ```
 
-## Creating Messages
-Messages should be created through `MessageHelper`. It holds factory methods that construct actual message objects that implement `IMessage` interface. When sent, every message get's converted into byte array.
+## Message Serialization
 
-MessageHelper has these basic methods for creating messages out of some common types:
-* `Create(opCode)` - creates an empty message
-* `Create(opCode, byte[])` - creates a message with data provided
-* `Create(opCode, string)` - creates a message from string
-* `Create(opCode, int)` - creates a message from integer 
-
-When receiver handles this message and receives an `IIncommingMessage`, it can use these methods to conveniently transform message to a type it was sent in:
-* `AsBytes()` - returns your data in byte[] array
-* `AsString()` - uses data in message to convert it to string
-* `AsInt()` - uses data in message to convert it to int
-
-## Serialization
 Every single peace of data you send is converted into `byte[]`
 
 To avoid reflection and AOT methods, I didn't use any third party serialization libraries. Instead, every packet is serialized manually - it's not difficult to do, and gives you full control.
 
 :information_source: It doesn't mean you can't use serialization libs, such as **Json.NET** or **protobuf-net**. As long as they can turn objects into bytes and back again, and your platform supports them - have fun!
 
-There are some helpful extension methods for turning common types to byte array and back:
+`IMsgDispatcher.Send` supports these types of data:
+
+* `int`
+* `string`
+* `byte[]`
+* `MessageBase` (standard **Unet** message, which can be serialized automatically)
+* `ISerializablePacket` - any data structure, which implement `ISerializablePacket` interface
+
+On the receiving end, you can "read" received data from `IIncommingMessage` with these methods:
+
+* `AsInt()` - uses data in message to convert it to int
+* `AsString()` - uses data in message to convert it to string
+* `AsBytes()` - returns your data in byte[] array
+* `Deserialize<MessageBase>()` - deserializes Unet messages, for example `message.Deserialize<StringMessage>()`;
+* `Deserialize(ISerializablePacket packet)` - fills`ISerializable` implementation with data.
+
+There are some helpful extension methods for turning common types to byte arrays and back:
 
 * `String.ToBytes()` - use it like this: `"my string".ToBytes()`
 * `Dictionary<string,string>.ToBytes()`
@@ -227,18 +230,15 @@ If you're using `SerializablePacket`, here's how you serialize, send, receive an
 
 ``` C#
             // Create a packet
-            var packet = new GameAccessPacket()
+            var packet = new RoomAccessPacket()
             {
-                AccessToken = "54fgf4wr81wx85nh5io5gh",
-                Address = "127.0.0.1",
+                Token = "54fgf4wr81wx85nh5io5gh",
+                RoomIp = "127.0.0.1",
                 SceneName = "Main"
             };
 
-            // Create a message from the packet
-            var msg = MessageHelper.Create(0, packet.ToBytes());
-
             // Send the message
-            client.Peer.SendMessage(msg, DeliveryMethod.Reliable);
+            client.Peer.SendMessage(msg, packet.ToBytes();
 ```
 
 Receive a packet:
@@ -249,8 +249,8 @@ Receive a packet:
                 peer.OnMessage += message =>
                 {
                     // We received a message
-                    var data = message.DeserializePacket(new GameAccessPacket());
-                    Debug.Log(data.AccessToken);
+                    var data = message.Deserialize(new RoomAccessPacket());
+                    Debug.Log(data.Token);
                 };
             };
 ```
