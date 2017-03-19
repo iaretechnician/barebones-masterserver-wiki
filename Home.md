@@ -27,7 +27,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
    1. uNET + Rooms Module
    1. Switching database implementations
    1. Command Line Arguments
-   1. [**Networking API**](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API)
+   1. [**Networking API**](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API) - serializing, sending and receiving messages between servers and clients
 1. Production
    1. Debugging Connection
    1. Make sure your IP addresses are correct
