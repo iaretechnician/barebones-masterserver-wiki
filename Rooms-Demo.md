@@ -6,10 +6,10 @@
 
 Make a build with all the scenes, located at `Barebones/Demos/RoomsDemo/Scenes/` (they will probably start with "Demo-...")
 
-* File > Build Settings
-* Drag in all the scenes
-* :warning: Make sure that **Demo-SelectScene** is the first scene
-* Make a build 
+1. File > Build Settings
+1. Drag in all the scenes
+1. :warning: Make sure that **Demo-SelectScene** is the first scene
+1. Make a build 
 
 ![](http://i.imgur.com/9MKnb6Z.png)
 
