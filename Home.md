@@ -18,7 +18,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
    1. [**Chat module examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Chat)
 1. Getting Started
    1. Core concepts / Basic examples
-   1. Rooms Demo
+   1. [**Rooms Demo**](https://github.com/alvyxaz/barebones-masterserver/wiki/Rooms-Demo)
    1. Worlds Demo
 1. Development
    1. Creating modules
