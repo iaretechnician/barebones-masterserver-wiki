@@ -27,3 +27,17 @@ Make a build with all the scenes, located at `Barebones/Demos/RoomsDemo/Scenes/`
    1. Click "Create Game Server"
    1. Wait for the server to be spawned
    1. Play the game
+
+### Running the server from command line
+
+Basic setup: 
+
+`./Build.exe -msfStartMaster -msfStartSpawner`
+
+Start spawner only:
+
+`./Build.exe -msfStartSpawner`
+
+Using a different build for game server:
+
+`./Build.exe -msfStartSpawner -msfExe 'D:/SomethingElse/build.exe'`
