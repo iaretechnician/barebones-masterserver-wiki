@@ -25,11 +25,22 @@ If you hit the "Play" button in editor, you should see two messages:
 
 ℹ️ `Barebones/Demos/Basics/Scenes/Basics-1. Master And Client` scene contains an example, where master server and client connects manually, when user clicks a button.
 
-#### How does this work?
+## How does this work?
 
-* **MasterServer** prefab starts the master server, and initializes all of the modules that it can find in the scene.
+* **MasterServer** prefab starts the master server
+  * Initializes all of the modules that it can find in the scene.
 * **ConnectionToMaster** keeps trying to connect to the master server automatically, so when master server is started, connection is established.
 
-#### Can I have the server and client in different scenes?
+So with these two prefabs, your scene becomes both - the master server, and the client.
+
+## Can I have the server and client in different scenes?
 
 Of course, just add the **MasterServer** to one scene, and **ConnectionToMaster** to another. In fact, you can have them in completely **different projects**! 
+
+There's really no "best" way to work with the framework - you do what suits you best.
+
+## What's next?
+
+* Start working with the API
+* Write your own modules
+* Learn to use the Spawner (if you need it)
