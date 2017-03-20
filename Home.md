@@ -18,7 +18,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
    1. [**Spawners module examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Spawner)
    1. [**Chat module examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Chat)
 1. Getting Started
-   1. Core concepts / Basic examples
+   1. [**Getting Started**](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started) - it's important to read and understand this before delving deeper into the framework
    1. [**Rooms Demo**](https://github.com/alvyxaz/barebones-masterserver/wiki/Rooms-Demo)
    1. Worlds Demo
 1. Development
