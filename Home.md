@@ -3,8 +3,8 @@
 
 ## News
 
-**2018 03 20** | Added [Tips and Recommendations](https://github.com/alvyxaz/barebones-masterserver/wiki/Tips-And-Recommendations) page
-**2017 03 20** | Added the [Getting Started](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started) guide
+* **2018 03 20** | Added [Tips and Recommendations](https://github.com/alvyxaz/barebones-masterserver/wiki/Tips-And-Recommendations) page
+* **2017 03 20** | Added the [Getting Started](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started) guide
 
 ## Table Of Contents (V2)
 
