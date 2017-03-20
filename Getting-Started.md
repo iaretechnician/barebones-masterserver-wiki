@@ -37,7 +37,18 @@ So with these two prefabs, your scene becomes both - the master server, and the 
 
 Of course, just add the **MasterServer** to one scene, and **ConnectionToMaster** to another. In fact, you can have them in completely **different projects**! 
 
-There's really no "best" way to work with the framework - you do what suits you best.
+There's really no "best" setup when working with the framework - you do what suits you best.
+
+## Starting server and client from build
+
+It's probably not enough to see the console message, especially if we're making a build, so let's add a simple HUD indicator, which would show us the status of connection, and whether or not the master server has started
+
+1. Create Canvas in the scene, by going to `GameObject > UI > Canvas`.
+2. Drag a prefab `Barebones/MsfUiSamples/Prefabs/MsfHUD` as a **child of Canvas**
+
+Hit a Play button, and you should see the HUD ( ℹ️ you might need to click on the header to expand it)
+
+![](http://i.imgur.com/abslSZA.png)
 
 ## What's next?
 
