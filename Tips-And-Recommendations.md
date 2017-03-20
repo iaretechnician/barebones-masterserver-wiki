@@ -1,3 +1,9 @@
+
+I recommend reading this whole page, but if you don't feel like it, here are the main points:
+
+* Don't rewrite demos - start from scratch
+* Use the API instead of default UI prefabs
+
 ### Start From Basics, Don't Rewrite Demos
 
 > I've noticed that many users like to start by rewriting the demo to suit their games. And when something doesn't work - they spend a large amount of time trying to understand what's wrong. 🐎 It's actually **a lot faster** to do everything from scratch, than trying to rewrite demos
