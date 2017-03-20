@@ -1,5 +1,3 @@
-⚠️ Not finished
-
 ### Launching The Demo
 
 #### Making a Build
