@@ -41,6 +41,8 @@ There's really no "best" setup when working with the framework - you do what sui
 
 ## Starting server and client from build
 
+### Adding the HUD prefab
+
 It's probably not enough to see the console message, especially if we're making a build, so let's add a simple HUD indicator, which would show us the status of connection, and whether or not the master server has started
 
 1. Create Canvas in the scene, by going to `GameObject > UI > Canvas`.
@@ -50,8 +52,23 @@ Hit a Play button, and you should see the HUD ( ℹ️ you might need to click o
 
 ![](http://i.imgur.com/abslSZA.png)
 
+### Running From Build
+
+1. Go to `File > Build Settings`, and add current scene
+1. Make a build to any location you like (I made mine in `D:/Build/Win/Build.exe`)
+1. Open command prompt / terminal at the location where you made a build, and run the command `./Build -msfStartMaster`.
+ This should start a master server.
+1. Open the build without the `-msfStartMaster`, or by simply opening it while the master server is running, and you should see this indication:
+
+![](http://i.imgur.com/X8I0XMj.png)
+
+This way, you have two instances of unity running:
+
+* One is both - **master server** and **client**
+* The other one is just a **client**
+
 ## What's next?
 
-* Start working with the API
-* Write your own modules
+* Start working with the API and default modules
 * Learn to use the Spawner (if you need it)
+* Write your own modules
