@@ -1,6 +1,10 @@
 ### 
 :warning: If you're using V1.xx version of the framework -  [**V1.03 documentation**](https://github.com/alvyxaz/barebones-master-v1/wiki)
 
+## News
+
+**2017 03 20** | Added the [Getting Started](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started) guide
+
 ## Table Of Contents (V2)
 
 ℹ️ [**Main Changes In V2**](https://github.com/alvyxaz/barebones-masterserver/wiki/Main-Changes-in-V2)
