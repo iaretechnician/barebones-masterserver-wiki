@@ -14,4 +14,4 @@ Instead, a better approach would be to start small, for example:
 
 Smaller steps will help you to make sure that you **understand how everything works**, and when something doesn't work - you'll know exactly what's wrong.
 
-> I've noticed that many users like to start by rewriting the demo to suit their games. And when something doesn't work - they spend a large amount of time trying to understand what's wrong. ❗️ It's actually **faster** to do everything from scratch
+> I've noticed that many users like to start by rewriting the demo to suit their games. And when something doesn't work - they spend a large amount of time trying to understand what's wrong. ❗️ It's actually **a lot faster** to do everything from scratch
