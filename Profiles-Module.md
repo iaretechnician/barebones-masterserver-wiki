@@ -1,5 +1,3 @@
-⚠️ Not finished
-
 **Player Profiles** module allows you to build player profiles, which are synchronized and persisted automatically.
 
 When a player joins game server, game server can obtain players profile, make changes to it, and those changes will be sent to Master server.
