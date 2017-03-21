@@ -3,6 +3,7 @@
 
 ## News
 
+* **2018 03 21** | Added [Profiles Module](https://github.com/alvyxaz/barebones-masterserver/wiki/Profiles-Module) page
 * **2018 03 20** | Added [Tips and Recommendations](https://github.com/alvyxaz/barebones-masterserver/wiki/Tips-And-Recommendations) page
 * **2017 03 20** | Added the [Getting Started](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started) guide
 
@@ -43,7 +44,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
    1. Auth Module
    1. Chat Module
    1. Rooms Module
-   1. Profiles Module
+   1. [**Profiles Module**](https://github.com/alvyxaz/barebones-masterserver/wiki/Profiles-Module) - how to use the profiles module
    1. Spawners Module
 
 ## Editing Source code
