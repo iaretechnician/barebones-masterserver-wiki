@@ -104,7 +104,7 @@ coinsProp.OnDirty += property =>
 };
 ```
 
-## Retrieving Player Profile In Game Server
+## Retrieving And Changing Player Profile In Game Server
 
 Game server retrieves profile data almost identically as client does. Main difference is that instead of `ObservableProfile` it creates `ObservableServerProfile`, which requires player's username.
 
