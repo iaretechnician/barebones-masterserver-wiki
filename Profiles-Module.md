@@ -61,7 +61,7 @@ Client will need to create the profile, and send a request to master server, to 
 
 Client doesn't really know what kind of profile was created for him on the master server, and he **doesn't need to** - he only needs to add properties that interest him.
 
-:warning: By default, if profiles don't match, an error will be logged to notify you about it (in case you did it accidentally). You can disable the error by checking `ProfilesModule.IgnoreProfileMissmatchError` in the inspector
+:warning: By default, if profiles don't match, an error will be logged to notify you about it (in case you did it accidentally). You can disable the error by checking `ProfilesModule.IgnoreProfileMissmatchError` in your code or in the inspector.
 
 ``` C#
 // Create a profile (we're intentionally not constructing all properties)
@@ -104,6 +104,37 @@ coinsProp.OnDirty += property =>
 };
 ```
 
+## Retrieving Player Profile In Game Server
+
+Game server retrieves profile data almost identically as client does. Main difference is that instead of `ObservableProfile` it creates `ObservableServerProfile`, which requires player's username.
+
+To retrieve data, server calls `Msf.Server.Profiles.FillProfileValues`
+
+``` C#
+var username = "playerUsername";
+
+// Construct the profile
+var profile = new ObservableServerProfile(username)
+{
+    new ObservableInt(MyProfileKeys.Coins, 5),
+    new ObservableString(MyProfileKeys.Title, "DefaultTitle"),
+};
+
+// Fill profile values
+Msf.Server.Profiles.FillProfileValues(profile, (successful, error) =>
+{
+    if (!successful)
+    {
+        Logs.Error(error);
+        return;
+    }
+
+    // Modify the profile (changes will automatically be sent to the server master server)
+    profile.GetProperty<ObservableInt>(MyProfileKeys.Coins).Add(4);
+    profile.GetProperty<ObservableString>(MyProfileKeys.Title).Set("DifferentTitle");
+
+});
+```
 
 ## Observable Properties
 
