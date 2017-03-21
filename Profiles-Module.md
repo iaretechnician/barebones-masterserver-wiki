@@ -129,7 +129,8 @@ Msf.Server.Profiles.FillProfileValues(profile, (successful, error) =>
         return;
     }
 
-    // Modify the profile (changes will automatically be sent to the server master server)
+    // Modify profile properties (changes will automatically be sent to the master server, 
+    // and then to client)
     profile.GetProperty<ObservableInt>(MyProfileKeys.Coins).Add(4);
     profile.GetProperty<ObservableString>(MyProfileKeys.Title).Set("DifferentTitle");
 
@@ -150,8 +151,8 @@ There are two methods which you can use to see get properties of the profile:
 Here's how you retrieve a property of `ObservableInt` type: 
 
 ``` C#
-        var coinsProperty = profile.GetProperty<ObservableInt>(MyKeys.Coins);
-        var oldValue = coinsProperty.Value;
+var coinsProperty = profile.GetProperty<ObservableInt>(MyProfileKeys.Coins);
+var coins = coinsProperty.Value;
 ```
 
 ## Built-in Observable Types
@@ -182,6 +183,8 @@ Here's a list of built-int observable types and some of their methods.
   * `.UnderlyingDictionary` - property, which returns an underlying dictionary. **This is mutable!**
   * `.SetValue(key, value)` - sets a value in the dictionary (updates an existing, or adds a new one)
   * `.Remove(key)` - removes a value from dictionary
+* `ObservableDictionaryStringInt` - represents a `Dictionary<string, int>`
+* `ObservableDictionaryStringFloat` - represents a `Dictionary<string, float>`
 
 ## Creating Your Own Observable types
 
