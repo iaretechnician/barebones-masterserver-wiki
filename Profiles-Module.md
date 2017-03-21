@@ -90,50 +90,20 @@ Msf.Client.Profiles.GetProfileValues(profile, (isSuccessful, profileError) =>
 });
 ```
 
-## Defining a Profile Structure
-
-In most cases, you'll need your profiles to be constructed the same way, in all servers and clients. To do that, you'll need to call `ProfilesModule.SetFactory` method, and provide a parameter with your construction method. 
-
-> You'll need to set the profiles factory on every scene where you use profiles, because this factory is used to Serialize / Deserialize profiles data.
-
-Here's an example of how you can create your own profile factory. **This component should be added to all of your scenes** (or at least the ones, where client and servers are using profiles, because, as mentioned earlier, this factory is used to serialize / deserialize profiles data)
+Or you can listen to profile changes directly:
 
 ``` C#
-using UnityEngine;
-using Barebones.MasterServer;
+// Listen directly to changes in coins property
+var coinsProp = profile.GetProperty<ObservableInt>(MyProfileKeys.Coins);
+coinsProp.OnDirty += property =>
+{
+    Logs.Info("Coins changed to: " + coinsProp.Value);
 
-public class MyGame : MonoBehaviour {
-
-	// Use this for initialization
-	void Awake () {
-
-        // Set the factory method
-	    ProfilesModule.SetFactory(ProfileFactory);
-	}
-
-    public static ObservableProfile ProfileFactory(string username)
-    {
-        var profile = new ObservableProfile(username);
-
-        // Registering profile variables
-        profile.AddProperty(new ObservableInt(MyKeys.Coins, 1000));
-        profile.AddProperty(new ObservableString(MyKeys.Weapon, "Sword"));
-        profile.AddProperty(new ObservableDictionaryInt(MyKeys.Inventory));
-
-        return profile;
-    }
-
-    /// <summary>
-    /// Keys of profile properties
-    /// </summary>
-    public static class MyKeys
-    {
-        public const short Coins = 0;
-        public const short Weapon = 1;
-        public const short Inventory = 2;
-    }
-}
+    // OR
+    // Logs.Info("Coins changed to: " + (property as ObservableInt).Value);
+};
 ```
+
 
 ## Observable Properties
 
