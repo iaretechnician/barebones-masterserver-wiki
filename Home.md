@@ -3,9 +3,10 @@
 
 ## News
 
-* **2018 03 22** | I'm planning to get a whole bunch of this documentation finished within the next few days. If you have requests for a topic you'd like me to cover, or cover first, leave a message at the [issues](https://github.com/alvyxaz/barebones-masterserver/issues). Cheers!
-* **2018 03 21** | Added [Profiles Module](https://github.com/alvyxaz/barebones-masterserver/wiki/Profiles-Module) page
-* **2018 03 20** | Added [Tips and Recommendations](https://github.com/alvyxaz/barebones-masterserver/wiki/Tips-And-Recommendations) page
+* **2017 03 23** | Added [Command Line Arguments](https://github.com/alvyxaz/barebones-masterserver/wiki/Command-Line-Arguments) page
+* **2017 03 22** | I'm planning to get a whole bunch of this documentation finished within the next few days. If you have requests for a topic you'd like me to cover, or cover first, leave a message at the [issues](https://github.com/alvyxaz/barebones-masterserver/issues). Cheers!
+* **2017 03 21** | Added [Profiles Module](https://github.com/alvyxaz/barebones-masterserver/wiki/Profiles-Module) page
+* **2017 03 20** | Added [Tips and Recommendations](https://github.com/alvyxaz/barebones-masterserver/wiki/Tips-And-Recommendations) page
 * **2017 03 20** | Added the [Getting Started](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started) guide
 
 ## Table Of Contents (V2)
@@ -35,7 +36,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
    1. Sending / Receiving messages
    1. uNET + Rooms Module
    1. Switching database implementations
-   1. Command Line Arguments
+   1. [**Command Line Arguments**](https://github.com/alvyxaz/barebones-masterserver/wiki/Command-Line-Arguments)
    1. [**Networking API**](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API) - serializing, sending and receiving messages between servers and clients
 1. Production
    1. Debugging Connection
