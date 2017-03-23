@@ -56,6 +56,7 @@ if (Msf.Args.IsProvided("-myMagicNumber"))
 | **Spawner**  | |
 | -msfExe | null| Path to executable, which should be used to spawn a process
 | -msfMaxProcesses | 0 (infinite) | Max number of processes, that this spawner can spawn
+| -msfSpawnBatchmode| false (not provided) | If provided, will spawn processes in batchmode. ⚠️ Removed in V2.0.2 - will spawn in batchmode automatically, if spawner is in batchmode
 | **Spawned Process**  | |
 | -msfAssignedPort | -1| Port, which is assigned by spawner to a spawned process
 | -msfSpawnId | -1| Spawn id, which is used to identify which process is spawned for which request
