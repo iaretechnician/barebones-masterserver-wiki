@@ -41,3 +41,25 @@ if (Msf.Args.IsProvided("-myMagicNumber"))
 ```
 
 ## List Of Used Argument names
+
+| Argument       | Default value| Description|
+| -------------  |:-------------:| -----:|
+| **General** | |
+| -msfMasterIp | null | Ip, which will be used when connecting to master server|
+| -msfMasterPort | 5000 | Port, which will be used to connect to master server
+| -msfMachineIp | null | Public IP of the machine, on which the process is running
+| -msfLoadScene | null | Name of the scene, which should be loaded (you'll need a script which reads this argument, otherwise - nothing will happen)
+| **Master** | |
+| -msfStartMaster | false (not provided) | Starts master server|
+| -msfMasterPort | 5000 | Master server will open this port|
+| -msfDbConnectionString | null | Database connection string, which can be used by some of the database implementations
+| **Spawner**  | |
+| -msfExe | null| Path to executable, which should be used to spawn a process
+| -msfMaxProcesses | 0 (infinite) | Max number of processes, that this spawner can spawn
+| **Spawned Process**  | |
+| -msfAssignedPort | -1| Port, which is assigned by spawner to a spawned process
+| -msfSpawnId | -1| Spawn id, which is used to identify which process is spawned for which request
+| -msfSpawnCode | null | Code, which is used to check if there's no tampering with spawned processes
+| -msfLobbyId | -1 | Id of the lobby, for which the process was spawned
+| **Other** | |
+|-msfWebgl | false (not provided) | Used to check if server should support WebGL clients
