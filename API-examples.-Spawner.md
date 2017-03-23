@@ -43,7 +43,7 @@ Msf.Server.Spawners.RegisterSpawner(spawnerOptions, (spawner, error) =>
     spawner.Settings.ExecutablePath = "C:/Win/Build.exe";
 
     // Change whether or not the spawner process should run in batchmode
-    spawner.Settings.RunInBatchmode = false;
+    spawner.Settings.SpawnInBatchmode = false;
 
     // (Optional) If you want to handle spawn requests manually
     spawner.SetSpawnRequestHandler((packet, message) =>
