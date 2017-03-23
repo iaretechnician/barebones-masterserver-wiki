@@ -3,6 +3,7 @@
 
 ## News
 
+* **2017 03 23** | Added [Peer Extensions](https://github.com/alvyxaz/barebones-masterserver/wiki/Peer-Extensions-and-Properties) page
 * **2017 03 23** | Added [Command Line Arguments](https://github.com/alvyxaz/barebones-masterserver/wiki/Command-Line-Arguments) page
 * **2017 03 22** | I'm planning to get a whole bunch of this documentation finished within the next few days. If you have requests for a topic you'd like me to cover, or cover first, leave a message at the [issues](https://github.com/alvyxaz/barebones-masterserver/issues). Cheers!
 * **2017 03 21** | Added [Profiles Module](https://github.com/alvyxaz/barebones-masterserver/wiki/Profiles-Module) page
@@ -32,7 +33,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
    1. Worlds Demo
 1. Development
    1. Creating modules
-   1. Peer Extensions / States
+   1. [**Peer Extensions / States**](https://github.com/alvyxaz/barebones-masterserver/wiki/Peer-Extensions-and-Properties)
    1. Sending / Receiving messages
    1. uNET + Rooms Module
    1. Switching database implementations
