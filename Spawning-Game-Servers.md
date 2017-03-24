@@ -1,5 +1,7 @@
 This page demonstrates the whole process of spawning game servers. It doesn't matter which technology you're using for your game servers, the process will be pretty much identical (except for starting the actual server)
 
+ℹ️ I've added examples with comments and without them - it might be easier to see what's happening when there are no comments :)
+
 ### Overview
 
 1. **Client sends request** to master server to spawn a game server
