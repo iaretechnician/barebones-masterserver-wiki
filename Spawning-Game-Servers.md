@@ -1,8 +1,6 @@
-⚠️ Not finished
-
 ### Overview
 
-1. **Client sends reques** to master server to spawn a game server
+1. **Client sends request** to master server to spawn a game server
 1. Master server finds an appropriate spawner and passes it the request
 1. **Spawner starts a new unity instance** (process)
    1. Process switches to necessary scene (optional)
@@ -11,6 +9,7 @@
       1. Notifies master server that a new process was started
       1. Starts a game server
       1. Registers the game server (room)
+      1. Finalizes spawn request
 1. Master server notifies client that a server that he requested was created (**finalized**)
 
 ### Registering a Spawner
