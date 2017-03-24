@@ -3,6 +3,7 @@
 
 ## News
 
+* **2017 03 24** | Added [Spawning Game Servers](https://github.com/alvyxaz/barebones-masterserver/wiki/Spawning-Game-Servers) page
 * **2017 03 23** | Added [Peer Extensions](https://github.com/alvyxaz/barebones-masterserver/wiki/Peer-Extensions-and-Properties) page
 * **2017 03 23** | Added [Command Line Arguments](https://github.com/alvyxaz/barebones-masterserver/wiki/Command-Line-Arguments) page
 * **2017 03 22** | I'm planning to get a whole bunch of this documentation finished within the next few days. If you have requests for a topic you'd like me to cover, or cover first, leave a message at the [issues](https://github.com/alvyxaz/barebones-masterserver/issues). Cheers!
@@ -32,13 +33,13 @@ _**If you found a section that's lacking**, or if you want something covered in 
    1. [**Rooms Demo**](https://github.com/alvyxaz/barebones-masterserver/wiki/Rooms-Demo)
    1. Worlds Demo
 1. Development
+   1. [**Spawning Game Servers**](https://github.com/alvyxaz/barebones-masterserver/wiki/Spawning-Game-Servers) - covers the whole process of spawning game servers (**doesn't matter** which technology you use for game networking)
    1. Creating modules
    1. [**Peer Extensions / States**](https://github.com/alvyxaz/barebones-masterserver/wiki/Peer-Extensions-and-Properties)
-   1. Sending / Receiving messages
    1. uNET + Rooms Module
    1. Switching database implementations
    1. [**Command Line Arguments**](https://github.com/alvyxaz/barebones-masterserver/wiki/Command-Line-Arguments)
-   1. [**Networking API**](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API) - serializing, sending and receiving messages between servers and clients
+   1. [**Networking API / Sending and handling messages**](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API) - serializing, sending and receiving messages between servers and clients
 1. Production
    1. Debugging Connection
    1. Make sure your IP addresses are correct
