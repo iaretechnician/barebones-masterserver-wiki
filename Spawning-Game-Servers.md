@@ -2,18 +2,59 @@
 
 ### Overview
 
-1. Client sends request to master server to spawn a game server
+1. **Client sends reques** to master server to spawn a game server
 1. Master server finds an appropriate spawner and passes it the request
-1. Spawner starts a new unity instance (process)
+1. **Spawner starts a new unity instance** (process)
    1. Process switches to necessary scene (optional)
    1. In that scene, there should be scripts that:
       1. Connect to master server
       1. Notifies master server that a new process was started
       1. Starts a game server
       1. Registers the game server (room)
-1. Master server notifies client that a server that he requested was created
+1. Master server notifies client that a server that he requested was created (**finalized**)
+
+### Registering a Spawner
+
+When client sends a request to spawn a server, master server picks one of the spawners from the list of registered spawners. 
+
+Spawner is essentially an instance of unity, which starts other unity instances. It can be an almost empty unity build, with a script which connects to master server, and registers itself as a spawner.
+
+To register a spawner:
+
+``` C#
+var options = new SpawnerOptions()
+{
+    MaxProcesses = 0, // Unlimited,
+    MachineIp = "127.0.0.1", // Public IP address of this machine
+    Region = "US", // Region identifier, can be anything
+    Properties = new Dictionary<string, string>()
+    {
+        // If you need spawner to have some extra properties
+        {"ExtraProperty", "Whatever" }
+    }
+};
+
+// Registers a spawner to master server, so that master server knows about it's existance.
+// Your spawner will receive requests to spawn unity instances
+Msf.Server.Spawners.RegisterSpawner(options, (spawner, error) =>
+{
+    if (spawner == null)
+    {
+        Logs.Error(error);
+        return;
+    }
+
+    // Set the build path (default ""(empty string))
+    // When spawner receives a request, it will use this build to start unity instances
+    // If you set it to an empty string (""), spawned instance will use same binaries
+    // as spawner does
+    spawner.DefaultSpawnerSettings.ExecutablePath = "C:/Win/Build.exe";
+});
+``` 
 
 ### Sending a request to spawn server
+
+**This should be done on Client**
 
 ⚠️ Before executing this script, make sure you're connected to master server and logged in. If you don't know how to do it - check out other guides - you're probably getting ahead of yourself 😄 
 
