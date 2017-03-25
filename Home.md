@@ -3,6 +3,7 @@
 
 ## News
 
+* **2017 03 25** | Added [Quick Setup](https://github.com/alvyxaz/barebones-masterserver/wiki/Quick-Setup) page
 * **2017 03 25** | V2.0.2 sent to asset store, should be approved within a few days
 * **2017 03 24** | Added [Spawning Game Servers](https://github.com/alvyxaz/barebones-masterserver/wiki/Spawning-Game-Servers) page
 * **2017 03 23** | Added [Peer Extensions](https://github.com/alvyxaz/barebones-masterserver/wiki/Peer-Extensions-and-Properties) page
