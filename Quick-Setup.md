@@ -25,4 +25,32 @@ This is **NOT** the only way to work with the framework, nor is it the best (the
 
 ## How it works
 
+When you hit `Tools > Msf > Build All`, `MsfQuickBuild.cs` script creates two builds:
+
+1. For Master and Spawner servers
+1. For Client
+1. For Game Server
+
+#### 1. Master And Spawner Build
+
+Scene: `QuickSetup/Scenes/MasterAndSpawner`
+
+If you look in the hierarchy, these are the **Game Objects of interest**:
+
+* MasterServer - this objects starts the master server
+* ConnectionToMaster - this object tries to connect to master server
+* Spawner - registers a spawner to master server (it first needs to connect to it, which is why we have `ConnectionToMaster` object)
+* DemoPlayerProfiles - a simple module, which construct player profiles on master server
+
+Normally, you should start master server and spawner by using command line arguments, but for this example, I decided that it might be a bit easier to understand if I added UI for manual controls. This way, you can start it both manually and by using command line arguments (you'll find more information below).
+
+#### 2. Client build
+
+Scene: `QuickSetup/Scenes/Client`
+
+**Game Objects of interest**:
+
+* ConnectionToMaster - this script automatically connects to master server
+* UnetConnector - when client wants to enter a room, he receives a `RoomAccess` (which has game server ip, port and scene name). This script waits for access to be received, and then loads the appropriate scene.
+* Canvas/MsfUiCombined - this object contains all of the ui components from ui examples that come with master server framework.
 
