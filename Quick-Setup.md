@@ -73,3 +73,6 @@ Scene: `QuickSetup/Scenes/GameLevels/SimplePlatform`
 * Msf/UnetServerStarter - this script analyses parameter from spawner, and uses them to start a game sever (for example, it reads `-msfAssignedPort` to know on which port to start the server)
 * Msf/ConnectionToMaster - it's automatically destroyed, because there's already "ConnectionToMaster" script from the main scene (it doesn't get destroyed). This is added in case you don't want to connect to master on the main scene
 * Msf/UnetConnector - this is used **by client** (remember, client and game server use the same scene. Of course, you can use different scenes, but I've tried to make this example simple). This script uses `RoomAccess` (most likely received on the previous scene) to know the address of game server, and connects to it.
+
+## What to do next?
+
