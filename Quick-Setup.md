@@ -1,5 +1,3 @@
-:warning: Still working on it
-
 ### What it's all about?
 
 ⚠️ Available only from **V2.0.2**
