@@ -9,7 +9,7 @@ No matter what you're building with the framework, there will always be two main
 
 ## The Most Basic Setup
 
-1. Create new scene
+1. Create a new scene
 1. Drag a `Barebones/Msf/Prefabs/MasterServer` prefab to scene
 1. Drag a `Barebones/Msf/Prefabs/ConnectionToMaster` prefab to scene
 
