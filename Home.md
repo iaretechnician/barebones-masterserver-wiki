@@ -16,7 +16,7 @@
 
 ⚠️ If you've downloaded framework from the asset store, you'll find V2.0 as a separate .unitypackage within `Barebones` folder. Read the `V2 README !IMPORTANT.txt` for more information.
 
-_**If you found a section that's lacking**, or if you want something covered in the documentation - post a feature request here, in GitHub (Issues tab)_, or send me a personal message. I know what it feels to own a product with great documentation, so I'll be more than happy to assist. 🌞 
+_**If you found a section that's lacking**, or if you want something covered in the documentation - post a feature request here, in GitHub (Issues tab)_, or send me a personal message. 🌞 
 
 1. [**Introduction to the framework**](https://github.com/alvyxaz/barebones-masterserver/wiki/Introduction-To-The-Framework) - a general introduction to the main concepts of the framework
 1. [**Updates**](https://github.com/alvyxaz/barebones-masterserver/wiki/Updates) - (Latest: **V2.0.2**, waiting for approval, submitted 2017 03 25)
