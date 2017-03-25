@@ -1,4 +1,4 @@
-### V2.0.1 (Micro update)
+### V2.0.2 (Micro update)
 
 * **Added "Quick Setup" demonstration**
 * Spawned servers will now copy "-batchmode" argument from spawner
