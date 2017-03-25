@@ -6,7 +6,7 @@
 
 Master Server Framework is extremely customizable, but that comes with a price - it might be a bit difficult to understand how everything ties together. To help you ease into the framework, I made this guide and added a "QuickSetup" demo.
 
-This is **NOT** the only way to work with the framework, nor is it the best (there's really no best way to use it). However, I think it's the easiest to understand and get into, so let's do it!
+This is **NOT** the only way to work with the framework, nor is it the best (there's really no best way to use it). However, I think it's the easiest to understand and get into, so let's do this!
 
 ## Test it first
 
@@ -76,3 +76,74 @@ Scene: `QuickSetup/Scenes/GameLevels/SimplePlatform`
 
 ## What to do next?
 
+### Copy the demo
+
+I don't recommend making any changes to any of the files in the `QuickSetup` folder, because they will be overwritten after each update.
+
+Instead, what I'd recommend you to do - copy the whole QuickSetup folder, and modify the `MsfQuickBuild` file (rename it, change build platforms, scenes and etc.)
+
+### Add more levels to client
+
+1. Open the client's scene, and expand `Canvas/MsfUiCombined`
+1. Select `CreateGameWindow` object, and in the inspector, add another scene to the `CreateGameUi` component: 
+![](http://i.imgur.com/TR8vsef.png)
+1. If you're using lobby creation UI, add the new map to `CreateLobby` Game object to
+
+Now you'll need to make sure that game servers can be started on these levels.
+
+### Starting Game Servers on new levels
+
+Open the `SimplePlatformer` scene and make a prefab out of `Msf` object:
+
+![](http://i.imgur.com/8PVh5J7.png)
+
+Add it to your new scene.
+
+Make sure you understand what each of the game objects does. There are short descriptions above
+
+Now modify your **Network Manager** to listen to room events, so that network manager knows when players join and leave the room. 
+
+If you're using the default **NetworkManager**, you'll need to replace it with the one below:
+
+If you're already using a customized network manager, just **copy the lines of interest**. 
+
+``` C#
+using UnityEngine;
+using UnityEngine.Networking;
+
+/// <summary>
+/// This script represents the changes that you will need to do in your custom
+/// network manager
+/// </summary>
+public class ModifiedNetworkManager : NetworkManager
+{
+    // Set this in the inspector
+    public UnetGameRoom GameRoom;
+
+    void Awake()
+    {
+        if (GameRoom == null)
+        {
+            Debug.LogError("Game Room property is not set on NetworkManager");
+            return;
+        }
+
+        // Subscribe to events
+        GameRoom.PlayerJoined += OnPlayerJoined;
+        GameRoom.PlayerLeft += OnPlayerLeft;
+    }
+
+    private void OnPlayerJoined(UnetMsfPlayer player)
+    {
+        // Spawn the player object (https://docs.unity3d.com/Manual/UNetPlayers.html)
+        // This is just a dummy example, you'll need to create your own object (or not)
+        var playerGameObject = new GameObject();
+        NetworkServer.AddPlayerForConnection(player.Connection, playerGameObject, 0);
+    }
+
+    private void OnPlayerLeft(UnetMsfPlayer player)
+    {
+    }
+    
+}
+```
