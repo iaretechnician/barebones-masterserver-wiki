@@ -31,7 +31,7 @@ When you hit `Tools > Msf > Build All`, `MsfQuickBuild.cs` script creates two bu
 1. For Client
 1. For Game Server
 
-#### 1. Master And Spawner Build
+### 1. Master And Spawner Build
 
 Scene: `QuickSetup/Scenes/MasterAndSpawner`
 
@@ -44,9 +44,11 @@ If you look in the hierarchy, these are the **Game Objects of interest**:
 
 Normally, you should start master server and spawner by using command line arguments, but for this example, I decided that it might be a bit easier to understand if I added UI for manual controls. This way, you can start it both manually and by using command line arguments (you'll find more information below).
 
-#### 2. Client build
+### 2. Client build
 
-Scene: `QuickSetup/Scenes/Client`
+Scene: `QuickSetup/Scenes/Client` + **all of the game scenes**.
+
+When using Unet, clients usually share scenes with game servers. This is because client is usually exactly the same as game server, but it just doesn't run some of the code.
 
 **Game Objects of interest**:
 
@@ -54,3 +56,18 @@ Scene: `QuickSetup/Scenes/Client`
 * UnetConnector - when client wants to enter a room, he receives a `RoomAccess` (which has game server ip, port and scene name). This script waits for access to be received, and then loads the appropriate scene.
 * Canvas/MsfUiCombined - this object contains all of the ui components from ui examples that come with master server framework.
 
+### 3. Game Server build
+
+Scene: `QuickSetup/Scenes/GameServer` + **all of the game scenes**
+
+GameServer scene itself is almost empty, it's used mainly to switch to another scene, where actual game server starts. There's an example of game server scene, which is a bit more interesting.
+
+Scene: `QuickSetup/Scenes/GameLevels/SimplePlatform`
+
+**Game Objects of interest**:
+
+* Msf/UnetGameRoom - this script waits for server to start, and then registers it to the master server
+* Msf/RoomTerminator - tracks the number of online players, and shuts down the game server when there are none
+* Msf/UnetServerStarter - this script analyses parameter from spawner, and uses them to start a game sever (for example, it reads `-msfAssignedPort` to know on which port to start the server)
+* Msf/ConnectionToMaster - it's automatically destroyed, because there's already "ConnectionToMaster" script from the main scene (it doesn't get destroyed). This is added in case you don't want to connect to master on the main scene
+* Msf/UnetConnector - this is used **by client** (remember, client and game server use the same scene. Of course, you can use different scenes, but I've tried to make this example simple). This script uses `RoomAccess` (most likely received on the previous scene) to know the address of game server, and connects to it.
