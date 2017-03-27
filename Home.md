@@ -3,6 +3,7 @@
 
 ## News
 
+* **2017 03 27** | I'm visiting my parents for a week, so I'll be a bit inactive during the time. I'll still reply, but a bit sparingly. Thanks for understanding!
 * **2017 03 25** | Added [Quick Setup](https://github.com/alvyxaz/barebones-masterserver/wiki/Quick-Setup) page
 * **2017 03 25** | V2.0.2 sent to asset store, should be approved within a few days
 * **2017 03 24** | Added [Spawning Game Servers](https://github.com/alvyxaz/barebones-masterserver/wiki/Spawning-Game-Servers) page
