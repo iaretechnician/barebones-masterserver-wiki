@@ -89,7 +89,7 @@ Instead, what I'd recommend you to do - copy the whole QuickSetup folder, and mo
 
 Now you'll need to make sure that game servers can be started on these levels.
 
-### Starting Game Servers on new levels
+### Starting Game Servers on new levels (scenes)
 
 Open the `SimplePlatformer` scene and make a prefab out of `Msf` object:
 
