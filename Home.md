@@ -24,7 +24,6 @@ _**If you found a section that's lacking**, or if you want something covered in 
 1. [**Updates**](https://github.com/alvyxaz/barebones-masterserver/wiki/Updates) - (Latest: **V2.0.2**, waiting for approval, submitted 2017 03 25)
 1. [**Folder Structure**](https://github.com/alvyxaz/barebones-masterserver/wiki/Folder-Structure)
 1. API
-   1. [**Authentication module examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Authentication)
    1. [**Rooms module examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Rooms)
    1. [**Spawners module examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Spawner)
    1. [**Chat module examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Chat)
@@ -47,7 +46,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
    1. Make sure your IP addresses are correct
    1. [**Performance considerations**](https://github.com/alvyxaz/barebones-masterserver/wiki/Performance-Considerations)
 1. Modules
-   1. Auth Module
+   1. [**Auth Module**](https://github.com/alvyxaz/barebones-masterserver/wiki/Auth-Module) - logging in / registering an account
    1. Chat Module
    1. Rooms Module
    1. [**Profiles Module**](https://github.com/alvyxaz/barebones-masterserver/wiki/Profiles-Module) - how to use the profiles module
