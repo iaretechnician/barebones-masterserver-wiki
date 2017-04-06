@@ -1,0 +1,25 @@
+By default, MSF uses [Lite DB V2](https://github.com/mbdavid/LiteDB) for data storage. It was chosen because it's **Embedded**, **requires no setting up**, and works with **.NET 2.0 subset** target. 
+
+However, it's not perfect for all games, because:
+
+* It's very hard to edit the data, as it's in binary form
+* V2 is outdated. V3 should be used (but it required full **.NET 2.0**)
+* Other databases have better performance
+
+So because of these issues, you might want to change your database implementation. 
+
+## Other implementations
+
+All of the MSF accesses to databases are through interfaces, which means that you can switch implementations to use anything you need. If you want, you can even write your own.
+
+You can find alternative database implementations in `Barebones/MsfDatabaseImplementations/`. They will be zipped, so if you want to use them, you'll need to extract them first. By default, there should be two alternatives:
+
+* MySQL
+* MongoDB
+
+## How to Change The Database Implementation
+
+1. Create a new game object as a child of `MasterServer/Databases/` (hierarchy)
+1. Attach to it a factory component (for example, if it's MongoDB: `MongoDbFactory`, MySQL: ``)
+
+![](http://i.imgur.com/iyFcIQu.png)
