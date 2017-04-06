@@ -25,3 +25,12 @@ You can find alternative database implementations in `Barebones/MsfDatabaseImple
 1. Attach to it a factory component (for example, if it's MongoDB: `MongoDbFactory`, MySQL: `MySqlDbFactory`)
 
 ![](http://i.imgur.com/iyFcIQu.png)
+
+## Installing Alternative Databases
+
+* MongoDB doesn't require any setting up, except for installing a database
+* MySQL - you'll need to "inject" provided SQL code into your database to setup the tables
+
+There are plenty tutorials on installing these databases that are a lot better than what I could write. 
+
+If you still can't do it, send me a message and I'll try to help you out 😉 
