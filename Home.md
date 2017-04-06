@@ -3,6 +3,7 @@
 
 ## News
 
+* **2017 04 06** | Added [**Database implementations**](https://github.com/alvyxaz/barebones-masterserver/wiki/Database-Implementations) page
 * **2017 03 30** | I sent V2.0.2 to asset store two times now, and they keep updating it to V2.0.1! I'm now pushing the new version as a whole (without intermediary .unitypackage)
 * **2017 03 27** | I'm visiting my parents for a week, so I'll be a bit inactive during the time. I'll still reply, but a bit sparingly. Thanks for understanding!
 * **2017 03 25** | Added [Quick Setup](https://github.com/alvyxaz/barebones-masterserver/wiki/Quick-Setup) page
@@ -35,7 +36,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
    1. Creating modules
    1. [**Peer Extensions / States**](https://github.com/alvyxaz/barebones-masterserver/wiki/Peer-Extensions-and-Properties)
    1. uNET + Rooms Module
-   1. Switching database implementations
+   1. [**Switching database implementations**](https://github.com/alvyxaz/barebones-masterserver/wiki/Database-Implementations)
    1. [**Command Line Arguments**](https://github.com/alvyxaz/barebones-masterserver/wiki/Command-Line-Arguments)
    1. [**Networking API / Sending and handling messages**](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API) - serializing, sending and receiving messages between servers and clients
 1. Production
