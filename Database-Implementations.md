@@ -19,7 +19,9 @@ You can find alternative database implementations in `Barebones/MsfDatabaseImple
 
 ## How to Change The Database Implementation
 
+1. Extract the necessary files
+1. `File > Build Settings > Player Settings > Other Settings > Api COmpatibility Level: ` **.NET 2.0** (not subset)
 1. Create a new game object as a child of `MasterServer/Databases/` (hierarchy)
-1. Attach to it a factory component (for example, if it's MongoDB: `MongoDbFactory`, MySQL: ``)
+1. Attach to it a factory component (for example, if it's MongoDB: `MongoDbFactory`, MySQL: `MySqlDbFactory`)
 
 ![](http://i.imgur.com/iyFcIQu.png)
