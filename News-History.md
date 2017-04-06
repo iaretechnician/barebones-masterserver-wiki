@@ -1,4 +1,4 @@
-* **2017 03 25** | Started working on a crazy-simple example. I'll publish it together with V2.0.2.
+* **2017 03 25** | Started working on a simple example. I'll publish it together with V2.0.2.
 * **2017 03 24** | Added [Spawning Game Servers](https://github.com/alvyxaz/barebones-masterserver/wiki/Spawning-Game-Servers) page
 * **2017 03 23** | Added [Peer Extensions](https://github.com/alvyxaz/barebones-masterserver/wiki/Peer-Extensions-and-Properties) page
 * **2017 03 23** | Added [Command Line Arguments](https://github.com/alvyxaz/barebones-masterserver/wiki/Command-Line-Arguments) page
