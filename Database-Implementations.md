@@ -1,4 +1,4 @@
-
+:warning: For those, who want to use MySQL -  until the V2.0.3 is out, I'd recommend downloading [this implementation](https://mega.nz/#!VBVymKSB!eTmiG-sZMV4GnYxuGc6mL7Z4uZJzezaK-M3lh6MWvOM)
 
 By default, MSF uses [Lite DB V2](https://github.com/mbdavid/LiteDB) for data storage. It was chosen because it's **Embedded**, **requires no setting up**, and works with **.NET 2.0 subset** target. 
 
