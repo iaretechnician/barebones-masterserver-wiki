@@ -73,3 +73,58 @@ public class CustomModule : ServerModuleBehaviour {
 }
 
 ```
+
+### Handling messages
+
+Here's an example of a custom module, which handles a message from client, and responds with a number of connected users:
+
+``` C#
+using Barebones.MasterServer;
+using Barebones.Networking;
+
+// Custom op codes
+public enum CustomOpCodes
+{
+    GetOnlineCount = 0
+    // (OpCodes should be unique. MSF internal opCodes 
+    // start from 32000, so you can use anything from 0 to 32000
+}
+
+
+/// <summary>
+/// Our custom module
+/// </summary>
+public class CustomModule : ServerModuleBehaviour
+{
+    private AuthModule _auth;
+
+    void Awake()
+    {
+        // Add dependency to auth module
+        AddDependency<AuthModule>();
+    }
+
+    public override void Initialize(IServer server)
+    {
+        _auth = server.GetModule<AuthModule>();
+
+        server.SetHandler((short) CustomOpCodes.GetOnlineCount, HandleGetOnlineCount);
+    }
+
+    private void HandleGetOnlineCount(IIncommingMessage message)
+    {
+        // Respond with a number of online users
+        message.Respond(_auth.LoggedInUsers.Count);
+    }
+}
+
+```
+
+On the client, you can send the message like this:
+
+``` C#
+Msf.Connection.SendMessage((short) CustomOpCodes.GetOnlineCount, (status, response) =>
+{
+    Debug.Log("Logged in users count: " + response.AsInt());
+});
+```
