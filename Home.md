@@ -33,7 +33,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
    1. Worlds Demo
 1. Development
    1. [**Spawning Game Servers**](https://github.com/alvyxaz/barebones-masterserver/wiki/Spawning-Game-Servers) - covers the whole process of spawning game servers (**doesn't matter** which technology you use for game networking)
-   1. Creating modules
+   1. [**Custom modules**](https://github.com/alvyxaz/barebones-masterserver/wiki/Custom-modules) - basics of extending the MSF functionality
    1. [**Peer Extensions / States**](https://github.com/alvyxaz/barebones-masterserver/wiki/Peer-Extensions-and-Properties)
    1. uNET + Rooms Module
    1. [**Switching database implementations**](https://github.com/alvyxaz/barebones-masterserver/wiki/Database-Implementations)
