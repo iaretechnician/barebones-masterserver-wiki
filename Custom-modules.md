@@ -13,7 +13,13 @@ In essence, a module is just a game object, which is initialized by the Master S
 
 ### Creating a basic module
 
-To create a module, you'll need to create a new script which extends `ServerModuleBehaviour`. You should also override the `Initialize` method. Here's an example of the most basic module you can have:
+To create a module, you'll need to create a new script which extends `ServerModuleBehaviour`. You should also override the `Initialize` method. 
+
+This script should then be added to a new game object, which is a child of `Master Server` game object.
+
+ℹ️ It doesn't have to be the child of Master Server object, as long as `LookInChildrenOnly` is set to false on Master Server object (int the inspector) 
+
+Here's an example of the most basic module you can have:
 
 ``` C#
 using Barebones.MasterServer;
@@ -120,7 +126,7 @@ public class CustomModule : ServerModuleBehaviour
 
 ```
 
-On the client, you can send the message like this:
+On the client, you can send the message like this, and it will be handled by our custom module:
 
 ``` C#
 Msf.Connection.SendMessage((short) CustomOpCodes.GetOnlineCount, (status, response) =>
