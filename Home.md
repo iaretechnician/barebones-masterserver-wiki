@@ -3,6 +3,8 @@
 
 ### Going Free And Open Source
 
+EDIT: I'll still work on the framework, it's not dying :)
+
 **I've pushed all the source code to this repository, and marked the asset to be Free** (which will take a couple of days to be approved). I guess not everyone's going to be happy about it, but it's the only way to move forward.
 
 For the past few months, I've been stuck. Replying all the e-mails and chat messages took me more than 5 hours a day (you have to load other projects by other people, look into what they are doing and etc.), after which time I'd be too exhausted to work on the framework, and half a day wouldn't pass before replies start coming in. It's an endless loop of exhaustion.
