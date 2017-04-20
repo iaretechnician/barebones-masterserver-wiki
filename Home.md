@@ -1,27 +1,9 @@
 ### 
 :warning: This wiki is for V2.x of the framework. If you're using V1.xx -  [**V1.03 documentation**](https://github.com/alvyxaz/barebones-master-v1/wiki)
 
-### Going Free And Open Source
-
-EDIT: I'll still work on the framework, it's not dying :)
-
-**I've pushed all the source code to this repository, and marked the asset to be Free** (which will take a couple of days to be approved). I guess not everyone's going to be happy about it, but it's the only way to move forward.
-
-For the past few months, I've been stuck. Replying all the e-mails and chat messages took me more than 5 hours a day (you have to load other projects by other people, look into what they are doing and etc.), after which time I'd be too exhausted to work on the framework, and half a day wouldn't pass before replies start coming in. It's an endless loop of exhaustion.
-
-One could say - "you don't need to support everyone", but reality is that you do, indeed, have to support everyone and reply to every e-mail. Otherwise you'd get crappy reviews that would kill the project and make your income non-existent. Who wants to sink all day into exhaustion for free?
-
-This framework became into something I can't handle alone, which is why I'm making it free and open source. What does it mean for the future of the project?
-
-* **More people collaborating to improve it** (making videos, tutorials, custom modules and bug fixes)
-* I no longer need to slave for reviews, which means I can be less active in support, and **work on the actual framework**.
-
-Oh, and the last thing - **I'm going off-the-grid for a month** - there's a bunch of stuff that needs to be done before the wedding, and I want to work on my game a bit - I can't push the framework forward if I have no game which actually uses it. **I'll still poke around** to see if there are high priority issues that need to be fixed, but I won't engage much in the conversations - I need to take a break from all the writing. This post alone took me 90 minutes to write, god dammit.
-
-P.S. I hope you don't start "1-star" rating this asset, as it would harm all of the developers who are using it. Framework is no longer mine - **it's ours**. 
-
 ## News
 
+* **2017 04 20** | Submitted V2.0.3 to asset store
 * **2017 04 06** | Added [**Database implementations**](https://github.com/alvyxaz/barebones-masterserver/wiki/Database-Implementations) page
 * **2017 03 30** | I sent V2.0.2 to asset store two times now, and they keep updating it to V2.0.1! I'm now pushing the new version as a whole (without intermediary .unitypackage)
 * **2017 03 27** | I'm visiting my parents for a week, so I'll be a bit inactive during the time. I'll still reply, but a bit sparingly. Thanks for understanding!
