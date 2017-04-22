@@ -1,3 +1,8 @@
+### V2.0.3 (Micro update)
+* Multiple Chat module fixes
+* Updated MySQL implementation
+* Added PostgreSQL implementation (thanks to Arcanor!)
+
 ### V2.0.2 (Micro update)
 
 * **Added "Quick Setup" demonstration**
