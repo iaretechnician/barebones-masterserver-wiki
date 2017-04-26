@@ -1,4 +1,4 @@
-IMPORTANT NOTE: This wiki document is largely based on personal opinion, and does not necessarily represent the views of anyone other than the author of this specific document, Walt Collins. Your own experiences may be different.
+**_IMPORTANT NOTE: This wiki document is largely based on personal opinion, and does not necessarily represent the views of anyone other than the author of this specific document (Walt Collins, who is just a member of the MSF community, and not the original author of MSF!). Your own experiences may be different._**
 
 ## Choosing a Database Model: RDBMS vs. NoSQL
 
