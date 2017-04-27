@@ -32,6 +32,26 @@ if (db.CollectionExists(collectionName)) // can check if collection already exis
 _customers = db.GetCollection<CustomerDataLdb>(collectionName);
 ```
 
+### Check if a collection exists
+```
+if (db.CollectionExists("customers")) {
+    Debug.Log("It exists!");
+}
+```
+
+### Delete a collection
+```
+db.DropCollection("customers");
+```
+
+### Enumerate all collections in database
+```
+foreach (string collectionName in db.GetCollectionNames())
+{
+    Debug.Log(collectionName);
+}
+```
+
 ### Insert into a collection
 
 ```
@@ -63,5 +83,18 @@ if (entry != null)
 {
     entry.Password = "secret";
     _customers.Update(entry);
+}
+```
+
+### Count number of entries in a collection
+```
+Debug.Log("Customers: " + _customers.Count());
+```
+
+### Iterate over all entries in a collection
+```
+foreach (CustomerDataLdb customer in _customers.FindAll())
+{
+    Debug.Log(customer.Username);
 }
 ```
