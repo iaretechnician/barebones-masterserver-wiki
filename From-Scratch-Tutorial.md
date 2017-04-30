@@ -1,9 +1,26 @@
-## Simple, minimum featured tutorial to introduce features of MSF
-*this does assume basic knowledge of Unity and C#
+# Simple, minimum featured tutorial to introduce features of MSF
+*This tutorial assumes basic knowledge of Unity and C#  
+*Read [Getting Started](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started) first. It covers some concepts used in this tutorial
 
-Start with a new Unity project (or just a new scene) and make sure the entirety of the Barebones Master Framework asset is imported into your Assets folder. 
+---
+
+## Step 1 - Making the scenes
+
+To start, make a new project named whatever you like. Make sure the entirety of the Barebones Master Framework asset is imported into your Assets folder.  
+In the Assets folder, make a new folder called `Scenes`. Save the current scene in the `Scenes` folder and name it **scratchMasterServer**. Go to `File->Save Scene As` and save the scene again with the name **scratchClient**.
+
+Make sure you are editing the proper scene while following the instructions. There will be a title above every edit indicating the scene that should be open.
 
 (Add image)
 
-In your new scene, add `Barebones/Msf/Prefabs/MasterServer`. Make sure it doesn't have any parents.
+## MSFMasterServer  
+In a new scene, add `Barebones/Msf/Prefabs/MasterServer`. Make sure it doesn't have any parents.  
 Do the same with `Barebones/Msf/Prefabs/ConnectionToMaster`.
+
+At this point, hit "Play" and check the console. If everything went well, you should see:
+
+![](https://camo.githubusercontent.com/fc8f2b25064bdf222c7505b124adf164ec3d2a7a/687474703a2f2f692e696d6775722e636f6d2f446b64504f79382e706e67)
+
+
+(These steps were covered in [Getting Started](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started), so it should seem familiar)
+
