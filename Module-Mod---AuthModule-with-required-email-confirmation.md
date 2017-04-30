@@ -1,6 +1,8 @@
 ## First, Caveat Emptor!
 
-I am providing this as a courtesy to the community, because a few people have asked me for details on how I implemented it. Beware! This code may not work for you! It's a bit of a hack, and could probably be done in a cleaner way. I am not volunteering to support you in your attempts to implement this code!
+I am providing this as a courtesy to the community, because a few people have asked me for details on how I implemented it. Beware! This code may not work for you! I am not volunteering to support you in your attempts to implement this code!
+
+Note also that these changes were written for my own game project, but not really coded with "framework usability" in mind. So it's a bit of a hack, and may cause merge issues down the road, because it's not really in a state that could be submitted as part of the MSF base code. This code will CHANGE how the server works. So it won't be suitable for all people.
 
 If you have any doubts about your understanding and ability to fix any problems you may encounter, please DO NOT USE THIS CODE. Have a nice day. :)
 
