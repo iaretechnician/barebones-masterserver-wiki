@@ -89,6 +89,8 @@ Click play, and watch the Console.
 
 If everything went well, you should see the connection information in the console!
 
+---
+
 Congratulations, you have successfully built a server and connected to it through your client!
 
 In the next part, we'll be adding some additional functionality and some GUI elements to keep track of everything. 
