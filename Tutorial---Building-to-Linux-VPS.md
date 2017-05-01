@@ -64,6 +64,8 @@ This step is optional. You can either build it for your local OS or just run it 
 
 3. Press build. It will be called **Client.exe** from here on. (I'm on windows)
 
+---
+
 ## Step 3:
 
 I'm no expert in SSH or VPS, so I can't explain much here. I used WinSCP to move the files to my VPS. You can find tutorials with a quick search.
