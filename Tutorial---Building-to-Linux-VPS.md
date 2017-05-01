@@ -38,4 +38,74 @@ Change the "Target Platform" to Linux. Change the architecture to either **x86**
 
 Now to build the scenes:
 
-1. Select only 
+### The GameServer
+
+1. Select only the **GameServer** and **SimplePlatform** scenes.
+
+2. Make sure "Headless Mode" is _ENABLED_.
+
+3. Press build. It will be called **GameServer.x86_64** from here on.
+
+### The Master Server and Spawner
+
+1. Select only the **MasterAndSpawner** scene.
+
+2. Make sure "Headless Mode" is _ENABLED_.
+
+3. Press build. It will be called **MasterAndSpawner.x86_64** from here on.
+
+### The Client
+
+This step is optional. You can either build it for your local OS or just run it in the editor. Instructions follow for completion's sake.
+
+1. Select only the **Client** and **SimplePlatform** scenes.
+
+2. Make sure "Headless Mode" is _DISABLED_. (The option might not show up if you're not building for linux)
+
+3. Press build. It will be called **Client.exe** from here on. (I'm on windows)
+
+## Step 3:
+
+I'm no expert in SSH or VPS, so I can't explain much here. I used WinSCP to move the files to my VPS. You can find tutorials with a quick search.
+
+However you connect and upload the files, make sure you grab both **GameServer.x86_64** and **MasterAndSpawner.x86_64**, as well as their corresponding data folders. They should be placed in the same directory.
+
+You'll now need to connect to your VPS with SSH. Again, not an expert. I use PuTTY to connect and open the command line. Make sure you know your username and password for the account (usually "root" and "" (nothing) for the default User/Pass).
+
+From here, navigate to the directory that you uploaded the files to.
+
+In order to run them, you need to make the files executable with `chmod 700 ./MasterAndSpawner.x86_64` and `chmod 700 GameServer.x86_64`
+
+These shouldn't return anything. If they do and you can't figure it out on your own, feel free to contact us in the Discord for help!
+
+After you have them both setup, you can run them. I recommend using two different command line windows so you can monitor the Master Server as well as the Spawner.
+
+### Master Server
+
+The parameter to start the Master Server is `-msfStartMaster`. You'll also need to tell it what IP address it is on with `-msfMasterIp xxx.xxx.xxx.xxx`. Finally, use `-logfile` to have the logs output to the command line window.
+
+Here it is put together:
+
+`./MasterAndSpawner.x86_64 -msfStartMaster -msfMasterIp xxx.xxx.xxx.xxx -logfile`
+
+Replace xxx.xxx.xxx.xxx with your **VPS IP address**.
+
+## Spawner
+
+In a second window, you will use the parameter `-msfStartSpawner` to start the spawner. You can also `-logfile` to have to logs output to the window.
+
+Put together:
+
+`./MasterAndSpawner.x86_64 -msfStartSpawner -logfile`
+
+---
+
+And that's that! If there aren't any errors, your Master Server and Spawners should be up and running. To test it, either go to the editor and start the **Client** scene, or go to the Client build that you made and run it.
+
+From here, you can either register or play as a guest. Once you're logged in, click on "Games List", then "CREATE GAME SERVER". The settings aren't important, click on "CREATE" and after a moment, the game should start.
+
+If you see something about the process being aborted, it is probably an error on the naming of your GameServer or the Executable path. Check the Spawner and MasterServer windows and see what errors were thrown. Ask in the Discord channel if you need help!
+
+When you're ready to shut down the Spawner and Master Server, use Ctrl+C in both command line windows to end the processes.
+
+That's all there is to it, with this, you can upload your own game to your VPS and anyone with the client can play!
