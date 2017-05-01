@@ -1,9 +1,7 @@
-(Quick write-up before I forget what I did)
-
 We are using the QuickSetup demo for this tutorial. It has everything needed to get started with minimal work.  
 As we need to make a few minor changes, you can either edit it directly which may get overwritten when the assets are updated, or you can copy the QuickSetup directory and edit it there.
 
-The changes are very few and very minor, so it's not much lost if it's overwritten.
+The changes are very few and very minor, so it's no loss if it's overwritten.
 
 ---
 
