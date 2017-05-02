@@ -39,6 +39,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
    1. [**Switching database implementations**](https://github.com/alvyxaz/barebones-masterserver/wiki/Database-Implementations)
    1. [**Command Line Arguments**](https://github.com/alvyxaz/barebones-masterserver/wiki/Command-Line-Arguments)
    1. [**Networking API / Sending and handling messages**](https://github.com/alvyxaz/barebones-masterserver/wiki/Networking-API) - serializing, sending and receiving messages between servers and clients
+   1. [**Angusmf's Tips!**](https://github.com/alvyxaz/barebones-masterserver/wiki/Angusmf's-MSF-Tips!)
 1. Production
    1. Debugging Connection
    1. Make sure your IP addresses are correct
