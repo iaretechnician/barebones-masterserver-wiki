@@ -3,13 +3,12 @@
 
 ## News
 
+* **2017 05 02** | 🔥  Give your suggestions for the **V2.0.4** ad **V2.1** - [**Discussion**](https://github.com/alvyxaz/barebones-masterserver/issues/84)
 * **2017 04 20** | Submitted V2.0.3 to asset store
 * **2017 04 06** | Added [**Database implementations**](https://github.com/alvyxaz/barebones-masterserver/wiki/Database-Implementations) page
 * **2017 03 30** | I sent V2.0.2 to asset store two times now, and they keep updating it to V2.0.1! I'm now pushing the new version as a whole (without intermediary .unitypackage)
 * **2017 03 27** | I'm visiting my parents for a week, so I'll be a bit inactive during the time. I'll still reply, but a bit sparingly. Thanks for understanding!
 * **2017 03 25** | Added [Quick Setup](https://github.com/alvyxaz/barebones-masterserver/wiki/Quick-Setup) page
-* **2017 03 25** | V2.0.2 sent to asset store, should be approved within a few days
-* [**History**](https://github.com/alvyxaz/barebones-masterserver/wiki/News-History)
 
 ## Table Of Contents (V2)
 
