@@ -5,6 +5,8 @@
 
 > I've just noticed a large number of documentation contributions! Thanks a lot, guys! I've also noticed that you didn't include them in this main page, so I wanted to encourage you - **feel free to do it**, or if you don't feel confident - write an issue here in github, and I'll review your contributions. In a few days, I'll setup a proper list of contributors to thank you all! 😉 
 
+> Angusmf note: Added a user doc section to the bottom of this doc. Please add your stuff!
+
 ### Open Discussions
 
 * [**Database Performance Improvements**](https://github.com/alvyxaz/barebones-masterserver/issues/83)
@@ -69,3 +71,5 @@ _With that said, it's still possible that you might stumble upon an issue where 
 ## User Documentation
 
 Add your links here!
+
+[Angusmf's MSF tips!](https://github.com/alvyxaz/barebones-masterserver/wiki/Angusmf's-MSF-Tips!)
