@@ -12,6 +12,8 @@ Player settings:
 
 You may wish your players to start with certain default settings. For example, a default resolution, or to not display the resolution dialog, or even to change the .NET profile. When building from script, these are accessed through PlayerSettings. Here are some example settings:
 
+(note that _buildTargetGroup is a reference to a BuildTargetGroup that will be used when the player is built. Replace with your own reference.)
+
 `PlayerSettings.SetApiCompatibilityLevel(_buildTargetGroup, ApiCompatibilityLevel.NET_2_0_Subset);`
 
 `PlayerSettings.defaultIsFullScreen = false;`
