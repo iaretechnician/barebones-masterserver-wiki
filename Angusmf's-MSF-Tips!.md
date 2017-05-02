@@ -1,10 +1,35 @@
 ### Builds!
 
-Debugging: The QuickStart example that comes with MSF enables development builds by setting the BuildOptions.Development flag. This doesn't allow script debugging by default, however. Just like the build settings page in the editor, there are two flags. You can also enable script debugging by setting your build options to
+Debugging:
+
+The QuickStart example that comes with MSF enables development builds by setting the BuildOptions.Development flag. This doesn't allow script debugging by default, however. Just like the build settings page in the editor, there are two flags. You can also enable script debugging by setting your build options to
 
 `BuildOptions.Development | BuildOptions.AllowDebugging`
 
 (Note: As mentioned below, Linux headless mode is incompatible with dev mode and thus script debugging, so for production builds you'll have to turn this off! ;)
+
+Player settings:
+
+You may wish your players to start with certain default settings. For example, a default resolution, or to not display the resolution dialog, or even to change the .NET profile. When building from script, these are accessed through PlayerSettings. Here are some example settings:
+
+`PlayerSettings.SetApiCompatibilityLevel(_buildTargetGroup, ApiCompatibilityLevel.NET_2_0_Subset);`
+
+`PlayerSettings.defaultIsFullScreen = false;`
+
+`PlayerSettings.defaultScreenHeight = 768;`
+
+`PlayerSettings.defaultScreenWidth = 1024;`
+
+`PlayerSettings.runInBackground = true;`
+
+`PlayerSettings.displayResolutionDialog = ResolutionDialogSetting.Disabled;`
+
+`PlayerSettings.resizableWindow = true;`
+
+or if you are using a version of Unity previous to 5.6, change the first line to:
+
+`      PlayerSettings.apiCompatibilityLevel = ApiCompatibilityLevel.NET_2_0_Subset;`
+
 
 
 ### Linux
