@@ -1,6 +1,10 @@
 ### 
 :warning: This wiki is for V2.x of the framework. If you're using V1.xx -  [**V1.03 documentation**](https://github.com/alvyxaz/barebones-master-v1/wiki)
 
+### Thank you!
+
+> I've just noticed a large number of documentation contributions! Thanks a lot, guys! I've also noticed that you didn't include them in this main page, so I wanted to encourage you - **feel free to do it**, or if you don't feel confident - write an issue here in github, and I'll review your contributions. In a few days, I'll setup a proper list of contributors to thank you all! 😉 
+
 ## News
 
 * **2017 05 02** | 🔥  Give your suggestions for the **V2.0.4** ad **V2.1** - [**Discussion**](https://github.com/alvyxaz/barebones-masterserver/issues/84)
