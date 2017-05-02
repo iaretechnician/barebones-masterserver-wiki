@@ -1,16 +1,39 @@
 ### Builds!
 
-Debugging:
+General:
 
-The QuickStart example that comes with MSF enables development builds by setting the BuildOptions.Development flag. This doesn't allow script debugging by default, however. Just like the build settings page in the editor, there are two flags. You can also enable script debugging by setting your build options to
+When building from script, such as in the menu options provided for the QuickStart example in MSF, there are ways to achieve all the same settings found in the build settings UI in the Unity editor. The ones you will probably need to change for your scripting purposes are:
 
-`BuildOptions.Development | BuildOptions.AllowDebugging`
+BuildOptions
 
-(Note: As mentioned below, Linux headless mode is incompatible with dev mode and thus script debugging, so for production builds you'll have to turn this off! ;)
+BuildTargetGroup (Unity 5.6)
 
-Player settings:
+BuildTarget
 
-You may wish your players to start with certain default settings. For example, a default resolution, or to not display the resolution dialog, or even to change the .NET profile. When building from script, these are accessed through PlayerSettings. Here are some example settings:
+PlayerSettings
+
+
+You'll probably find you have default settings you want to apply to your all of your builds, whether they are client, server, master, spawner, windows, Linux...then edit specific settings per-build before each call to BuildPipeline.BuildPlayer.
+
+To start with, set BuildOptions to
+
+ `BuildOptions.None`
+
+ for a default. You can set it to
+
+` BuildOptions.Development | BuildOptions.AllowDebugging` 
+
+before development builds to allow debugging via Mono or Visual Studio and to enable the dev console in the player. When building for headless Linux (aka, a VPS) you must _replace_ the value in BuildOptions with 
+
+`BuildOptions.EnableHeadlessMode`
+
+or you will not be able to run in batchmode, and the executable will crash.  AllowDebugging and Development cannot be set at the same time as EnableHeadlessMode! (On Windows, EnableHeadlessMode does not seem to be required, so dev/debug builds may run headless.)
+
+BuildTargetGroup (Unity 5.6+) can be set to Standalone for Linux, Windows and Mac, but must be set to the correct target for WebGL, Android, etc.
+
+BuildTarget should reflect the actual player type you are trying to build and is more granular than the BuildTargetGroup setting. For instance, you must specify 32 or 64 bit when building standalone. 64-bit windows is pretty forgiving and will run any Windows build, but Linux, in my testing, did not like the "Universal" build target, so I specifically built for `StandanloneLinux64`, which worked on local test VMs and my VPS.
+
+PlayerSettings allows you to set the small details of each player you build, such as most of the player-specific settings you see in the editor. See below for some reasonable defaults that you can play with.
 
 (note that _buildTargetGroup is a reference to a BuildTargetGroup that will be used when the player is built. Replace with your own reference.)
 
@@ -35,11 +58,10 @@ or if you are using a version of Unity previous to 5.6, change the first line to
 
 
 ### Linux
-Tip for Linux VPS folks: 
-If you want to enable headless mode, and you're doing your build from script, like the menu customizations, you'll need to set BuildOptions to BuildOptions.EnableHeadlessMode. You can't '|' it with dev mode because the two build options are mutually exclusive! (Note: previous rev of this doc implied using & (bit-wise AND) to set two modes at once, but the correct operator is |, the bit-wise OR. )
+See above for Linux build settings.
 
+To run your executables on headless Linux, you'll need to be aware of a few things (see [Tutorial: Building to Linux VPS](https://github.com/alvyxaz/barebones-masterserver/wiki/Tutorial:-Building-to-Linux-VPS) for much more detailed information if needed.)
 
-Also:
 Make sure you enable owner execution of the binaries (chmod 7xx)
 
 On Debian, the libgl (I think) lib was missing, so I had to install with apt. I suspect most server images will be missing this unless there is a UI. 
