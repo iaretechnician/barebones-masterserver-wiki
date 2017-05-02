@@ -5,6 +5,11 @@
 
 > I've just noticed a large number of documentation contributions! Thanks a lot, guys! I've also noticed that you didn't include them in this main page, so I wanted to encourage you - **feel free to do it**, or if you don't feel confident - write an issue here in github, and I'll review your contributions. In a few days, I'll setup a proper list of contributors to thank you all! 😉 
 
+### Open Discussions
+
+* [**Database Performance Improvements**](https://github.com/alvyxaz/barebones-masterserver/issues/83)
+* [**Your requests for V2.0.4 (and maybe for V2.1)**](https://github.com/alvyxaz/barebones-masterserver/issues/84)
+
 ## News
 
 * **2017 05 02** | 🔥  Give your suggestions for the **V2.0.4** ad **V2.1** - [**Discussion**](https://github.com/alvyxaz/barebones-masterserver/issues/84)
