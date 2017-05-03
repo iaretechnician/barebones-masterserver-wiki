@@ -3,6 +3,8 @@ As we need to make a few minor changes, you can either edit it directly which ma
 
 The changes are very few and very minor, so it's no loss if it's overwritten.
 
+Talk to Trivn in the [Discord](https://discord.gg/ZqGummZ) if you have any issues!
+
 ---
 
 ## Step 1:
@@ -109,3 +111,5 @@ If you see something about the process being aborted, it is probably an error on
 When you're ready to shut down the Spawner and Master Server, use Ctrl+C in both command line windows to end the processes.
 
 That's all there is to it, with this, you can upload your own game to your VPS and anyone with the client can play!
+
+[Angusmf's MSF Tips](https://github.com/alvyxaz/barebones-masterserver/wiki/Angusmf's-MSF-Tips!) have some more information on building to linux if you want a more in-depth understanding.
