@@ -73,3 +73,7 @@ _With that said, it's still possible that you might stumble upon an issue where 
 Add your links here!
 
 [Angusmf's MSF tips!](https://github.com/alvyxaz/barebones-masterserver/wiki/Angusmf's-MSF-Tips!)
+
+Trivn's Tutorials:  
+[Building to Linux VPS](https://github.com/alvyxaz/barebones-masterserver/wiki/Tutorial:-Building-to-Linux-VPS)  
+[From Scratch, part 1](https://github.com/alvyxaz/barebones-masterserver/wiki/Tutorial:-From-Scratch:-Part-1)
