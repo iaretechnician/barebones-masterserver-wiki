@@ -3,7 +3,7 @@ As we need to make a few minor changes, you can either edit it directly which ma
 
 The changes are very few and very minor, so it's no loss if it's overwritten.
 
-Talk to Trivn in the [Discord](https://discord.gg/ZqGummZ) if you have any issues!
+Talk to Trivn in the [MSF Discord](https://discord.gg/ZqGummZ) server if you have any issues!
 
 ---
 
