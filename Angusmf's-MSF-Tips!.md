@@ -1,7 +1,5 @@
 ### Builds!
 
-General:
-
  A very useful feature of MSF is the collection of menu items that you can click to automatically build players for the QuickStart demo scenes​. They are a great example to start from when automating builds for your own project. Something that is really cool in Unity is that you can call methods like these from the command line! This means you should be able to fire off new builds without even starting the editor​! To change the settings and output of your builds, you'll need to be able to tweak some settings. These tips cover some of the useful settings you may need.
 
 When building from script, such as in the menu options provided for the QuickStart example in MSF, there are ways to achieve all the same
