@@ -75,5 +75,13 @@ This file is a timesaver. You can run it instead of the lengthy command to start
 Next, make a second document called "MasterInScreen.sh" with the following text:
 
 ```
-
+screen -d -m -S MasterServer ./MasterServerStarter.sh
 ```
+
+Upload it to the same directory as the MasterServerStarter and executable. You'll need to `chmod 700` it as well.
+
+With all of this set up, just run "MasterInScreen.sh" and your MasterServer executable will be started in a screen instance in the background. You can check to make sure it worked by running `screen -r`.
+
+---
+
+With all of that, you can now run your server without having to type out the whole command and you don't need to have the SSH connection up at all times without running the screen commands!
