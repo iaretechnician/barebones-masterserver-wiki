@@ -2,6 +2,8 @@
 *This tutorial assumes basic knowledge of Unity and C#  
 *Read [Getting Started](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started) first. It covers some concepts used in this tutorial
 
+Talk to Trivn in the [MSF Discord](https://discord.gg/ZqGummZ) server if you have any issues!
+
 ---
 
 ## Step 1 - Making the scenes
