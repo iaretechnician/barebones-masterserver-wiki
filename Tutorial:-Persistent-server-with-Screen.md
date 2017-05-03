@@ -46,6 +46,17 @@ Your MasterServer is now running in a Screen instance in the background! You can
 
 ---
 
+## Extra info:
+
+Useful screen commands:  
+(press keys after "Ctrl+a")  
+* d -disconnects from the current screen instance  
+* c -makes a new "tab" in the screen instance. You can switch between these with:  
+* n -goes to the next "tab". It loops back to the first tab after you hit the end  
+* k -kills the current screen "tab". You'll need to accept it with "y" afterward
+
+---
+
 ## OPTIONAL STEPS
 
 This is where we get a bit tricky. We're going to automate the Screen _and_ the MasterServer startup!
