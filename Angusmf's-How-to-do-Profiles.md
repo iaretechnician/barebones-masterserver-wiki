@@ -141,7 +141,7 @@ Remember, code inside the lambda expressions are really callbacks being executed
             {
                     //despite the adorable log messages, we are waiting for our client object to spawn on server and set connid
                     AngError.NormalMessage("WaitForPlayer(): Waiting for prince/princess to rescue me..."); //this is too cute not to leave in
-                    yield return new WaitWhile(() => !GameControl.Instance.ConnIds.ContainsKey(connid));
+                    yield return new WaitWhile(() => !GameControl.Instance.AngNetControls.ContainsKey(connid));
                     AngError.NormalMessage("WaitForPlayer(): Finally I have been rescued!");
                     InitPlayer(player, connid);
                     AngNetMessages.SendReadyToStart(connid);
@@ -162,7 +162,7 @@ Remember, code inside the lambda expressions are really callbacks being executed
 
                 AngAccount acc = AngAccountManager.Instance.AddAccount(usertoken, username);
                 acc.ConnectionId = connid;
-                acc.angnetcontrol = GameControl.Instance.ConnIds[connid];
+                acc.angnetcontrol = GameControl.Instance.AngNetControls[connid];
                 acc.CurrBreed = userbreed;
             }
 
@@ -184,7 +184,7 @@ Finally, _on the client_, from a NetworkBehaviour on the initial player object, 
 
                 if (isServer)
                 {
-                    GameControl.Instance.ConnIds.Add(connectionToClient.connectionId, this);
+                    GameControl.Instance.AngNetControls.Add(connectionToClient.connectionId, this);
                     initialized = true;
                 }
                 else if (isLocalPlayer)
