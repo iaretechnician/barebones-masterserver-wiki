@@ -1,6 +1,6 @@
 First of all, please read [Profiles Module doc](https://github.com/alvyxaz/barebones-masterserver/wiki/Profiles-Module) because it does contain all the info you need. If you're still confused, come back...
 
-Ok. I'm going to explain this using my own code from my very own project. Compare to the doc linked above as another way to understand what you will need to change for your own project. But first, a few explanations.
+Ok. I'm going to explain this using my own code from my very own project. You can compare to the doc linked above as another way to understand what you will need to change for your own project. You'll also see how I use coroutines to wait for things that aren't always ready when I go to use them. But first, a few explanations.
 
 Any user can have profile data, and you access it via their username. Username is accessible when a user connects to your game server, and we'll see the simplest example below, using the UNET demo code provided in MSF. 
 
@@ -8,7 +8,9 @@ The profile gets defined on the master server AND in each of the places you need
 
 A profile is indexed by username, but the username doesn't have to exist in the auth database. This means the game server can create and access arbitrary profiles as long as the names don't collide with the name of a real user. Since users can only access profiles that have the same name as their user, they would not be able to see this data directly. This could be useful for storing data about the game-server itself, though it's probably technically better to create a new module for that kind of data because it would likely have different fields. 
 
-To start with, just create a new file with a class in it that will contain your profile. My game is called "Caris World" and I often abbreviate it as CW, so I'm going to create a CW Player Profile. _This script is attached to a game object in my master server scene._
+# The Code
+
+To start with, just create a new file with a class in it that will contain your profile. My game is called "Caris World" and I often abbreviate it as CW, so I'm going to create a CW Player Profile. _This script is attached to a game object in my master server scene._ It defines the profile factory that will be used by the client and game server. It's the simplest part. Just add the fields you want. 
 
     using Barebones.MasterServer;
     using Barebones.Networking;
@@ -72,7 +74,12 @@ To start with, just create a new file with a class in it that will contain your 
         }
     }
 
-As I said above, we're going to use the (UNE HLAPI-based) Demo Room code from MSF. _On the game server_, we're going to access the profile right from inside our NetworkManager. In Awake, we need to listen for GameRoom events that we'll use to set up the profile. We also define some Obserables right in that class for easy reference. Note they are the same as the ones in the profile we created on the master server.
+
+As I said above, we're going to use the (UNET HLAPI-based) Demo Room code from MSF. _On the game server_, we're going to access the profile right from inside our NetworkManager. In Awake, we need to listen for GameRoom events that we'll use to set up the profile. We also define some Obserables right in that class for easy reference. Note they are the same as the ones in the profile we created on the master server. (AngAccountManager and the AngAccount that it returns is my game code, included to demonstrate how MSF integrates.)
+
+Remember, code inside the lambda expressions are really callbacks being executed AFTER the profile is returned: `Msf.Server.Profiles.FillProfileValues(defaultProfile, (successful, error) =>
+            {...}`
+
 
     namespace HBYW.BMSF.CarisWorld
     {
@@ -159,7 +166,7 @@ As I said above, we're going to use the (UNE HLAPI-based) Demo Room code from MS
                 acc.CurrBreed = userbreed;
             }
 
-Finally, _on the client_, from a NetworkBehaviour on the initial player object, we read the profile values. Note that when creating the ObservalbeProfile, you don't get ALL the profile values, you will get a warning, but that can be turned off in MSF. Also, remember that the code inside the lambda expression `Msf.Client.Profiles.GetProfileValues(profile, (isSuccessful, profileError) = { ...} ` doesn 't run until after the result comes back from the master server!
+Finally, _on the client_, from a NetworkBehaviour on the initial player object, we read the profile values. Note that when creating the ObservalbeProfile, you don't get ALL the profile values, you will get a warning, but that can be turned off in MSF. Look for `public bool IgnoreProfileMissmatchError = false;` Remember, just like the game server code above, the code inside the lambda expression `Msf.Client.Profiles.GetProfileValues(profile, (isSuccessful, profileError) = { ...} ` doesn 't run until after the result comes back!
 
     using UnityEngine.Networking;
     using Barebones.MasterServer;
