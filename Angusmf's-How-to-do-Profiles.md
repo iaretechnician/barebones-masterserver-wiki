@@ -139,7 +139,7 @@ Remember, code inside the lambda expressions are really callbacks being executed
 
             IEnumerator WaitForPlayer(string player, int connid)
             {
-                    //despite the adorable log messages, we are for our client object to spawn on server and set connid
+                    //despite the adorable log messages, we are waiting for our client object to spawn on server and set connid
                     AngError.NormalMessage("WaitForPlayer(): Waiting for prince/princess to rescue me..."); //this is too cute not to leave in
                     yield return new WaitWhile(() => !GameControl.Instance.ConnIds.ContainsKey(connid));
                     AngError.NormalMessage("WaitForPlayer(): Finally I have been rescued!");
