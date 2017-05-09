@@ -67,7 +67,7 @@ _**If you found a section that's lacking**, or if you want something covered in 
 Add your links here!
 
 * [Angusmf's MSF tips!](https://github.com/alvyxaz/barebones-masterserver/wiki/Angusmf's-MSF-Tips!)
-* [Angusmf's How to "Do Profiles"](https://github.com/alvyxaz/barebones-masterserver/wiki/Angusmf's-How-to-%22Do-Profiles%22)
+* [Angusmf's How to "Do Profiles"](https://github.com/alvyxaz/barebones-masterserver/wiki/Angusmf's-How-to-do-Profiles)
 
 Trivn's Tutorials:  
 [Building to Linux VPS](https://github.com/alvyxaz/barebones-masterserver/wiki/Tutorial:-Building-to-Linux-VPS)  
