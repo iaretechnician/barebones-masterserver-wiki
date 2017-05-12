@@ -74,6 +74,15 @@ Trivn's Tutorials:
 [From Scratch, part 1](https://github.com/alvyxaz/barebones-masterserver/wiki/Tutorial:-From-Scratch:-Part-1)  
 [Starting a Persistent Server with Screen](https://github.com/alvyxaz/barebones-masterserver/wiki/Tutorial:-Persistent-server-with-Screen)
 
+Arcanor's Doc Contributions:
+
+* [RDBMS Choices for Indie Game Developers: PostgreSQL vs. MySQL](https://github.com/alvyxaz/barebones-masterserver/wiki/RDBMS-Choices-for-Indie-Game-Developers:-PostgreSQL-vs.-MySQL) 
+* [Module Mod - AuthModule with required email confirmation](https://github.com/alvyxaz/barebones-masterserver/wiki/Module-Mod---AuthModule-with-required-email-confirmation) - _**DEPRECATED** - will soon be replaced with a more maintainable solution_
+
+Emil's Additions:
+
+* [erainero's MSF - Custom Matchmaking](https://github.com/alvyxaz/barebones-masterserver/wiki/erainero's-MSF---Custom-Matchmaking)
+
 ## Editing Source code
 
 It's highly advised that you don't make any changes to source code. In most cases, you should be able to make changes by implementing interfaces, extending classes or subscribing to events. If you edit the source, it's possible that your project will break when you download an update, because your changes will be overwritten.
