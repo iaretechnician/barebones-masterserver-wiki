@@ -10,11 +10,12 @@
 ### Open Discussions
 
 * [**Database Performance Improvements**](https://github.com/alvyxaz/barebones-masterserver/issues/83)
-* [**Your requests for V2.0.4 (and maybe for V2.1)**](https://github.com/alvyxaz/barebones-masterserver/issues/84)
+* [**Your requests for immediate fixes and future releases**](https://github.com/alvyxaz/barebones-masterserver/issues/84)
 
 ## News
 
-* **2017 05 02** | 🔥  Give your suggestions for the **V2.0.4** ad **V2.1** - [**Discussion**](https://github.com/alvyxaz/barebones-masterserver/issues/84)
+* **2017 05 29** | Version: V2.0.4 (Micro update) [Release Notes](https://github.com/alvyxaz/barebones-masterserver/blob/master/MasterServerFramework2/Assets/Barebones/MSF%20ReleaseNotes.txt)
+* **2017 05 02** | 🔥  Give your suggestions fixes and future releases- [**Discussion**](https://github.com/alvyxaz/barebones-masterserver/issues/84)
 * **2017 04 20** | Submitted V2.0.3 to asset store
 * **2017 04 06** | Added [**Database implementations**](https://github.com/alvyxaz/barebones-masterserver/wiki/Database-Implementations) page
 * **2017 03 30** | I sent V2.0.2 to asset store two times now, and they keep updating it to V2.0.1! I'm now pushing the new version as a whole (without intermediary .unitypackage)
@@ -30,7 +31,7 @@
 _**If you found a section that's lacking**, or if you want something covered in the documentation - post a feature request here, in GitHub (Issues tab)_, or send me a personal message. 🌞 
 
 1. [**Introduction to the framework**](https://github.com/alvyxaz/barebones-masterserver/wiki/Introduction-To-The-Framework) - a general introduction to the main concepts of the framework
-1. [**Updates**](https://github.com/alvyxaz/barebones-masterserver/wiki/Updates) - (Latest: **V2.0.3**)
+1. [**Updates**](https://github.com/alvyxaz/barebones-masterserver/wiki/Updates) - (Latest: **V2.0.4**)
 1. [**Folder Structure**](https://github.com/alvyxaz/barebones-masterserver/wiki/Folder-Structure)
 1. API
    1. [**Rooms module examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Rooms)
