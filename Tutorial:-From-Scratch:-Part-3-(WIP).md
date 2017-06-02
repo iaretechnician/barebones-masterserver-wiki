@@ -8,9 +8,22 @@ In Part 2, we set up some displays to indicate what was going on in the backgrou
 Make a new scene called **scratchGame** and delete everything inside it. We don't need to see what's happening, as this is running on the server where no one will look.  
 This isn't going to be the game itself but a scene that is spawned by the Spawner and will run the server side of the game scene.
 
-Next, throw in a *ConnectionToMaster* prefab. Now it'll find the MasterServer, but it still doesn't have anything to show game-wise. So let's make a game!
+Next, throw in a *ConnectionToMaster* prefab. Now it'll find the MasterServer, but it still doesn't have anything to show game-wise. So let's make a game.
 
 # Step 2
 
-Make another new scene called **scratchLevel**. This is going to be a simple game as a proof of concept, but feel free to make it as complex as you want!
+Make another new scene called **scratchLevel**. This is going to be a simple game as a proof of concept, but after we're done here, feel free to make it as complex as you want.
+
+First, set the *Main Camera* and *Directional Light* Transforms as shown:
+![](http://i.imgur.com/p5lbxvR.png)
+![](http://i.imgur.com/PsPsVwu.png)
+
+Make a new empty gameobject, name it *NetworkManager* add a new script called *ScratchNetworkManager.cs*.
+
+This is just a trimmed down version of the *NetworkManagerSample* included in the BareBones assets.
+
+`
+`
+
+Add *ConnectionToMaster* object.
 
