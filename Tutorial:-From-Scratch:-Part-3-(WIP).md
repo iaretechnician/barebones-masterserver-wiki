@@ -20,13 +20,24 @@ First, set the *Main Camera* and *Directional Light* Transforms as shown:
 
 Add *ConnectionToMaster* object.
 
-We're going to be adding a bit of code. We're not going to be walking through this line-by-line, but I'll add comments to explain what different parts are doing. I recommend reading through the original scripts as well to better understand what is going on, as well as what is possible to add. 
+We're going to be adding a bit of code. Some will be new, some will be taken from the included assets. We're not going to be walking through this line-by-line, but I'll add comments to explain what different parts are doing. I recommend reading through the original scripts as well to better understand what is going on, as well as what is possible to add. 
 
-Make a new empty gameobject, name it *NetworkManager* add a new script called *ScratchNetworkManager.cs*.
+### Network Manager
+
+Make a GameObject called *NetworkManager* with a new script called *ScratchNetworkManager.cs*.
 
 This is just a trimmed down version of the *NetworkManagerSample* included in the BareBones assets.
 
 `
 `
 
+### Game Room
+
+Make a GameObject called *UnetGameRoom* and add the included script *UnetGameRoom.cs*.
+
+### Room Terminator
+
+Make a GameObject called *RoomTerminator* and add the included script *UnetGameTerminator.cs*.
+
+### Unet Server Starter
 
