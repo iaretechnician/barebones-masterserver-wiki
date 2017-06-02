@@ -18,6 +18,10 @@ First, set the *Main Camera* and *Directional Light* Transforms as shown:
 ![](http://i.imgur.com/p5lbxvR.png)
 ![](http://i.imgur.com/PsPsVwu.png)
 
+Add *ConnectionToMaster* object.
+
+We're going to be adding a bit of code. We're not going to be walking through this line-by-line, but I'll add comments to explain what different parts are doing. I recommend reading through the original scripts as well to better understand what is going on, as well as what is possible to add. 
+
 Make a new empty gameobject, name it *NetworkManager* add a new script called *ScratchNetworkManager.cs*.
 
 This is just a trimmed down version of the *NetworkManagerSample* included in the BareBones assets.
@@ -25,5 +29,4 @@ This is just a trimmed down version of the *NetworkManagerSample* included in th
 `
 `
 
-Add *ConnectionToMaster* object.
 
