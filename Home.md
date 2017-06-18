@@ -9,7 +9,6 @@
 
 ### Open Discussions
 
-* [**Database Performance Improvements**](https://github.com/alvyxaz/barebones-masterserver/issues/83)
 * [**Your requests for immediate fixes and future releases**](https://github.com/alvyxaz/barebones-masterserver/issues/84)
 
 ## News
