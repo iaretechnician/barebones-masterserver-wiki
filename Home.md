@@ -14,7 +14,7 @@
 
 ## News
 
-* **2017 05 29** | Version: V2.0.4 (Micro update) [Release Notes](https://github.com/alvyxaz/barebones-masterserver/blob/master/MasterServerFramework2/Assets/Barebones/MSF%20ReleaseNotes.txt)
+* **2017 06 18** | Submitted V2.0.4 to asset store [Release Notes](https://github.com/alvyxaz/barebones-masterserver/blob/master/MasterServerFramework2/Assets/Barebones/MSF%20ReleaseNotes.txt)
 * **2017 05 02** | 🔥  Give your suggestions for fixes and future releases- [**Discussion**](https://github.com/alvyxaz/barebones-masterserver/issues/84)
 * **2017 04 20** | Submitted V2.0.3 to asset store
 * **2017 04 06** | Added [**Database implementations**](https://github.com/alvyxaz/barebones-masterserver/wiki/Database-Implementations) page
