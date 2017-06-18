@@ -3,6 +3,11 @@ In Part 2, we set up some displays to indicate what was going on in the backgrou
 
 We're going to be adding a bit of code in this tutorial. Some will be new, some will be taken from the included assets. We're not going to be walking through this line-by-line, but I'll add comments to explain what different parts are doing. I recommend reading through the original scripts as well to better understand what is going on, as well as what is possible to add.
 
+### PLEASE READ:  
+In my attempts to simplify everything and keep everything as tidy as possible, I made a small error in judgment. If we were truly to do this from scratch, we'd need to re-write several modules that allow the game to be played. I plan on covering these modules and how to write your own in later tutorials. For now, we'll make do with copying the modules from the **MasterServer** object from the scene Assets>Barebones>Demos>Quicksetup>Scenes>*MasterAndSpawner* and use it in our **scratchMasterServer** scene.
+
+At the end of this tutorial, I will post a link to a download of the project thus far to ensure that any confusion is cleared up.
+
 ----
 
 # Step 1
@@ -31,6 +36,7 @@ Make a GameObject called *NetworkManager* with a new script called *ScratchNetwo
 This is just a trimmed down version of the *NetworkManagerSample* included in the BareBones assets.
 
 `
+
 `
 
 The following scripts are fairly generic so they can be used for many different kinds of games. We will (probably) be covering how to make custom versions in their own tutorial later. (If there is a tutorial, please link it here or contact "Trivn" in the discord)
