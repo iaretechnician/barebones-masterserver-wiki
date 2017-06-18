@@ -35,7 +35,7 @@ Make a GameObject called *NetworkManager* with a new script called *ScratchNetwo
 
 This is just a trimmed down version of the *NetworkManagerSample* included in the BareBones assets.
 
-`
+```  
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -102,8 +102,8 @@ public class ScratchNetworkManager : NetworkManager
             player.connectionToClient.Disconnect();
         }
     }
-}
-`
+}  
+```
 
 The following scripts are fairly generic so they can be used for many different kinds of games. We will (probably) be covering how to make custom versions in their own tutorial later. (If there is a tutorial, please link it here or contact "Trivn" in the discord)
 
@@ -154,6 +154,26 @@ namespace Barebones.MasterServer
         //This will be called when we click the button that this script will be attached to
         public void OnCreateClick()
         {
+            //LOG IN AS GUEST
+            //This is part of the error in judgment. In order for the serverside code to work
+            //and the gameServer to connect to the client properly, it needs to be authenticated. 
+            //To get around this, we're going to trigger the "Guest access" by default before we 
+            //spawn the gameserver.
+            //I will provide a tutorial at a later date to explain how the authModule works and how
+            //to write your own.
+                var promise = Msf.Events.FireWithPromise(Msf.EventNames.ShowLoading, "Logging in");
+                Msf.Client.Auth.LogInAsGuest((accInfo, error) =>
+                {
+                    promise.Finish();
+
+                    if (accInfo == null)
+                    {
+                        Msf.Events.Fire(Msf.EventNames.ShowDialogBox, DialogBoxData.CreateError(error));
+                        Logs.Error(error);
+                    }
+                });
+            
+
             //There can be more or fewer settings included, we're going to keep this simple.
             var settings = new Dictionary<string, string>
             {
@@ -292,3 +312,73 @@ namespace Barebones.MasterServer
     }
 }
 ```
+
+
+## Step 4
+
+Last but not least, we need a player object for the game to spawn in! If you look at line 41 in *ScratchNetworkManager* you'll see that we Instantiated a game object called "PlayerPrefab". We're going to make that now.
+
+First, create a folder named "Resources". If you don't know how resources and instantiation from resources works, please look up an explanation on that if you don't understand how this works.
+
+Inside the scene (doesn't matter which at the moment) create a cube. Set its position and orientation to 0,0,0. Add a **Network Identity** component and check off "local Player Authority".
+
+Next, add a new script called *ScratchPlayerController*. The code is simple, so it will not be explained in depth:
+
+```
+using UnityEngine;
+using UnityEngine.Networking;
+
+public class ScratchPlayerController : NetworkBehaviour
+{
+    
+    private readonly float _forwardMaxSpeed = 5f;
+    private readonly float _rotationMaxVelocity = 270;
+
+    private float _forwardSpeed;
+    private float _rotationVelocity;
+    
+    private void Update()
+    {
+        // Ignore input from other players
+        if (!isLocalPlayer)
+            return;
+
+        _forwardSpeed = Input.GetAxis("Vertical") * _forwardMaxSpeed;
+        _rotationVelocity = Input.GetAxis("Horizontal") * _rotationMaxVelocity;
+        
+        UpdateMovement();
+    }
+
+    private void UpdateMovement()
+    {
+        var moveDirection = transform.forward * _forwardSpeed * Time.deltaTime;
+        
+        transform.position += moveDirection;
+
+        transform.Rotate(Vector3.up * _rotationVelocity * Time.deltaTime);
+    }
+
+    public void MoveToRandomSpawnPoint()
+    {
+        var spawns = FindObjectsOfType<NetworkStartPosition>();
+        var spawn = spawns[Random.Range(0, spawns.Length)];
+        transform.position = spawn.transform.position;
+    }
+}
+```
+
+Name the object "PlayerPrefab" and make it a prefab and put it in the *Resources* folder created earlier. Delete the object from the scene.
+
+And that's it! With this, you can build *scratchGame* and *scratchLevel* together, build *scratchMaster* and start it up, then run *scratchClient* in the editor.
+
+The end result should be a cube on the screen that can be moved forwards and backward and rotated.
+
+(If anything doesn't work, please contact Trivn in the discord server.)
+
+# DOWNLOAD THE PROJECT
+
+Convenient link to download the project and check to see if everything matches if your project isn't working.
+
+If anything in this link doesn't work, please contact Trivn in the discord server.  
+If anything in this link is needed for the project and was left out in the tutorial, please contact Trivn in the discord server.  
+If you have issues in general, please contact Trivn in the discord server.  
