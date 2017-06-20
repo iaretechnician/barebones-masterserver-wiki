@@ -123,6 +123,8 @@ Switch back to **scratchClient** and add a GameObject called *UnetConnector* and
 
 Now for the call to request a game instance be made:
 
+### ScratchCreateGame
+
 ```
 using System;
 using System.Collections.Generic;
@@ -313,6 +315,11 @@ namespace Barebones.MasterServer
 }
 ```
 
+Now add a button to the **scratchClient** scene with the above script attached to it. Add an *OnClick* event on the button pointing to the script and set it to "ScratchCreateGame.OnCreateClick".
+
+For the Map variable on the script, set the name to scratchLevel, and drag the **scratchLevel** scene to the Scene variable.
+
+---
 
 ## Step 4
 
