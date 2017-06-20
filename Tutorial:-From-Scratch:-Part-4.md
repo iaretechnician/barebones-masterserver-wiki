@@ -12,4 +12,17 @@ Anyway, let's continue:
 
 What we're going to be doing is re-making the "games list" from the QuickSetup tutorial, but leave more room for modification.
 
-First, open the *scratchClient* scene.
+First, open the *scratchClient* scene. Hide the button we were using to start the new game scene.
+
+On the canvas, create a new **panel** element and name it *ServerList*. Set its **Transform** to fill the entire screen. This is going to hold all of our new elements for the sake of organization.
+
+Create a new **panel** element and name it *Rooms* and two new **button** elements name *CreateGame* and *Refresh*. Position your elements and change their colours however you like. Mine looks like this (stole the colours from the demo):
+
+![](http://i.imgur.com/OvjvH55.png)
+
+Inside the *Rooms* element, add a **Scroll View** named *List* and a **scrollbar**. Set the scrollbar to **Bottom to Top** and line it up on the right sitde of the *Rooms* panel. Move the *List* Scroll view to the top of the *Rooms* panel and stretch it to the right until it reaches the scrollbar. 
+
+Inside the *List* **Scroll Rect** component, set the Content to *List*, the Viewport to *Rooms*, and the Vertical Scrollbar to the scrollbar we just made. Add a **Content Size Fitter** Component and set **Horizontal Fit** to Unconstrained and **Vertical Fit** to Preferred Size.  
+
+
+
