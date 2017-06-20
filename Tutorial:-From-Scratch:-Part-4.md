@@ -186,6 +186,26 @@ namespace Barebones.MasterServer
 }
 ```
 
+Set the *ItemPrefab* to the **Item** panel, and teh *Layout Group* to the **List** panel.
 
+Go back to the **Item** panel and set the *List View* to the **Rooms** panel.
 
+Go to the **Button** under the **Item** panel and set the *OnClick* event to **Item** "ScratchGameListItem.OnJoinClick". 
 
+Go to the **Refresh** button we created at the beginning of this part of the tutorial and add an *OnClick* event for the **Rooms** panel "ScratchGamesList.OnRefreshClick". This will handle the refresh of the list while the scene is open.
+
+Finally, we need to let the player create a new game instance. Go to the **CreateGame** button we made earlier. Set this button up the same as the button we disabled at the beginning of this tutorial. This was made in Step 3 of the previous part of this tutorial series.
+
+---
+
+And that's that! Build the **scratchGame** and **scratchLevel** scenes together, build the **scratchMasterServer** alone, and build the **scratchGame** and **scratchLevel** scenes together. 
+
+If you run the master server and start it up, then run multiple instances of the client, you should be able to see all the current game instances, connect to them, and make new ones.
+
+---
+
+This concludes the From Scratch tutorial. Now you can make your own game and play it. Check out the [Building to Linux VPS](https://github.com/alvyxaz/barebones-masterserver/wiki/Tutorial:-Building-to-Linux-VPS) tutorial if you want to run your game on a server so people can connect to the game remotely.
+
+As always, any comments, questions, or issues should be directed to Trivn in the discord channel.
+
+(P.S. If you ran through this entire tutorial in one session, please tell me how long it took. I'd like to provide an estimate on the first part so that people know how much time they are going to invest!)
