@@ -1,4 +1,4 @@
-Continuing from [Tutorial: From Scratch: Part 2](https://github.com/alvyxaz/barebones-masterserver/wiki/Tutorial:-From-Scratch:-Part-2)
+Continuing from [Tutorial: From Scratch: Part 2](https://github.com/alvyxaz/barebones-masterserver/wiki/Tutorial:-From-Scratch:-Part-2)  
 In Part 2, we set up some displays to indicate what was going on in the background. Now we're going to actually set up the Game Server and have something for the client to do.
 
 We're going to be adding a bit of code in this tutorial. Some will be new, some will be taken from the included assets. We're not going to be walking through this line-by-line, but I'll add comments to explain what different parts are doing. I recommend reading through the original scripts as well to better understand what is going on, as well as what is possible to add.
