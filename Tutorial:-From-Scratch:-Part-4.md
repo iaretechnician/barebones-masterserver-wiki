@@ -34,9 +34,158 @@ Add a new Panel to **Header** and name it **Item**. This will essentially be a "
 
 In the **Item** element, add a *Button*, and two *Text element*s named **Map** and **PlayerCount**. Add *Horizontal Layout Group* Components to each of these and set them the same as above (it may take some messing around again).
 
-Finally, it should look like this:
+Finally, it should look like this (or something similar):
 
 ![](http://i.imgur.com/9UGeDt1.png)
+
+----
+
+# Step 2
+
+Now that the layout is complete, let's get to the code.
+
+Create the script *ScratchGameListItem* and add it to the **Item** panel.
+
+### ScratchGameListItem
+
+```
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace Barebones.MasterServer
+{
+    public class ScratchGameListItem : MonoBehaviour
+    {
+        //Button to click to join the game
+        public Button joinButton;
+
+        //Storing the packet that contains the information about the game instance
+        public GameInfoPacket RawData { get; protected set; }
+        //The list we're adding the element to
+        public ScratchGamesList ListView;
+
+        public Text MapName;
+        public Text PlayerCount;
+
+        //Placeholder in case something goes wrong
+        public string UnknownMapName = "Unknown";
+
+        //store the gameId for easy access when joining the game instance
+        public int GameId { get; private set; }
+
+        //Here we set up the item to display the information
+        public void Setup(GameInfoPacket data)
+        {
+            //We take the raw data and extract the gameId
+            RawData = data;
+            GameId = data.Id;
+
+            //the display for the player count
+            if (data.MaxPlayers > 0)
+            {
+                PlayerCount.text = string.Format("{0}/{1}", data.OnlinePlayers, data.MaxPlayers);
+            }
+            else
+            {
+                PlayerCount.text = data.OnlinePlayers.ToString();
+            }
+            //the display for the map name
+            MapName.text = data.Properties.ContainsKey(MsfDictKeys.MapName)
+                ? data.Properties[MsfDictKeys.MapName] : UnknownMapName;
+        }
+        //This gets called when the client clicks on Join
+        public void OnJoinClick()
+        {
+            Msf.Client.Rooms.GetAccess(RawData.Id, OnPassReceived);
+        }
+
+        //If the GetAccess call returns properly, everything will be handled automatically, otherwise, we display the error
+        protected virtual void OnPassReceived(RoomAccessPacket packet, string errorMessage)
+        {
+            if (packet == null)
+            {
+                Msf.Events.Fire(Msf.EventNames.ShowDialogBox, DialogBoxData.CreateError(errorMessage));
+                Logs.Error(errorMessage);
+                return;
+            }
+        }
+    }
+}
+```
+
+Set the variables as follows:
+
+*Join Button* = the button under the **Item** panel  
+*Map name* = the **Map** text element in the **Item** panel  
+*Player Count* = the **PlayerCount** text element in the **Item** panel  
+
+We'll make the script for *List View* next.
+
+Create the script *ScratchGamesList* and add it to the **Rooms** panel.
+
+### ScratchGamesList
+
+```
+using System.Collections.Generic;
+using System.ComponentModel;
+using Barebones.Networking;
+using Barebones.Utils;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace Barebones.MasterServer
+{
+    public class ScratchGamesList : MonoBehaviour
+    {
+        //List of the game packets to make the list from
+        private GenericUIList<GameInfoPacket> _items;
+        //The list "prefab" we created
+        public ScratchGameListItem ItemPrefab;
+        //the layout group that holds the list items
+        public LayoutGroup LayoutGroup;
+        //the connection to the master server
+        protected IClientSocket Connection = Msf.Connection;
+
+        //when the client is started up, we want it to update automatically so the player doesn't need to click on "refresh" right away 
+        protected virtual void Awake()
+        {
+            _items = new GenericUIList<GameInfoPacket>(ItemPrefab.gameObject, LayoutGroup);
+
+            Connection.Connected += OnConnectedToMaster;
+        }
+        protected void OnConnectedToMaster()
+        {
+            RequestRooms();
+        }
+        protected virtual void RequestRooms()
+        {
+            if (!Connection.IsConnected)
+            {
+                Logs.Error("Tried to request rooms, but no connection was set");
+                return;
+            }
+
+            var loadingPromise = Msf.Events.FireWithPromise(Msf.EventNames.ShowLoading, "Retrieving Rooms list...");
+
+            Msf.Client.Matchmaker.FindGames(games =>
+            {
+                loadingPromise.Finish();
+
+                Setup(games);
+            });
+        }
+        public void Setup(IEnumerable<GameInfoPacket> data)
+        {
+            _items.Generate<TNGameListItem>(data, (packet, item) => { item.Setup(packet); });
+        }
+        public void OnRefreshClick()
+        {
+            RequestRooms();
+        }
+    }
+}
+```
+
 
 
 
