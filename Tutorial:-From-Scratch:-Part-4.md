@@ -12,9 +12,54 @@ Anyway, let's continue:
 
 What we're going to be doing is re-making the "games list" from the QuickSetup tutorial, but leave more room for modification. For now, let's get the layout of the elements and add the scripts after.
 
-First, open the **scratchClient** scene. Hide the button we were using to start the new game scene.
+First, open the **scratchClient** scene.
+
+On the button we were using to start the new game scene, remove the *ScratchCreateGame* script. Add a new script called *ScratchGuestAuth*. Put this code into the script:
+
+```
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Barebones.MasterServer
+{
+
+    public class ScratchGuestAuth : MonoBehaviour
+    {
+        //we will be making this object in a moment
+        public GameObject gamesListPanel;
+
+        public void GuestAuth()
+        {
+
+            //LOG IN AS GUEST
+            //This is part of the error in judgment. In order for the serverside code to work
+            //and the gameServer to connect to the client properly, it needs to be authenticated. 
+            //To get around this, we're going to trigger the "Guest access" by default before we 
+            //spawn the gameserver.
+            //I will provide a tutorial at a later date to explain how the authModule works and how
+            //to write your own.
+            var promise = Msf.Events.FireWithPromise(Msf.EventNames.ShowLoading, "Logging in");
+            Msf.Client.Auth.LogInAsGuest((accInfo, error) =>
+            {
+                promise.Finish();
+
+                if (accInfo == null)
+                {
+                    Msf.Events.Fire(Msf.EventNames.ShowDialogBox, DialogBoxData.CreateError(error));
+                    Logs.Error(error);
+                }
+                gameObject.SetActive(false);
+                gamesListPanel.SetActive(true);
+            });
+        }
+    }
+}
+```
 
 On the canvas, create a new *panel* element and name it **ServerList**. Set its *Transform* to fill the entire screen. This is going to hold all of our new elements for the sake of organization.
+
+Make sure you add this new object to the **gamesListPanel** variable in the above script. 
 
 Create a new *panel* element and name it **Rooms** and two new *button* elements name **CreateGame** and **Refresh**. Position your elements and change their colours however you like. Mine looks like this (stole the colours from the demo):
 
@@ -194,7 +239,7 @@ Go to the **Button** under the **Item** panel and set the *OnClick* event to **I
 
 Go to the **Refresh** button we created at the beginning of this part of the tutorial and add an *OnClick* event for the **Rooms** panel "ScratchGamesList.OnRefreshClick". This will handle the refresh of the list while the scene is open.
 
-Finally, we need to let the player create a new game instance. Go to the **CreateGame** button we made earlier. Set this button up the same as the button we disabled at the beginning of this tutorial. This was made in Step 3 of the previous part of this tutorial series.
+Finally, we need to let the player create a new game instance. Go to the **CreateGame** button we made earlier. Set this button up the same as the button we altered at the beginning of this tutorial. This was made in Step 3 of the previous part of this tutorial series. Disable the **ServerList** panel.
 
 ---
 
