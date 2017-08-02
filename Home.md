@@ -20,6 +20,7 @@
 * **2017 03 30** | I sent V2.0.2 to asset store two times now, and they keep updating it to V2.0.1! I'm now pushing the new version as a whole (without intermediary .unitypackage)
 * **2017 03 27** | I'm visiting my parents for a week, so I'll be a bit inactive during the time. I'll still reply, but a bit sparingly. Thanks for understanding!
 * **2017 03 25** | Added [Quick Setup](https://github.com/alvyxaz/barebones-masterserver/wiki/Quick-Setup) page
+* [**Old News**](https://github.com/alvyxaz/barebones-masterserver/wiki/News-History)
 
 ## Table Of Contents (V2)
 
@@ -36,9 +37,12 @@ _**If you found a section that's lacking**, or if you want something covered in 
    1. [**Rooms module examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Rooms)
    1. [**Spawners module examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Spawner)
    1. [**Chat module examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Chat)
+   1. [**Authentication examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Authentication)
+   1. [**Lite DB examples**](https://github.com/alvyxaz/barebones-masterserver/wiki/API-examples.-Lite-DB)
 1. Getting Started
    1. [**Quick Setup**](https://github.com/alvyxaz/barebones-masterserver/wiki/Quick-Setup)
    1. [**Core Of The Framework**](https://github.com/alvyxaz/barebones-masterserver/wiki/Getting-Started) - it's important to read and understand this before delving deeper into the framework
+   1. [**Important Stuff**](https://github.com/alvyxaz/barebones-masterserver/wiki/Important-Stuff)
    1. [**Tips and Recommendations**](https://github.com/alvyxaz/barebones-masterserver/wiki/Tips-And-Recommendations) - some of my recommendations and tips for those, who want to work with the framework
    1. [**Rooms Demo**](https://github.com/alvyxaz/barebones-masterserver/wiki/Rooms-Demo)
    1. Worlds Demo
@@ -70,9 +74,9 @@ Add your links here!
 * [Angusmf's How to "Do Profiles"](https://github.com/alvyxaz/barebones-masterserver/wiki/Angusmf's-How-to-do-Profiles)
 
 Trivn's Tutorials:  
-[Building to Linux VPS](https://github.com/alvyxaz/barebones-masterserver/wiki/Tutorial:-Building-to-Linux-VPS)  
-[From Scratch, part 1](https://github.com/alvyxaz/barebones-masterserver/wiki/Tutorial:-From-Scratch:-Part-1)  
-[Starting a Persistent Server with Screen](https://github.com/alvyxaz/barebones-masterserver/wiki/Tutorial:-Persistent-server-with-Screen)
+* [Building to Linux VPS](https://github.com/alvyxaz/barebones-masterserver/wiki/Tutorial:-Building-to-Linux-VPS)  
+* [From Scratch, part 1](https://github.com/alvyxaz/barebones-masterserver/wiki/Tutorial:-From-Scratch:-Part-1)  
+* [Starting a Persistent Server with Screen](https://github.com/alvyxaz/barebones-masterserver/wiki/Tutorial:-Persistent-server-with-Screen)
 
 Arcanor's Doc Contributions:
 
