@@ -30,6 +30,7 @@
 
 _**If you found a section that's lacking**, or if you want something covered in the documentation - post a feature request here, in GitHub (Issues tab)_, or send me a personal message. 🌞 
 
+1. [**Is Barebones-MasterServer for you?**](https://github.com/alvyxaz/barebones-masterserver/wiki/Is-It-For-You%3F)
 1. [**Introduction to the framework**](https://github.com/alvyxaz/barebones-masterserver/wiki/Introduction-To-The-Framework) - a general introduction to the main concepts of the framework
 1. [**Updates**](https://github.com/alvyxaz/barebones-masterserver/wiki/Updates) - (Latest: **V2.0.4**)
 1. [**Folder Structure**](https://github.com/alvyxaz/barebones-masterserver/wiki/Folder-Structure)
