@@ -10,6 +10,8 @@ This is **NOT** the only way to work with the framework, nor is it the best (the
 
 ⚠️ By default, this demonstration is set up to work on **Windows** only. For other platforms, you'll need to edit the `Barebones/Demos/QuickSetup/Editor/MsfQuickBuild` script. You'll also need to change the "Executable Path" (on Mac, it's probably `./GameServer.app/Contents/MacOS/GameServer`).
 
+⚠️ By default, Unity will build the exe with the Full screen enabled by default. This can be hard to launch the game. Any easy fix is to enable File > Player Settings > Standalone Player Options > Display Resolution Dialog. Save the scenes and rebuild all.
+
 1. Go to `Tools > Msf > Build All` and select a folder, to which you want to save the binaries (builds with .exe files).
 2. Wait for the building process to complete
 3. Go to the specified folder and open `MasterAndSpawner.exe`
