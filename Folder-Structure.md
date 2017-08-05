@@ -4,6 +4,7 @@ At the time of writing, the **MasterServerFramework2/Assets** folder structure o
   * **Basics** - contains simple examples, that should be easy to follow
   * **Common** - prefabs and scripts, used commonly through the demos
   * **MiniGame** - an example of Unet game. This game is reused in other demos, to show how framework can be integrated into your own game.
+  * **QuickSetup** - See the [**Quick Setup page**](https://github.com/alvyxaz/barebones-masterserver/wiki/Folder-Structure/_edit)
   * **RoomsDemo** - shows how rooms concept works within the framework
   * **WorldsDemo** - shows how you can utilize the framework to create game servers, that are connected to each other
 * **Documentation** - self explanatory ^_^
@@ -15,3 +16,5 @@ At the time of writing, the **MasterServerFramework2/Assets** folder structure o
 * **Plugins** - plugins, on which the framework depends
 * **Resources** - resources, used within the framework (fonts and etc.)
 * **Utils** - collection of helpful scripts and tools, used within the framework
+* **Development** - Some dev test scripts
+* **MsfWikiExamples** - Wiki Examples
