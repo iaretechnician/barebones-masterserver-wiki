@@ -1,4 +1,4 @@
-At the time of writing, the **MasterServerFramework2/Assets** folder structure of the framework is as follows:
+At the time of writing, the **MasterServerFramework2/Assets/Barebones/** folder structure of the framework is as follows:
 
 * **Demos** - contains content and scenes, which demonstrates some of the framework functionality.
   * **Basics** - contains simple examples, that should be easy to follow
@@ -16,5 +16,8 @@ At the time of writing, the **MasterServerFramework2/Assets** folder structure o
 * **Plugins** - plugins, on which the framework depends
 * **Resources** - resources, used within the framework (fonts and etc.)
 * **Utils** - collection of helpful scripts and tools, used within the framework
-* **Development** - Some dev test scripts
-* **MsfWikiExamples** - Wiki Examples
+
+Note that the framework zip also contains the folders:
+
+* **MasterServerFramework2/Assets/Development/** - Some dev test scripts
+* **MasterServerFramework2/Assets/MsfWikiExamples/** - Wiki Examples
