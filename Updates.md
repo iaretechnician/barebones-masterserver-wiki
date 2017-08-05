@@ -1,3 +1,11 @@
+[**Release Notes**](https://github.com/alvyxaz/barebones-masterserver/blob/master/MasterServerFramework2/Assets/Barebones/MSF%20ReleaseNotes.txt)
+
+### Version: V2.0.4 (Micro update)
+* Fixed "Disconnect" event when client is running on editor
+* Added protected methods to trigger events in AuthModule
+* Elevated `AuthModule.IsLoggedIn` to protected
+* Fixed passwords in spawned rooms
+
 ### V2.0.3 (Micro update)
 * Multiple Chat module fixes
 * Updated MySQL implementation
