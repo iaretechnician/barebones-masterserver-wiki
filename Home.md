@@ -91,6 +91,10 @@ Emil's Additions:
 
 * [erainero's MSF - Custom Matchmaking](https://github.com/alvyxaz/barebones-masterserver/wiki/erainero's-MSF---Custom-Matchmaking)
 
+Dênis Contributions:
+
+* [Using the MSF hashing on your PHP site](https://github.com/alvyxaz/barebones-masterserver/wiki/MSF-Auth-Hashing-Algorithm-for-PHP-(PBKDF2-algorithm))
+
 ## Editing Source code
 
 It's highly advised that you don't make any changes to source code. In most cases, you should be able to make changes by implementing interfaces, extending classes or subscribing to events. If you edit the source, it's possible that your project will break when you download an update, because your changes will be overwritten.
