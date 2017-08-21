@@ -221,7 +221,7 @@ namespace Barebones.MasterServer
         }
         public void Setup(IEnumerable<GameInfoPacket> data)
         {
-            _items.Generate<TNGameListItem>(data, (packet, item) => { item.Setup(packet); });
+            _items.Generate<ScratchGameListItem>(data, (packet, item) => { item.Setup(packet); });
         }
         public void OnRefreshClick()
         {
@@ -241,6 +241,7 @@ Go to the **Refresh** button we created at the beginning of this part of the tut
 
 Finally, we need to let the player create a new game instance. Go to the **CreateGame** button we made earlier. Set this button up the same as the button we altered at the beginning of this tutorial. This was made in Step 3 of the previous part of this tutorial series. Disable the **ServerList** panel.
 
+Note that this will trigger an error: "Already logged In". This is because in the script ScratchCreateGame we try to login again as guest. To remove the warning remove the lines 31 to 48.
 ---
 
 And that's that! Build the **scratchGame** and **scratchLevel** scenes together, build the **scratchMasterServer** alone, and build the **scratchGame** and **scratchLevel** scenes together. 
