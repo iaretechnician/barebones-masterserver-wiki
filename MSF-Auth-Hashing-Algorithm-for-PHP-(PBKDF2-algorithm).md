@@ -17,7 +17,7 @@ Lucky we can use the [defuse PBKDF2 implementation for PHP](https://github.com/d
     const PBKDF2_OUTPUT_BYTES = 24;
 ```
 
-## Use example
+## Usage example
 ```
 <?php
     include_once("path/to/PasswordStorage.php");
