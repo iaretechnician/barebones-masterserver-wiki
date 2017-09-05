@@ -11,6 +11,10 @@
 
 * [**Your requests for immediate fixes and future releases**](https://github.com/alvyxaz/barebones-masterserver/issues/84)
 
+
+> Angusmf note 2: Be sure to check the open and closed issues in the Issues section here on GitHub. They contain the answers to many common user issues.
+
+
 ## News
 
 * **2017 06 18** | Submitted V2.0.4 to asset store [Release Notes](https://github.com/alvyxaz/barebones-masterserver/blob/master/MasterServerFramework2/Assets/Barebones/MSF%20ReleaseNotes.txt)
