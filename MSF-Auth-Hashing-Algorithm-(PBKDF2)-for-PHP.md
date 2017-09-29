@@ -21,6 +21,6 @@ Lucky we can use the [defuse PBKDF2 implementation for PHP](https://github.com/d
 ```
 <?php
     include_once("path/to/PasswordStorage.php");
-    $hashingHelper = new PasswordStorage;
+    $hashingHelper = new PasswordStorage();
     $encodedString = $hashingHelper->create_hash($_POST["password"]); //Here we're using a POST form, encode whatever you need
 ``` 
