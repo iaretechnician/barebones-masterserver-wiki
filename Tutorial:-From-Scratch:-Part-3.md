@@ -376,7 +376,8 @@ public class ScratchPlayerController : NetworkBehaviour
 
 Name the object "PlayerPrefab" and make it a prefab and put it in the *Resources* folder created earlier. Delete the object from the scene.
 
---- Update from lazalong ----
+```
+(Update from lazalong)
 
 If you followed exactly the steps... well it will not quite work. 
 Here are some additional steps you will need to do:
@@ -399,12 +400,12 @@ In the GameServer scene:
    - Set the field ConnectionToMaster.ConnectOnStart to checked. 
    - Add the script QuickGameServerScene to a game object
 
- In PlayerPrefab:
-    - Add a NetworkTransform script (and click on the NetworkTransform.SyncAngularVelocity field)
-    - Set on the NetworkIdentity.LocalPlayerAuthority field
+In PlayerPrefab:
+   - Add a NetworkTransform script (and click on the NetworkTransform.SyncAngularVelocity field)
+   - Set on the NetworkIdentity.LocalPlayerAuthority field
 
-
----
+(end update)
+```
 
 And that's it! With this, you can build *scratchGame* and *scratchLevel* together, build *scratchMaster* and start it up, then run *scratchClient* in the editor.
 
