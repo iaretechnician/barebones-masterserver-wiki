@@ -376,6 +376,36 @@ public class ScratchPlayerController : NetworkBehaviour
 
 Name the object "PlayerPrefab" and make it a prefab and put it in the *Resources* folder created earlier. Delete the object from the scene.
 
+--- Update from lazalong ----
+
+If you followed exactly the steps... well it will not quite work. 
+Here are some additional steps you will need to do:
+
+In MasterAndSpawner scene:
+   - Set the spawner 'default exe path' field to the location of your scratchGame.exe (i.e. './scratchGame.exe') - not only the path.
+
+ In Level scene:
+   - Add the PlayerPrefab to the fields SpawnInfo 'PlayerPrefab' and 'Registred Spawnable Prefabs' of the ScratchNetworkManager script in the NetworkManager object.
+   - Reference the UnetGameRoom object in the SpawnInfo.GameRoom field of the NetworkManager script.
+   - Do not check the field AutoCreatePlayer in the SpawnInfo of the ScratchNetworkManager script in the NetworkManager object (or there will be an instance on the gameserver that isn't seen on the client)
+   - The UnetGameRoom object with the UnetGameTerminator script and set its Room field to the UnetGameRoom gameobject (without it the room will not self-destruct when the client quit).
+   - (useful? set in UnetGameRoom object the Network Identity.SeverOnly field to true )
+   - (nice to have) in UnetRoomConnector set the fields ConnectionFailedScene and Disconnected Scene to the Client scene
+
+ In the Client scene:
+    - In the script scratchCreateGame script attached to the start game button, set the field Map.Scene to the scene scratchLevel 
+
+ In the GameServer scene:
+    - Set the field ConnectionToMaster.ConnectOnStart to checked. 
+    - Add the script QuickGameServerScene to a game object
+
+ In PlayerPrefab:
+    - Add a NetworkTransform script (and click on the NetworkTransform.SyncAngularVelocity field)
+    - Set on the NetworkIdentity.LocalPlayerAuthority field
+
+
+---
+
 And that's it! With this, you can build *scratchGame* and *scratchLevel* together, build *scratchMaster* and start it up, then run *scratchClient* in the editor.
 
 The end result should be a cube on the screen that can be moved forwards and backward and rotated.
