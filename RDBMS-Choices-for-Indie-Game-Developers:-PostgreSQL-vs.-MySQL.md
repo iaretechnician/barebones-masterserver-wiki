@@ -23,6 +23,7 @@ Given our low budget, we can pretty much rule out the more expensive options lik
 * **Licensing**:  
   * PostgreSQL has a liberal open-source, BSD/MIT type license - <https://www.postgresql.org/about/licence/>. It is free to use for any purpose, including commercial.
   * MySQL is free for open source projects that conform to the GPL, but for closed-source projects, MySQL requires the purchase of a proprietary commercial license from Oracle that _**will cost thousands of dollars per year, even when you host it yourself**_. <https://www.mysql.com/about/legal/licensing/oem/>
+    * **Note:** From what I understand of the license, if you embed MySQL in your closed source program, you have to buy a commercial license, but to use a MySQL server for your game backend, you should be able to use the free version since your not embedding the MySQL code in your game. (Do your own research)
 * **Compliance** to Established ANSI SQL Standards:
   * PostgreSQL is known for its high level of compliance to the standards
   * MySQL has a more proprietary dialect, but still mostly compliant
