@@ -49,7 +49,7 @@ Client socket implements `IClientSocket` interface. Exposed properties and metho
 * `Connect(ip, port)` - Starts connecting to server socket at given address
 * `Disconnect()` - Closes the connection
 * `WaitConnection(callback)` - a helpful method, which will invoke a callback when connection is established, or after a failed attempt to connect. If already connected - callback will be invoked istantly.
-* `AddHandler(handler)` - adds a message handler of a specific operation code. If there's already a handler with same op code, it will be overriden.
+* `SetHandler(handler)` - adds a message handler of a specific operation code. If there's already a handler with same op code, it will be overriden.
 
 ``` C#
     private void StartClient()
