@@ -13,7 +13,7 @@ PlatformNotSupportedException: Operation is not supported on this platform.
 Then it will fail to bind and eventually just crash or hang.
 The error log is actually inaccurate in this case although I would recommend deleting any databases it attempts to generate (auth.db if you're running through the quick setup examples). 
 
-The fix to this is actually fairly simple. Grab a newer dll from https://github.com/mbdavid/LiteDB/releases then replace the old LiteDB.dll located in Path\To\Project\Assets\Barebones\MsfDatabaseImplementations\LiteDBV2\Plugins. Once you do that, after Unity recompiles you should run into 5 errors. 
+The fix to this is actually fairly simple. Grab a newer dll from https://github.com/mbdavid/LiteDB/releases then replace the old LiteDB.dll located in Path\To\Project\Assets\Barebones\MsfDatabaseImplementations\LiteDBV2\Plugins. After Unity recompiles you should run into 5 errors. 
 
 ```
 Assets\Barebones\MsfDatabaseImplementations\LiteDBV2\Scripts\ProfilesDatabaseLdb.cs(20,56): error CS0246: The type or namespace name 'IndexOptions' could not be found (are you missing a using directive or an assembly reference?)
